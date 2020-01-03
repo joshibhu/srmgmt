@@ -2,23 +2,23 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var mysql = require('mysql');
-
+const methodOverride = require('method-override');
 var serviceRecordController = require('./controllers/serviceRecordController');
 var empController = require('./controllers/empController');
 
 var port = process.env.PORT || 3000;
 
 app.use('/assets', express.static(__dirname + '/public'));
-
+app.use(express.static("public"));
 app.set('view engine', 'ejs');
-
+app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 const db = mysql.createConnection ({
     host: 'localhost',
     user: 'root',
-    password: "1qaz!QAZ",
+    password: "nj121296",
 	database: "srmgmt"
 });
 

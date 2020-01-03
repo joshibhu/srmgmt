@@ -30,6 +30,13 @@ const upload = multer({ storage : storage});
 
 module.exports = function(app) {
 	
+	app.get('/addEvent',function(req,res){
+		res.redirect('/addServiceRecord.html');
+	})
+
+	app.get('/updateEvent',function(req,res){
+		res.redirect('/updateServiceRecord.html');
+	})
 	// fetch employee detail based on employee id
 	app.get('/api/employees/:id', function(req, res) {
 	// get that data from database
@@ -54,7 +61,8 @@ module.exports = function(app) {
 	// create a service record
 	app.post('/api/employees', upload.single('serviceRec'), function(req, res) {
 		let empName = req.body.empName;
-		let empId = req.body.empId;				
+		let empId = req.body.empId;			
+		console.log(req.file);	
 		db.beginTransaction(function(err) {
 			if (err) { throw err; }
 			let query = "INSERT INTO `employee` (employeeId, employeeName) VALUES (?,?)";

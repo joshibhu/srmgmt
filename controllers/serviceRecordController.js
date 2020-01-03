@@ -5,6 +5,31 @@ const path = require('path');
 
 module.exports = function(app) {
 	
+	app.get('/viewAllRecordEvent',function(req,res){
+		res.redirect('/viewAllRecord.html');
+	})
+
+	//fetch all details of employee table
+	app.get('/api/servicerecords/viewAll', function(req, res) {
+		// get that data from database
+		
+			let query = "SELECT * FROM `employee` ";
+			db.query(query, function (err, result) { 
+				if(err) {
+					console.log("error: ", err);
+					res.status(500).send(err);
+				}else{
+					console.log(result);
+					var jsonObj = JSON.parse(JSON.stringify(result));	
+					res.status(200).send(jsonObj);
+				}
+				res.end();
+			});    
+	
+		});
+
+
+
 	// fetch employee detail based on employee id
 	app.get('/api/servicerecords/view/:empId', function(req, res) {
 		let empId =  req.params.empId;
