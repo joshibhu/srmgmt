@@ -9,6 +9,7 @@ module.exports = function(app) {
 		res.redirect('/viewAllRecord.html');
 	})
 
+
 	//fetch all details of employee table
 	app.get('/api/servicerecords/viewAll', function(req, res) {
 		// get that data from database
@@ -42,7 +43,10 @@ module.exports = function(app) {
 		let empId =  req.params.empId;
 		var filePath = path.join(fileDir, empId, empId+'_SR.pdf');
 		console.log(filePath);
+		var jsonObj = JSON.parse(JSON.stringify(filePath));	
+		res.status(200).send(jsonObj);
 		fs.createReadStream(filePath).pipe(res);
+		
 	});
 
 	app.get('/api/servicerecords/history/:empId', function(req, res) {
