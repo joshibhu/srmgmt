@@ -1,6 +1,7 @@
 
 document.getElementById('file').onchange = uploadOnChange;
 
+//To get the name of file uploaded
 function uploadOnChange() {
 
   var filename = this.value;
@@ -11,6 +12,7 @@ function uploadOnChange() {
   document.getElementById('filename').value = filename;
 }
 
+//Auto populate Employee Name on Emp Id Submit
 function getEmpData() {
   var empId = document.getElementById('empIdInput').value;
   console.log(empId);
