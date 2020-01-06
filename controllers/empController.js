@@ -30,13 +30,6 @@ const upload = multer({ storage : storage});
 
 module.exports = function(app) {
 	
-	app.get('/addEvent',function(req,res){
-		res.redirect('/addServiceRecord.html');
-	})
-
-	app.get('/updateEvent',function(req,res){
-		res.redirect('/updateServiceRecord.html');
-	})
 	// fetch employee detail based on employee id
 	app.get('/api/employees/:id', function(req, res) {
 	// get that data from database

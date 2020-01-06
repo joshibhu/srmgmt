@@ -14,7 +14,7 @@
 /* Start body rules */
 body {
     background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
-    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    /* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
     background-attachment: fixed;
     background-repeat: no-repeat;
 
@@ -22,18 +22,59 @@ body {
     /*   the main font */
     font-family: 'Abel', sans-serif;
     opacity: .95;
-    /* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); */
+    background-image: linear-gradient(to top, #faf9fa 0%, #97d9e1 100%);
 }
 
 
-
-/* |||||||||||||||||||||||||||||||||||||||||||||*/
-/* //////////////////////////////////////////// */
 
 
 
 
 /* End body rules */
+
+
+/* -------------navbar css start -----------------------------*/
+.navbar-header{
+    background-color: #111;
+    font-size: 120%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+/* ------------navbar css end---------------------------------- */
+
+
+
+
+
+
+
 
 /* Start form  attributes */
 form {
@@ -44,7 +85,7 @@ form {
     margin: 2% auto;
     box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
     padding: 2%;
-    background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
+    background-image: linear-gradient(-225deg, rgb(242, 247, 245) 50%, rgb(240, 237, 248) 50%);
 }
 
 /* form Container */
@@ -69,7 +110,7 @@ header {
 
 /* Login title form form */
 header h2 {
-    font-size: 250%;
+    font-size: 130%;
     font-family: 'Playfair Display', serif;
     color: #3e403f;
 }
@@ -81,9 +122,6 @@ header p {
 
 
 
-/* //////////////////////////////////////////// */
-/* //////////////////////////////////////////// */
-
 
 .input-item {
     background: #fff;
@@ -94,24 +132,7 @@ header p {
 
 
 
-/* Show/hide password Font Icon */
-#eye {
-    background: #fff;
-    color: #333;
 
-    margin: 5.9px 0 0 0;
-    margin-left: -20px;
-    padding: 15px 9px 19px 0px;
-    border-radius: 0px 5px 5px 0px;
-
-    float: right;
-    position: relative;
-    right: 1%;
-    top: -.2%;
-    z-index: 5;
-
-    cursor: pointer;
-}
 
 /* inputs form  */
 input[class="form-input"] {
@@ -143,17 +164,19 @@ input:focus {
     border-radius: 5px;
 }
 
-/* //////////////////////////////////////////// */
-/* //////////////////////////////////////////// */
 
-/* input[type="text"] {min-width: 250px;} */
-/* buttons  */
+#filename,
+#empIdInput {
+    width: 140px;
+}
+
+/*------------------------ buttons animation start ------------------- */
 button {
     display: inline-block;
     color: #252537;
 
     width: 280px;
-    height: 50px;
+    height: 40px;
 
     padding: 0 20px;
     background: #fff;
@@ -171,38 +194,17 @@ button {
 }
 
 /* Submits */
-.submits {
-    width: 48%;
+
+.submitbtn {
+    margin: 0px auto;
+    width: 100px;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #252537;
+    line-height: 2.6em;
+    text-align: center;
     display: inline-block;
-    margin-left: 2%;
-}
-
-.tblbtn {
-    width: 120px;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: 1em;
-    font-weight: 500;
-    color: #252537;
-    line-height: 2.6em;
-    text-align: center;
-    background-color: #B8F2E6;
-    border-radius: 10px;
-    transition: 150ms;
-
-}
-
-
-.empsubmit {
-    width: 80px;
-    height: 40px;
-    font-size: 1em;
-    font-weight: 500;
-    color: #252537;
-    line-height: 2.6em;
-    text-align: center;
+    box-shadow: 0px 3px 0px rgb(139, 141, 141);
     background-color: #B8F2E6;
     border-radius: 10px;
     transition: 150ms;
@@ -210,13 +212,17 @@ button {
 
 
 /* buttons hover */
-button:hover {
+button:hover,
+.submitbtn:hover {
     transform: translatey(3px);
     box-shadow: none;
+    background-color: #B8F2E6;
+    box-shadow: 0px 5px 0px #B8F2E6;
 }
 
 /* buttons hover Animation */
-button:hover {
+button:hover,
+.submitbtn:hover {
     animation: ani9 0.4s ease-in-out infinite alternate;
 }
 
@@ -230,6 +236,11 @@ button:hover {
     }
 }
 
+
+/*----------------- button animation ends------------------------ */
+
+/* -----------Upload Label------------------------------------------------ */
+
 .upload {
     width: 0.1px;
     height: 0.1px;
@@ -238,8 +249,7 @@ button:hover {
 
 .upload+label {
     width: 100px;
-    height: 40px;
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 500;
     color: #252537;
     line-height: 2.6em;
@@ -247,7 +257,7 @@ button:hover {
     background-color: #B8F2E6;
     display: inline-block;
     border-radius: 10px;
-    box-shadow: 0px 3px 0px #B8F2E6;
+    box-shadow: 0px 3px 0px rgb(139, 141, 141);
     transition: 150ms;
 }
 
@@ -264,13 +274,9 @@ button:hover {
     outline: -webkit-focus-ring-color auto 5px;
 }
 
-#filename {
-    width: 140px;
-}
+/* -----------Upload Label css end------------------------------------------------ */
 
-#empIdInput {
-    width: 140px;
-}
+/*------------ Label css start------------------------------------------------------ */
 
 label {
     text-transform: uppercase;
@@ -282,14 +288,9 @@ label {
 
 }
 
-#empName {
-    text-transform: uppercase;
-    font-family: "Raleway", sans-serif;
-    color: rgb(58, 24, 27);
-    ;
-    font-size: 12px;
-    font-weight: 500;
-}
+/*------------ Label css end------------------------------------------------------ */
+
+/* -------------select dropdown css start----------------------------------------- */
 
 .record_type {
     width: 265px;
@@ -311,7 +312,7 @@ label {
     transition: 0.2s linear;
 }
 
-
+/*------------ select dropdown css end------------------------------------------------------ */
 
 .record_type .select select {
     font-size: 16px;
@@ -328,7 +329,7 @@ label {
 }
 
 
-/* table css start*/
+/* -----------------------------table css start ----------------------------------------------*/
 #employees {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -339,6 +340,7 @@ label {
 #employees th {
     border: 1px solid #ddd;
     padding: 8px;
+    text-align: center;
 }
 
 #employees tr:nth-child(even) {
@@ -355,6 +357,7 @@ label {
     text-align: left;
     background-color: #252537;
     color: white;
+    text-align: center;
 }
 
 .emptable {
@@ -366,10 +369,12 @@ label {
     margin: 2% auto;
     box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
     padding: 2%;
-    background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
+    background-image: linear-gradient(-225deg, rgb(242, 247, 245) 50%, rgb(240, 237, 248) 50%);
 }
 
-/* search button */
+/* -----------------------------table css end ----------------------------------------------*/
+
+/* ---------------------------- search button css start-----------------------------------------------*/
 
 .search-container {
     float: right;
@@ -381,7 +386,7 @@ label {
 
 #search {
     background-image: url('search_icon.png');
-    background-position:left;
+    background-position: left;
     background-size: 20px 20px;
     background-repeat: no-repeat;
     width: 240px;
@@ -400,3 +405,6 @@ label {
     border-radius: 0px 5px 5px 0px;
     transition: 0.2s linear;
 }
+
+
+/* ---------------------------- search button css start end-----------------------------------------------*/

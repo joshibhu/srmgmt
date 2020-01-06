@@ -14,7 +14,7 @@ function printTableRecords() {
                 var cell3 = row.insertCell(2);
                 cell1.innerHTML = JsonRes[i].employeeId;
                 cell2.innerHTML = JsonRes[i].employeeName;
-                cell3.innerHTML= "<button onclick="+"downloadFileFunction("+"'"+JsonRes[i].employeeId+"'"+") id="+"download_"+JsonRes[i].employeeId+ " class="+"tblbtn"+">Download</button> <button onclick="+"getRecordHistory("+"'"+JsonRes[i].employeeId+"'"+","+"'"+JsonRes[i].employeeName+"'"+") class="+"tblbtn"+">History</button>";
+                cell3.innerHTML= "<button onclick="+"downloadFileFunction("+"'"+JsonRes[i].employeeId+"'"+") id="+"download_"+JsonRes[i].employeeId+ " class="+"submitbtn"+">Download</button> <button onclick="+"getRecordHistory("+"'"+JsonRes[i].employeeId+"'"+","+"'"+JsonRes[i].employeeName+"'"+") class="+"submitbtn"+">History</button>";
                 
             }
 

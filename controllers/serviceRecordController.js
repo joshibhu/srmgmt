@@ -5,10 +5,6 @@ const path = require('path');
 
 module.exports = function(app) {
 	
-	app.get('/viewAllRecordEvent',function(req,res){
-		res.redirect('/viewAllRecord.html');
-	})
-
 
 	//fetch all details of employee table
 	app.get('/api/servicerecords/viewAll', function(req, res) {
