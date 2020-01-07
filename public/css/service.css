@@ -34,10 +34,11 @@ body {
 
 
 /* -------------navbar css start -----------------------------*/
-.navbar-header{
+.navbar-header {
     background-color: #111;
     font-size: 120%;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -87,6 +88,7 @@ form {
     padding: 2%;
     background-image: linear-gradient(-225deg, rgb(228, 240, 240) 100%, rgb(240, 237, 248) 0%);
 }
+
 /*  rgb(242, 247, 245) */
 /* form Container */
 form .con {
@@ -102,7 +104,7 @@ form .con {
     margin: 0 auto;
 }
 
-.update-form{
+.update-form {
     visibility: hidden;
 }
 
@@ -171,7 +173,7 @@ input:focus {
 
 #filename {
     width: 140px;
-} 
+}
 
 /* #filename,
 #empIdInput {
@@ -179,7 +181,8 @@ input:focus {
 } */
 
 /*------------------------ buttons animation start ------------------- */
-button,.submit_empIdBtn {
+button,
+.submit_empIdBtn {
     display: inline-block;
     color: #252537;
 
@@ -221,7 +224,7 @@ button,.submit_empIdBtn {
 
 /* buttons hover */
 button:hover,
-submit_empIdBtn:hover{
+submit_empIdBtn:hover {
     transform: translatey(3px);
     box-shadow: none;
     background-color: #B8F2E6;
@@ -344,8 +347,8 @@ label {
     width: 100%;
 }
 
-.table-header{
-    margin : 0% auto 5% auto;
+.table-header {
+    margin: 0% auto 5% auto;
 }
 
 #employees td,
@@ -420,3 +423,29 @@ label {
 
 
 /* ---------------------------- search button css start end-----------------------------------------------*/
+
+/*----------------------------- Table Pagination CSS ----------------------------------------------------------  */
+
+
+#pagination {
+    display: inline-block;
+    margin: 3% 40% 3% 40%;
+  }
+  
+  #pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+  
+  #pagination a.active {
+    background-color: rgb(60, 62, 65);
+    color: white;
+  }
+  
+  #pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+  /*----------------------------- Table Pagination CSS End----------------------------------------------------------  */

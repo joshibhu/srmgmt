@@ -36,20 +36,24 @@
         <header class="table-header">
             <h2>Service Record</h2>
         </header>
+
         <div class="search-container">
             <input onkeyup="searchFunction()" type="text" id="search" placeholder="Search.." name="search">
         </div>
         <table id="employees">
             <thead>
-            <tr>
-                <th>Employee ID</th>
-                <th>Employee Name</th>
-                <th>Action</th>
-            </tr>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Employee Name</th>
+                    <th>Action</th>
+                </tr>
             </thead>
-    
-        </table>
+            <tbody id="employeesTbody">
 
+            </tbody>
+          
+        </table>
+        <div id="pagination"></div>
     </div>
 
 
