@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
 
-    <title>Update Service Record</title>
+    <title>Add Service Record</title>
 
 
     <!--Font Awesome-->
@@ -24,8 +24,8 @@
     <div class="navbar">
         <ul>
             <li><a class="navbar-header" href="#">EMPLOYEE RECORD MANAGEMENT</a></li>
-            <li><a href="./index.html">Update Record</a></li>
-            <li><a href="./addServiceRecord.html">Add Record</a></li>
+            <li><a href="./index.html">Add Record</a></li>
+            <li><a href="./updateServiceRecord.html">Update Record</a></li>
             <li><a href="./viewAllRecord.html">View Record</a></li>
         </ul>
     </div>
@@ -33,12 +33,12 @@
     <br>
     <div class="overlay">
 
-        <form action="/api/employees?_method=PUT" method="POST">
+        <form action="/api/employees" enctype="multipart/form-data" method="POST">
             <!--   con = Container  for items in the form-->
             <div class="con">
                 <!--     Start  header Content  -->
                 <header class="head-form">
-                    <h2>Update Service Record</h2>
+                    <h2>Add Service Record</h2>
 
                 </header>
                 <!--     End  header Content  -->
@@ -51,49 +51,25 @@
                         <i class="fa fa-id-card" aria-hidden="true"></i>
                     </span>
                     <!--   Employee ID Input-->
-
-                    <input class="form-input" type="text" placeholder="Empoyee ID" id="empIdInput" name="empId"
-                        required>
-                    <input type="button" onclick="getEmpData()" class="submitbtn" value="SUBMIT" />
-
+                    <input class="form-input" type="text" placeholder="Empoyee ID" id="empId" name="empId" required>
 
                     <br>
                     <br>
                     <!--   Employee name -->
-
-                    <!--   Employee name Input-->
-                    <label>Employee Name : </label><span name="empName" id="empName"></span>
-                    <br>
-                    <br>
-                    <!--Record Types -->
-                    <div class="record_type">
-                        <div class="select">
-                            <select name="recordType" id="record_type">
-                                <option value="none" selected disabled hidden>
-                                    Select Record Type
-                                </option>
-
-                            </select>
-                        </div>
-                    </div>
-
-                    <br>
-
-                    <!--   Comment -->
                     <span class="input-item">
-                        <i class="fa fa-comment"></i>
+                        <i class="fa fa-user-circle"></i>
                     </span>
-                    <!--   Comment Input-->
-                    <input class="form-input" id="comment" name="comment" type="text" placeholder="@Comment">
+                    <!--   Employee name Input-->
+                    <input class="form-input" id="empName" name="empName" type="text" placeholder="@EmployeeName"
+                        required>
                     <br>
                     <br>
-                    <!--   File Input-->
                     <span class="input-item">
                         <i class="fa fa-file" aria-hidden="true"></i>
                     </span>
                     <input class="form-input" id="filename" placeholder="Service Record" type="text">
-                    <input id="file" name="appendServiceRec" type="file" class="upload" />
-                    <label for="file"> Upload
+                    <input id="file" name="serviceRec" type="file" class="upload" />
+                    <label name="serviceRec" for="file"> Upload
                         <i class="fa fa-upload" aria-hidden="true"></i>
                     </label>
                     <br>
@@ -101,7 +77,7 @@
                     <!--        buttons -->
                     <!--      Submit -->
                     <button type="submit" class="log-in"> Submit </button>
-
+                    <!-- <input type="submit" class="log-in" value="Submit"> -->
                 </div>
 
 
@@ -111,7 +87,6 @@
             <!-- End Form -->
         </form>
     </div>
-    <script src="js/jquery.js"></script>
     <script src="js/serviceJS.js"></script>
 
 </body>

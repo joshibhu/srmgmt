@@ -25,29 +25,29 @@
     <div class="navbar">
         <ul>
             <li><a class="navbar-header" href="#">EMPLOYEE RECORD MANAGEMENT</a></li>
-            <li><a href="./index.html">Update Record</a></li>
-            <li><a href="./addServiceRecord.html">Add Record</a></li>
+            <li><a href="./index.html">Add Record</a></li>
+            <li><a href="./updateServiceRecord.html">Update Record</a></li>
             <li><a href="./viewAllRecord.html">View Record</a></li>
         </ul>
     </div>
-    <header>
-        <br>
-        <br>
-        <br>
-        <h2>Service Record</h2>
-    </header>
+
 
     <div class="emptable">
+        <header class="table-header">
+            <h2>Service Record</h2>
+        </header>
         <div class="search-container">
             <input onkeyup="searchFunction()" type="text" id="search" placeholder="Search.." name="search">
         </div>
         <table id="employees">
+            <thead>
             <tr>
                 <th>Employee ID</th>
                 <th>Employee Name</th>
                 <th>Action</th>
             </tr>
-
+            </thead>
+    
         </table>
 
     </div>

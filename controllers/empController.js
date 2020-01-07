@@ -104,6 +104,7 @@ module.exports = function(app) {
 
 			}else{
 				res.status(200).send(token);		
+				console.log(req.file);
 				// merge the uploaded record to exisitng service record
 				var empServiceRecordFilePath = path.join(req.file.destination,empId+'_SR.pdf');
 				var source_files = [empServiceRecordFilePath, req.file.path];				
