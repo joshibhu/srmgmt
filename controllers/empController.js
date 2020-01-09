@@ -30,6 +30,23 @@ const upload = multer({ storage : storage});
 
 module.exports = function(app) {
 	
+	app.get('/',function(req,res){
+		res.render('index' ,{message: {} });
+	});
+
+	app.get('/serviceRecordHistory',function(req,res){
+		res.render('serviceRecordHistory' ,{message: {} });
+	});
+
+	app.get('/updateServiceRecord',function(req,res){
+		res.render('updateServiceRecord' ,{message: {} });
+	});
+
+	app.get('/viewAllRecord',function(req,res){
+		res.render('viewAllRecord' ,{message: {} });
+	});
+
+
 	// fetch employee detail based on employee id
 	app.get('/api/employees/:id', function(req, res) {
 	// get that data from database
@@ -77,9 +94,12 @@ module.exports = function(app) {
 					return db.rollback(function() {
 					  throw err;
 					});
-				  }
-				  res.status(200).send({succees: 'Added successfully'});
-				  res.end();
+					}
+				 
+					//redirect back to addServiceRecord/index.html page
+		
+				  res.render('index' ,{message: {"successMessage":"Record added successfully"}});
+				  
 				});
 			  });
 			 
@@ -103,7 +123,7 @@ module.exports = function(app) {
 				res.status(500).send(err);
 
 			}else{
-				res.status(200).send(token);		
+				
 				console.log(req.file);
 				// merge the uploaded record to exisitng service record
 				var empServiceRecordFilePath = path.join(req.file.destination,empId+'_SR.pdf');
@@ -115,7 +135,8 @@ module.exports = function(app) {
 					console.log('Success')
 					// remove the uploaded file once merged
 					fs.unlinkSync(req.file.path);
-				});						
+				});	
+				res.render('updateServiceRecord' ,{message: {"successMessage":"Record Updates successfully Token Number is :"+token}});					
 			}
 			res.end();
 		}); 

@@ -25,7 +25,7 @@ function printTableRecords() {
 
 //Redirect to serviceRecordHistory.html 
 function getRecordHistory(empId, empName) {
-    window.location.href = "/serviceRecordHistory.html?empId=" + empId + "?empName=" + empName;
+    window.location.href = "/serviceRecordHistory?empId=" + empId + "?empName=" + empName;
 
 }
 

@@ -247,6 +247,14 @@ button:hover,
     }
 }
 
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 
 /*----------------- button animation ends------------------------ */
 
@@ -430,22 +438,48 @@ label {
 #pagination {
     display: inline-block;
     margin: 3% 40% 3% 40%;
-  }
-  
-  #pagination a {
+    width: max-content;
+}
+
+#pagination a {
     color: black;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
     transition: background-color .3s;
-  }
-  
-  #pagination a.active {
+}
+
+#pagination a.active {
     background-color: rgb(60, 62, 65);
     color: white;
-  }
-  
-  #pagination a:hover:not(.active) {background-color: #ddd;}
+}
+
+#pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
 
 
-  /*----------------------------- Table Pagination CSS End----------------------------------------------------------  */
+/*----------------------------- Table Pagination CSS End----------------------------------------------------------  */
+
+
+/* ------------------------------message css------------------------------------------------------- */
+#msgid {
+    display: block;
+
+    text-transform: uppercase;
+    align-items: center;
+    width: max-content;
+    height: 40px;
+    color: #B8F2E6;
+    background-color: rgb(28, 150, 44);
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+#msgid i,#msgid span{
+    width: 5%;
+    padding: 10px;
+    font-weight: 500;
+}
+
+
+/* ------------------------------message css end------------------------------------------------------- */

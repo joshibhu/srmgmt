@@ -11,10 +11,11 @@ var port = process.env.PORT || 3000;
 app.use('/assets', express.static(__dirname + '/public'));
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-
+app.use(express.static(__dirname + '/public'));
 const db = mysql.createConnection ({
     host: 'localhost',
     user: 'root',

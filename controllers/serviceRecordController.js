@@ -16,7 +16,6 @@ module.exports = function(app) {
 					console.log("error: ", err);
 					res.status(500).send(err);
 				}else{
-					console.log(result);
 					var jsonObj = JSON.parse(JSON.stringify(result));	
 					res.status(200).send(jsonObj);
 				}
