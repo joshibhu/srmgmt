@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Service Record History</title>
+
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="css/service.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/recordHistory.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+                <li><a class="navbar-header" href="#">EMPLOYEE RECORD MANAGEMENT</a></li>
+                <li><a href="/">Add Record</a></li>
+                <li><a href="/updateServiceRecord">Update Record</a></li>
+                <li><a href="/viewAllRecord">View Record</a></li>
+        </ul>
+    </div>
+
+
+    <div class="emptable">
+        <header class="table-header">
+            <h2>View Service Record History</h2>
+        </header>
+        <!--   Employee ID-->
+        <label>Employee ID : </label><span name="empId" id="empId"></span>
+        <br>
+        <br>
+        <!--   Employee name-->
+        <label>Employee Name : </label><span name="empName" id="empName"></span>
+        <br>
+        <br>
+        <table id="employees">
+            <tr>
+                <th>Update Date</th>
+                <th>Token Number</th>
+                <th>Record Type</th>
+                <th>Comment</th>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+
+</body>
+
+
+</html>

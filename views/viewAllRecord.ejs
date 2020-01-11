@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>View Service Record</title>
+
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="css/service.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/recordViewer.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+                <li><a class="navbar-header" href="#">EMPLOYEE RECORD MANAGEMENT</a></li>
+                <li><a href="/">Add Record</a></li>
+                <li><a href="/updateServiceRecord">Update Record</a></li>
+                <li><a href="/viewAllRecord">View Record</a></li>
+        </ul>
+    </div>
+
+    <!--<form  method="POST">-->
+        <div class="emptable">
+            <header class="table-header">
+                <h2>Service Record</h2>
+            </header>
+
+            <div class="search-container">
+                <input onkeyup="searchFunction()" type="text" id="search" placeholder="Search.." name="search">
+            </div>
+            <table id="employees">
+                <thead>
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Employee Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="employeesTbody">
+
+                </tbody>
+            
+            </table>
+            <div id="pagination"></div>
+        </div>
+    <!--</form>-->
+
+
+</body>
+
+
+</html>

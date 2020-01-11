@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Update Service Record</title>
+
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/css/service.css">
+
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a class="navbar-header" href="#">EMPLOYEE RECORD MANAGEMENT</a></li>
+            <li><a href="/">Add Record</a></li>
+            <li><a href="/updateServiceRecord">Update Record</a></li>
+            <li><a href="/viewAllRecord">View Record</a></li>
+        </ul>
+    </div>
+	<% if (typeof message.successMessage !== 'undefined') { %>
+		<div id="msgid"><i class="fa fa-check" aria-hidden="true"></i><span> <%= message.successMessage %></span></div>
+    <%} else { %>
+    <% } %>
+    <% if (typeof message.errorMessage !== 'undefined') { %>
+        <div id="msgid"><i class="fa fa-check" aria-hidden="true"></i><span> <%= message.errorMessage %></span></div>
+    <%} else { %>
+    <% } %>
+    <br>
+    <br>
+    <div class="overlay">
+
+        <form action="/api/employees?_method=PUT" enctype="multipart/form-data" method="POST">
+            <!--   con = Container  for items in the form-->
+            <div class="con">
+                <!--     Start  header Content  -->
+                <header class="head-form">
+                    <h2>Update Service Record</h2>
+
+                </header>
+                <!--     End  header Content  -->
+                <br>
+                <br>
+                <div class="field-set">
+                    <!--   Employee ID -->
+                    <div>
+                        <span class="input-item">
+                            <i class="fa fa-id-card" aria-hidden="true"></i>
+                        </span>
+                        <!--   Employee ID Input-->
+
+                        <input class="form-input" type="text" placeholder="Empoyee ID" id="empIdInput" name="empId"
+                            required>
+                        <!-- <input type="button" onclick="getEmpData()" class="submitbtn" value="SUBMIT" /> -->
+                        <br>
+                        <input type="button" onclick="getEmpData()" class="submit_empIdBtn" value="SUBMIT" />
+                        <br>
+                    </div>
+                    <div class="update-form">
+                        <!--   Employee name -->
+                        <!--   Employee name Input-->
+                        <span class="input-item">
+                            <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        </span>
+                        <!--   Employee ID Input-->
+
+                        <input class="form-input" type="text" placeholder="Empoyee ID" name="empName" id="empName"
+                            required>
+    
+                        <br>
+                        <br>
+                        <!--Record Types -->
+                        <div class="record_type">
+                            <div class="select">
+                                <select name="recordType" id="record_type">
+                                    <option value="none" selected disabled hidden>
+                                        Select Record Type
+                                    </option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <!--   Comment -->
+                        <span class="input-item">
+                            <i class="fa fa-comment"></i>
+                        </span>
+                        <!--   Comment Input-->
+                        <input class="form-input" id="comment" name="comment" type="text" placeholder="@Comment">
+                        <br>
+                        <br>
+                        <!--   File Input-->
+                        <span class="input-item">
+                            <i class="fa fa-file" aria-hidden="true"></i>
+                        </span>
+
+                        <input class="form-input" id="filename" placeholder="Service Record" type="text" required>
+                        <input id="file" name="appendServiceRec" type="file" class="upload" />
+                        <label name="appendServiceRec" for="file"> Upload
+                            <i class="fa fa-upload" aria-hidden="true"></i>
+                        </label>
+                        <br>
+                        <br>
+                        <!--        buttons -->
+                        <!--      Submit -->
+                        <button type="submit" class="log-in"> Submit </button>
+                    </div>
+
+
+                </div>
+
+
+                <!--   End Conrainer  -->
+            </div>
+
+            <!-- End Form -->
+        </form>
+    </div>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/serviceJS.js"></script>
+
+</body>
+
+
+</html>
