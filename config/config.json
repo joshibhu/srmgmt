@@ -1,8 +1,8 @@
 {
     "aws":{
-        "accessKeyId":"AKIAJUE5YWB4ADVBZCBQ",
-        "secretAccessKey":"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",
-        "bucket":"elasticbeanstalk-us-east-2-510137106449"
+        "accessKeyId":"",
+        "secretAccessKey":"",
+        "bucket":""
     },
     "upload_dir":"C:/Bhuwan/Learning/ServiceRecordMgmt/tmp_uploads"
 }
