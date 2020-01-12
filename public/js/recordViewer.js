@@ -14,7 +14,7 @@ function printTableRecords() {
                 cell1.innerHTML = JsonRes[i].employeeId;
                 cell2.innerHTML = JsonRes[i].employeeName;
                 cell3.innerHTML = "<button onclick=downloadFile(" + "'" + JsonRes[i].employeeId + "'" + ")  id=download" + JsonRes[i].employeeId + " class=submitbtn>Download</button>" 
-                + "<button onclick=" + "getRecordHistory(" + "'" + JsonRes[i].employeeId + "'" + ") class=" + "submitbtn" + ">History</button>";
+                + "<button onclick=" + "getRecordHistory(" + "'" + JsonRes[i].employeeId + "'" + "," + "'" +encodeURIComponent(JsonRes[i].employeeName) + "'" + ") class=" + "submitbtn" + ">History</button>";
             }
             pagination();
 
@@ -23,8 +23,8 @@ function printTableRecords() {
 }
 
 //Redirect to serviceRecordHistory.html 
-function getRecordHistory(empId, empName) {
-    window.location.href = "/serviceRecordHistory?empId=" + empId + "?empName=" + empName;
+function getRecordHistory(empId,empName) {
+    window.location.href = "/serviceRecordHistory?empId=" + empId + "?empName=" +empName;
 }
 
 function downloadFile(empId) {
@@ -66,6 +66,7 @@ function downloadFileFunction(empId) {
 
 /*search on the basis of EmployeeName and EmployeeId */
 function searchFunction() {
+    document.getElementById("pagination").style.display = "none";
     var input, filter, table, i, empIdValue, empNameValue;
     input = document.getElementById("search");
     filter = input.value.toUpperCase();
@@ -83,9 +84,37 @@ function searchFunction() {
             tr[i].style.display = "none";
         }
     }
+    if(filter.length==0)
+    {
+        var req_num_row = 5;
+        var $tr = jQuery('tbody tr');
+        var total_num_row = $tr.length;
+        var num_pages = 0;
+        if (total_num_row % req_num_row == 0) {
+            num_pages = total_num_row / req_num_row;
+        }
+        if (total_num_row % req_num_row >= 1) {
+            num_pages = total_num_row / req_num_row;
+            num_pages++;
+            num_pages = Math.floor(num_pages++);
+        }
+        $tr.each(function (i) {
+            jQuery(this).hide();
+            if (i + 1 <= req_num_row) {
+                $tr.eq(i).show();
+            }
+    
+        });
+        document.getElementById("pagination").style.display = "";
+    } 
+    else
+        document.getElementById("pagination").style.display = "none";
+
+
 }
 
 //------------pagination funtion-------------------------------------------------------//
+
 function pagination() {
     var req_num_row = 5;
     var $tr = jQuery('tbody tr');
@@ -119,7 +148,7 @@ function pagination() {
         var page = jQuery(this).text();
         var temp = page - 1;
         var start = temp * req_num_row;
-    
+
         for (var i = 0; i < req_num_row; i++) {
 
             $tr.eq(start + i).show();

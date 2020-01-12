@@ -199,7 +199,7 @@ button,
     cursor: pointer;
     text-align: center;
     transition: all 0.2s linear;
-
+    box-shadow: 0px 3px 0px rgb(139, 141, 141);
     margin: 7% auto;
     letter-spacing: 0.05em;
 }
@@ -223,18 +223,19 @@ button,
 
 
 /* buttons hover */
-button:hover,
-submit_empIdBtn:hover {
-    transform: translatey(3px);
-    box-shadow: none;
-    background-color: #B8F2E6;
-    box-shadow: 0px 5px 0px #B8F2E6;
+button:hover
+{
+    transform: translatey(0.5px);
+    background-color: #fff;
+    box-shadow: 0px 3px 0px #fff;
+    cursor: pointer;
 }
 
-/* buttons hover Animation */
-button:hover,
-.submit_empIdBtn:hover {
-    animation: ani9 0.4s ease-in-out infinite alternate;
+submit_empIdBtn:hover {
+    transform: translatey(1px);
+    background-color: #fff;
+    box-shadow: 0px 5px 0px #fff;
+    cursor: pointer;
 }
 
 @keyframes ani9 {
@@ -282,7 +283,7 @@ button:hover,
 
 .upload:focus+label,
 .upload+label:hover {
-    transform: translatey(3px);
+    transform: translatey(1px);
     background-color: #B8F2E6;
     box-shadow: 0px 5px 0px #B8F2E6;
     cursor: pointer;
@@ -475,11 +476,21 @@ label {
     animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
-#msgid i,#msgid span{
+#msgid i,#msgid span, #errmsgid i,#errmsgid span{
     width: 5%;
     padding: 10px;
     font-weight: 500;
 }
 
+#errmsgid {
+    display: block;
 
+    text-transform: uppercase;
+    align-items: center;
+    width: max-content;
+    height: 40px;
+    color: #B8F2E6;
+    background-color: rgb(255, 0, 0);
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
 /* ------------------------------message css end------------------------------------------------------- */
