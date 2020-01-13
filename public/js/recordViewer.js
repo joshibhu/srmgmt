@@ -14,7 +14,7 @@ function printTableRecords() {
                 cell1.innerHTML = JsonRes[i].employeeId;
                 cell2.innerHTML = JsonRes[i].employeeName;
                 cell3.innerHTML = "<button onclick=downloadFile(" + "'" + JsonRes[i].employeeId + "'" + ")  id=download" + JsonRes[i].employeeId + " class=submitbtn>Download</button>" 
-                + "<button onclick=" + "getRecordHistory(" + "'" + JsonRes[i].employeeId + "'" + "," + "'" +encodeURIComponent(JsonRes[i].employeeName) + "'" + ") class=" + "submitbtn" + ">History</button>";
+               +"&nbsp;&nbsp;" + "<button onclick=" + "getRecordHistory(" + "'" + JsonRes[i].employeeId + "'" + "," + "'" +encodeURIComponent(JsonRes[i].employeeName) + "'" + ") class=" + "submitbtn" + ">History</button>";
             }
             pagination();
 
@@ -28,6 +28,7 @@ function getRecordHistory(empId,empName) {
 }
 
 function downloadFile(empId) {
+    disableScreen();
     $.ajax({
         url: '/api/servicerecords/download/'+empId,
         method: 'POST',
@@ -44,6 +45,9 @@ function downloadFile(empId) {
             a.click();
             a.remove();
             window.URL.revokeObjectURL(url);
+            element = document.querySelector('.disable_overlay'); 
+            element.style.visibility = 'hidden'; 
+            element.parentNode.removeChild(element)
         }
     });
 }
