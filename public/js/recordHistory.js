@@ -3,7 +3,7 @@ function printEmployeeRecords() {
     console.log(window.location.href);
     var fields=window.location.href.split('?');
     var empId=fields[1].split('=')[1];
-    //var empName=fields[2].split('=')[1];
+    var empName=fields[2].split('=')[1];
     $.ajax({
         type: 'GET',
         url: '/api/servicerecords/history/'+empId,
@@ -30,7 +30,7 @@ function printEmployeeRecords() {
             }
             else{
                 document.getElementById('empId').innerHTML=empId;
-                document.getElementById('empName').innerHTML=empName;
+                document.getElementById('empName').innerHTML=decodeURIComponent(empName);;
         
                     var table = document.getElementById("employees");
                     var row = table.insertRow();
