@@ -2,7 +2,7 @@ const fs = require('fs');
 const config = require('../config/config.json');
 const fileDir = 'C:/Bhuwan/Learning/ServiceRecordMgmt/uploads/';
 const path = require('path');
-const fileHandler = require('../utils/upload.js');
+const ftpoperation = require('../utils/ftpoperation.js');
 
 const tmpUploadDir = config.upload_dir;
 
@@ -34,15 +34,26 @@ module.exports = function(app) {
 		fs.createReadStream(filePath).pipe(res);
 	});
 
-	app.post('/api/servicerecords/download/:empId', function(req, res) {
+	app.get('/api/servicerecords/download/:empId', function(req, res) {
 		let empId =  req.params.empId;
 		if(empId !== undefined){
-			process(res,empId); 
+			try{
+				const promise = ftpoperation.downloadFtp(empId, tmpUploadDir);
+				promise.then(function(filepath) { 				
+					res.setHeader('Content-disposition', 'attachment; filename='+empId+'_SR.pdf');
+					res.set('Content-Type', 'text/pdf');
+					fs.createReadStream(filepath).pipe(res);	
+				}); 
+			}catch(err){
+				console.log(err);
+				res.status(400);
+				res.end();
+			}
 		}else{
-			res.status(500);
+			console.log('came here.... ')
+			res.status(401);
 			res.end();
 		}
-		
 	});
 
 	app.get('/api/servicerecords/history/:empId', function(req, res) {
@@ -61,19 +72,4 @@ module.exports = function(app) {
 			res.end();
 		});    
 	});
-	
-	async function process(res, empId){
-		console.log('came here!!');
-		var filePath = path.join(tmpUploadDir,empId,empId+'_SR.pdf');
-		var isExist = fs.existsSync(path.dirname(filePath));
-		if(!isExist){
-			fs.mkdirSync(path.dirname(filePath));
-		}
-		var awsRes = await fileHandler.downloadServiceRec(filePath, empId+'_SR.pdf' );
-		if(awsRes === 'done'){
-			res.setHeader('Content-disposition', 'attachment; filename='+empId+'_SR.pdf');
-			res.set('Content-Type', 'text/pdf');
-			fs.createReadStream(filePath).pipe(res);
-		} 
-	}
 }

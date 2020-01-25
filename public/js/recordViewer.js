@@ -31,7 +31,7 @@ function downloadFile(empId) {
     disableScreen();
     $.ajax({
         url: '/api/servicerecords/download/'+empId,
-        method: 'POST',
+        method: 'GET',
         xhrFields: {
             responseType: 'blob'
         },
