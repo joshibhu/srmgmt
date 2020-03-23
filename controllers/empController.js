@@ -3,8 +3,8 @@ const config = require('../config/config.json');
 const fs = require('fs');
 const uid = require('rand-token').uid;
 const path = require('path');
-const ftpoperation = require('../utils/ftpoperation.js');
 const format = require('date-format');
+var logger = require('../config/winston');
 
 const tmpUploadDir = config.upload_dir;
 
@@ -19,10 +19,10 @@ var storage = multer.diskStorage({
 	filename: function (req, file, cb) {
 		var filename;
 		if(file.fieldname === 'serviceRec'){
-			filename = req.body.empId+'_SR'+'.'+file.originalname.split('.')[1];
+			filename = req.body.empId+'_SRInitial'+'.'+file.originalname.split('.')[1];
 	  		
 		}else if(file.fieldname === 'appendServiceRec'){
-			filename = req.body.empId+'_SRUpdate'+'_'+Date.now()+'.'+file.originalname.split('.')[1];
+			filename = req.body.empId+'_SRUpdate'+'_'+format('MMddyyyy_hhmmss',new Date())+'.'+file.originalname.split('.')[1];
 		}
 		cb(null, filename);
 		
@@ -52,10 +52,11 @@ module.exports = function(app) {
 	app.get('/api/employees/:id', function(req, res) {
 	// get that data from database
 		let empId =  req.params.id;
+		logger.info('Fetching employee record for ::%s',empId);
 		let query = "SELECT * FROM `employee` WHERE employeeId ='" + empId + "' ";
 		db.query(query, function (err, result) { 
 			if(err) {
-				console.log("error: ", err);
+				logger.error("error: ", err);
 				res.status(500);
 				res.render('updateServiceRecord' ,{message: {"errorMessage":"Error while fetching employee record"} });
 			}else{
@@ -65,7 +66,7 @@ module.exports = function(app) {
 					jsonObj['recordTypes'] = recordTypes;				
 					res.status(200).send(jsonObj);
 				}else{
-					console.log('Employee record does not exist');
+					logger.error('Employee record not found');
 					res.status(401).render('updateServiceRecord' ,{message: {"successMessage":"Employee id does not exist"} });
 				}
 			}
@@ -77,39 +78,20 @@ module.exports = function(app) {
 	app.post('/api/employees', upload.single('serviceRec'), function(req, res) {
 		let empName = req.body.empName;
 		let empId = req.body.empId;	
+		logger.info('Uploading service record for emp id ::%s and employee name ::%s', empId, empName);
 		try{		
 			let query = "INSERT INTO `employee` (employeeId, employeeName) VALUES (?,?)";
 			db.query(query, [empId, empName], function (err, result) {
 				if(err) {
-					console.log("error: ", err);
+					logger.error("error: ", err);
 					res.status(500).render('index' ,{message: {"errorMessage":"Error while adding record"}});	
 				}else{	
-					//save into ftp server
-					try{
-						const promise = ftpoperation.uploadFtp(req,empId);
-						promise.then(function(isSuccess) {						
-							if(isSuccess){ 
-								res.status(200).render('index' ,{message: {"successMessage":"Record added successfully."}});
-							}
-						});						
-					}catch(err){
-						// remove entry from db
-						console.log(err);
-						let query = "DELETE FROM `employee` WHERE employeeId = ?";
-						db.query(query, [empId], function (error, result) {
-							if(error){
-								console.log('unable to rollback for employee id :'+empId);
-							}
-						});
-						res.status(500).render('index' ,{message: {"errorMessage":"Error while FTP record"}});
-					}
-					//removeDir(req);												
+					logger.info('Employee service record saved and uploaded successfully!!');
+					res.status(200).render('index' ,{message: {"successMessage":"Record added successfully."}});											
 				}				
 			});	
-			
-
 		}catch(err){
-			console.log(err);
+			logger.error('Error while uploading record',err);
 			res.status(500);
 			res.render('index' ,{message: {"errorMessage":"Error while adding record."}});
 		}
@@ -121,35 +103,22 @@ module.exports = function(app) {
 		let empId = req.body.empId;
 		let recordType = req.body.recordType;
 		let comment = req.body.comment;
+		logger.info('Updating service record for emp id ::%s and record type ::%s', empId, recordType);
 		// generate a token
 		var token = uid(16);
+		logger.info('Unique token generated is :: %s', token);
 		// make an entry in database		
 		let query = "INSERT INTO `recordhistory` (recordType, tokenNumber, comment, createTimestamp, createdBy, employeeId) VALUES (?,?,?,?,?,?)";
 		db.query(query, [recordType, token, comment, format('dd-MM-yyyy hh.mm.ss',new Date()), '', empId], function (err, result) { 
 			if(err) {
-				console.log("error: ", err);
+				logger.error("error: ", err);
 				res.status(500);
 				res.render('updateServiceRecord' ,{message: {"errorMessage":"Error while updating service record"} });
 			}else{
-				try{
-					const promise = ftpoperation.uploadFtp(req,empId);
-					promise.then(function(isSuccess) {						
-						if(isSuccess){ 
-							res.status(200).render('updateServiceRecord' ,{message: {"successMessage":"Record updated successfully. Token Number is :: "+token}});
-						}
-					});
-				}catch(err){
-					res.status(500).render('updateServiceRecord' ,{message: {"errorMessage":"Error while FTP record"}});
-				}
-				//TODO:: remove temporary dir and now merging will happen while downloading the files			
+				logger.info('Service record update is successfull.');
+				res.status(200).render('updateServiceRecord' ,{message: {"successMessage":"Record updated successfully. Token Number is :: "+token}});	
 			}	
 		}); 	
 	});
 
-	function removeDir(req){
-		fs.unlink(req.file.path, function(){
-			//remove directory now
-			fs.rmdirSync(path.dirname(req.file.path));
-		});
-	}
 }
