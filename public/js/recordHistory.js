@@ -30,7 +30,7 @@ function printEmployeeRecords() {
             }
             else{
                 document.getElementById('empId').innerHTML=empId;
-                document.getElementById('empName').innerHTML=empName;
+                document.getElementById('empName').innerHTML=decodeURIComponent(empName);;
         
                     var table = document.getElementById("employees");
                     var row = table.insertRow();

@@ -1,0 +1,8 @@
+{
+    "aws":{
+        "accessKeyId":"",
+        "secretAccessKey":"",
+        "bucket":""
+    },
+    "upload_dir":"C:/Bhuwan/Learning/GIT/srmgmt/tmp_uploads"
+}

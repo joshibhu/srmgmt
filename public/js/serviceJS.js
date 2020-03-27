@@ -47,3 +47,13 @@ function getEmpData() {
 }
 
 
+//disable screem on form submit/download file
+
+function disableScreen() {
+  console.log("event");
+    // creates <div class="overlay"></div> and 
+    // adds it to the DOM
+    var div= document.createElement("div");
+    div.className += "disable_overlay";
+    document.body.appendChild(div);
+}

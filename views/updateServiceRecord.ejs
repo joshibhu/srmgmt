@@ -31,13 +31,17 @@
     </div>
 	<% if (typeof message.successMessage !== 'undefined') { %>
 		<div id="msgid"><i class="fa fa-check" aria-hidden="true"></i><span> <%= message.successMessage %></span></div>
-        <%} else { %>
-        <% } %>
+    <%} else { %>
+    <% } %>
+    <% if (typeof message.errorMessage !== 'undefined') { %>
+        <div id="errmsgid"><i class="fa fa-times" aria-hidden="true"></i><span> <%= message.errorMessage %></span></div>
+    <%} else { %>
+    <% } %>
     <br>
     <br>
     <div class="overlay">
 
-        <form action="/api/employees?_method=PUT" enctype="multipart/form-data" method="POST">
+        <form action="/api/employees?_method=PUT" enctype="multipart/form-data" method="POST" onsubmit="disableScreen()">
             <!--   con = Container  for items in the form-->
             <div class="con">
                 <!--     Start  header Content  -->

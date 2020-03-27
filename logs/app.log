@@ -1,0 +1,162 @@
+2020-02-22 23:04:36.487 - error: uncaughtException: path is not defined
+ReferenceError: path is not defined
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:22:20)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-02-22 23:05:13.344 - error: uncaughtException: fs is not defined
+ReferenceError: fs is not defined
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:25:1)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-02-22 23:17:47.038 - error: uncaughtException: Cannot find module './config/winston'
+Require stack:
+- C:\Bhuwan\Learning\GIT\srmgmt\controllers\empController.js
+- C:\Bhuwan\Learning\GIT\srmgmt\app.js
+Error: Cannot find module './config/winston'
+Require stack:
+- C:\Bhuwan\Learning\GIT\srmgmt\controllers\empController.js
+- C:\Bhuwan\Learning\GIT\srmgmt\app.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:797:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:690:27)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\controllers\empController.js:7:14)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+2020-02-22 23:30:24.614 - info: ::1 - GET / HTTP/1.1 304 - - 123.508 ms
+
+2020-02-22 23:30:24.951 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 14.490 ms
+
+2020-02-22 23:30:24.958 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 17.745 ms
+
+2020-02-22 23:30:24.966 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 22.154 ms
+
+2020-02-22 23:30:25.067 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 4.404 ms
+
+2020-02-27 15:48:52.242 - info: ::1 - GET / HTTP/1.1 304 - - 104.681 ms
+
+2020-02-27 15:48:52.576 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 5.133 ms
+
+2020-02-27 15:48:52.578 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 6.381 ms
+
+2020-02-27 15:48:52.581 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 8.902 ms
+
+2020-02-27 15:48:52.920 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 0.858 ms
+
+2020-02-27 15:48:53.143 - info: ::1 - GET /favicon.ico HTTP/1.1 404 150 - 5.092 ms
+
+2020-02-27 15:48:56.102 - info: ::1 - GET /viewAllRecord HTTP/1.1 304 - - 15.027 ms
+
+2020-02-27 15:48:56.171 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 4.203 ms
+
+2020-02-27 15:48:56.186 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 19.253 ms
+
+2020-02-27 15:48:56.190 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 304 - - 19.989 ms
+
+2020-02-27 15:48:56.199 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 1.795 ms
+
+2020-02-27 15:48:56.202 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 4.903 ms
+
+2020-02-27 15:48:56.329 - info: ::1 - GET /css/search_icon.png HTTP/1.1 304 - - 1.196 ms
+
+2020-02-27 15:48:56.674 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 304 - - 359.211 ms
+
+2020-02-27 15:48:58.831 - info: Request to donwload service record for employee id ::e00921
+2020-02-27 15:48:58.833 - info: Source files dir::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e00921 will be merged into a file having filepath ::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e00921\e00921_Merged_SR.pdf
+2020-02-27 15:49:00.363 - info: All records merger into PDF is successfull.
+2020-02-27 15:49:00.365 - info: Removing merged file !!
+2020-02-27 15:49:00.377 - info: ::1 - GET /api/servicerecords/download/e00921 HTTP/1.1 200 - - 1536.378 ms
+
+2020-02-27 15:49:02.698 - info: Request to donwload service record for employee id ::e00922
+2020-02-27 15:49:02.702 - info: Source files dir::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e00922 will be merged into a file having filepath ::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e00922\e00922_Merged_SR.pdf
+2020-02-27 15:49:04.240 - info: All records merger into PDF is successfull.
+2020-02-27 15:49:04.242 - info: Removing merged file !!
+2020-02-27 15:49:04.259 - info: ::1 - GET /api/servicerecords/download/e00922 HTTP/1.1 200 - - 1548.007 ms
+
+2020-02-27 15:49:06.689 - info: ::1 - GET / HTTP/1.1 304 - - 5.463 ms
+
+2020-02-27 15:49:06.773 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 1.005 ms
+
+2020-02-27 15:49:06.790 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 4.234 ms
+
+2020-02-27 15:49:06.798 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 1.364 ms
+
+2020-02-27 15:49:19.148 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 1.046 ms
+
+2020-02-27 15:49:19.154 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 1.225 ms
+
+2020-02-27 15:50:04.410 - info: Uploading service record for emp id ::e01010 and employee name ::Manuj Sharma
+2020-02-27 15:50:04.465 - info: Employee service record saved and uploaded successfully!!
+2020-02-27 15:50:04.471 - info: ::1 - POST /api/employees HTTP/1.1 200 2647 - 109.292 ms
+
+2020-02-27 15:50:04.554 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 2.794 ms
+
+2020-02-27 15:50:04.559 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 7.537 ms
+
+2020-02-27 15:50:04.563 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 1.137 ms
+
+2020-02-27 15:50:04.607 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.956 ms
+
+2020-02-27 15:50:09.989 - info: ::1 - GET /viewAllRecord HTTP/1.1 304 - - 4.811 ms
+
+2020-02-27 15:50:10.059 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 2.192 ms
+
+2020-02-27 15:50:10.065 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 6.289 ms
+
+2020-02-27 15:50:10.076 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 4.112 ms
+
+2020-02-27 15:50:10.079 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 304 - - 5.215 ms
+
+2020-02-27 15:50:10.084 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 8.770 ms
+
+2020-02-27 15:50:10.191 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 200 150 - 10.431 ms
+
+2020-02-27 15:50:10.198 - info: ::1 - GET /css/search_icon.png HTTP/1.1 304 - - 1.939 ms
+
+2020-02-27 15:50:23.411 - info: ::1 - GET /updateServiceRecord HTTP/1.1 304 - - 56.924 ms
+
+2020-02-27 15:50:23.494 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 1.854 ms
+
+2020-02-27 15:50:23.502 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 2.061 ms
+
+2020-02-27 15:50:23.509 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 3.064 ms
+
+2020-02-27 15:50:23.514 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 4.881 ms
+
+2020-02-27 15:50:28.480 - info: ::1 - GET /viewAllRecord HTTP/1.1 304 - - 5.694 ms
+
+2020-02-27 15:50:28.567 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 1.771 ms
+
+2020-02-27 15:50:28.581 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 7.045 ms
+
+2020-02-27 15:50:28.588 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 9.733 ms
+
+2020-02-27 15:50:28.593 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 13.360 ms
+
+2020-02-27 15:50:28.598 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 304 - - 17.878 ms
+
+2020-02-27 15:50:28.690 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 304 - - 9.892 ms
+
+2020-02-27 15:50:28.701 - info: ::1 - GET /css/search_icon.png HTTP/1.1 304 - - 2.549 ms
+
+2020-02-27 15:50:30.600 - info: Request to donwload service record for employee id ::e01010
+2020-02-27 15:50:30.604 - info: Source files dir::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e01010 will be merged into a file having filepath ::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e01010\e01010_Merged_SR.pdf
+2020-02-27 15:50:30.674 - error: uncaughtException: reject is not defined
+ReferenceError: reject is not defined
+    at C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecordController.js:51:8
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\easy-pdf-merge\distribution\lib\PDFMerger.js:55:14
+    at checkSrc (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\easy-pdf-merge\distribution\lib\PDFMerger.js:11:12)
+    at module.exports (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\easy-pdf-merge\distribution\lib\PDFMerger.js:53:3)
+    at C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecordController.js:49:6
+    at FSReqCallback.oncomplete (fs.js:146:23)
