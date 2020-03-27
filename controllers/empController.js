@@ -119,6 +119,7 @@ module.exports = function(app) {
 				res.status(200).render('updateServiceRecord' ,{message: {"successMessage":"Record updated successfully. Token Number is :: "+token}});	
 			}	
 		}); 	
+
 	});
 
 }

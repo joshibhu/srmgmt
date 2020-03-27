@@ -7,6 +7,7 @@ var fs = require('fs');
 const methodOverride = require('method-override');
 var morgan = require('morgan');
 var logger = require('./config/winston');
+
 var serviceRecordController = require('./controllers/serviceRecordController');
 var empController = require('./controllers/empController');
 
@@ -28,7 +29,7 @@ fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory);
 const db = mysql.createConnection ({
     host: 'localhost',
     user: 'root',
-    password: "1qaz!QAZ",
+    password: "nj121296",
 	database: "srmgmt"
 });
 
