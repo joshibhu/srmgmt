@@ -160,3 +160,1206 @@ ReferenceError: reject is not defined
     at module.exports (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\easy-pdf-merge\distribution\lib\PDFMerger.js:53:3)
     at C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecordController.js:49:6
     at FSReqCallback.oncomplete (fs.js:146:23)
+2020-03-27 18:51:42.442 - error: uncaughtException: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+    at Handshake.Sequence._packetToError (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\Connection.js:525:10)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Protocol._enqueue (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at Connection.connect (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\Connection.js:119:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:36:4)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-27 18:51:51.433 - error: uncaughtException: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+    at Handshake.Sequence._packetToError (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\Connection.js:525:10)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Protocol._enqueue (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at Connection.connect (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\Connection.js:119:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:36:4)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-27 18:51:55.051 - error: uncaughtException: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)
+    at Handshake.Sequence._packetToError (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\Connection.js:91:28)
+    at Socket.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\Connection.js:525:10)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:309:12)
+    --------------------
+    at Protocol._enqueue (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at Connection.connect (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mysql\lib\Connection.js:119:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:36:4)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-27 18:52:15.584 - info: ::1 - GET / HTTP/1.1 200 2536 - 14.176 ms
+
+2020-03-27 18:52:15.780 - info: ::1 - GET /css/service.css HTTP/1.1 200 10576 - 5.294 ms
+
+2020-03-27 18:52:15.785 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 200 31004 - 10.419 ms
+
+2020-03-27 18:52:15.788 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 200 1855 - 8.801 ms
+
+2020-03-27 18:52:16.109 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 200 77160 - 1.891 ms
+
+2020-03-27 18:52:16.239 - info: ::1 - GET /favicon.ico HTTP/1.1 404 150 - 1.937 ms
+
+2020-03-27 18:52:18.804 - info: ::1 - GET /viewAllRecord HTTP/1.1 200 1882 - 1.361 ms
+
+2020-03-27 18:52:18.861 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 4.413 ms
+
+2020-03-27 18:52:18.878 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 2.130 ms
+
+2020-03-27 18:52:18.883 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 200 5650 - 3.814 ms
+
+2020-03-27 18:52:18.886 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 4.463 ms
+
+2020-03-27 18:52:18.894 - info: ::1 - GET /js/jquery.js HTTP/1.1 200 282113 - 13.155 ms
+
+2020-03-27 18:52:18.987 - info: ::1 - GET /css/search_icon.png HTTP/1.1 200 164467 - 2.909 ms
+
+2020-03-27 18:52:19.056 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 200 150 - 86.419 ms
+
+2020-03-27 18:52:21.120 - info: ::1 - GET /serviceRecordHistory?empId=e00921?empName=Bhuwan HTTP/1.1 200 1698 - 2.449 ms
+
+2020-03-27 18:52:21.189 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.585 ms
+
+2020-03-27 18:52:21.204 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 0.772 ms
+
+2020-03-27 18:52:21.205 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 1.909 ms
+
+2020-03-27 18:52:21.208 - info: ::1 - GET /js/recordHistory.js HTTP/1.1 200 1966 - 1.134 ms
+
+2020-03-27 18:52:21.224 - info: Fething record history of empID ::e00921
+2020-03-27 18:52:21.267 - info: ::1 - GET /api/servicerecords/history/e00921 HTTP/1.1 200 336 - 42.857 ms
+
+2020-03-27 18:52:22.831 - info: ::1 - GET /viewAllRecord HTTP/1.1 304 - - 1.524 ms
+
+2020-03-27 18:52:22.886 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.700 ms
+
+2020-03-27 18:52:22.888 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 0.567 ms
+
+2020-03-27 18:52:22.893 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 0.540 ms
+
+2020-03-27 18:52:22.895 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 304 - - 0.762 ms
+
+2020-03-27 18:52:22.897 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 1.882 ms
+
+2020-03-27 18:52:22.925 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 304 - - 7.160 ms
+
+2020-03-27 18:52:22.930 - info: ::1 - GET /css/search_icon.png HTTP/1.1 304 - - 0.708 ms
+
+2020-03-27 18:52:24.800 - info: Request to donwload service record for employee id ::e00921
+2020-03-27 18:52:24.803 - info: Source files dir::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e00921 will be merged into a file having filepath ::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e00921\e00921_Merged_SR.pdf
+2020-03-27 18:52:26.051 - info: All records merger into PDF is successfull.
+2020-03-27 18:52:26.053 - info: Removing merged file !!
+2020-03-27 18:52:26.061 - info: ::1 - GET /api/servicerecords/download/e00921 HTTP/1.1 200 - - 1254.103 ms
+
+2020-03-27 18:52:28.533 - info: ::1 - GET /updateServiceRecord HTTP/1.1 200 4958 - 2.398 ms
+
+2020-03-27 18:52:28.594 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 1.135 ms
+
+2020-03-27 18:52:28.597 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 5.891 ms
+
+2020-03-27 18:52:28.602 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 0.921 ms
+
+2020-03-27 18:52:28.607 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 3.022 ms
+
+2020-03-27 18:52:29.232 - info: ::1 - GET / HTTP/1.1 304 - - 2.293 ms
+
+2020-03-27 18:52:29.288 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.658 ms
+
+2020-03-27 18:52:29.303 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 2.213 ms
+
+2020-03-27 18:52:29.305 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 0.597 ms
+
+2020-03-28 23:44:04.311 - error: uncaughtException: await is only valid in async function
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecController.js:15
+			const records = await RecordHistory.find({})
+			                ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:15:31)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-28 23:45:10.846 - error: uncaughtException: await is only valid in async function
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecController.js:15
+			const records = await RecordHistory.find({})
+			                ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:15:31)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-28 23:45:16.756 - error: uncaughtException: await is only valid in async function
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecController.js:15
+			const records = await RecordHistory.find({})
+			                ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:15:31)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-28 23:45:19.620 - error: uncaughtException: await is only valid in async function
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecController.js:15
+			const records = await RecordHistory.find({})
+			                ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:15:31)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-28 23:45:25.819 - error: uncaughtException: await is only valid in async function
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecController.js:15
+			const records = await RecordHistory.find({})
+			                ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:15:31)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-28 23:45:36.494 - error: uncaughtException: await is only valid in async function
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecController.js:15
+			const records = await RecordHistory.find({})
+			                ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:15:31)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-28 23:45:42.161 - error: uncaughtException: await is only valid in async function
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecController.js:15
+			const records = await RecordHistory.find({})
+			                ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:15:31)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-28 23:48:24.433 - info: ::1 - GET / HTTP/1.1 304 - - 68.062 ms
+
+2020-03-28 23:48:24.663 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 7.164 ms
+
+2020-03-28 23:48:24.666 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 7.918 ms
+
+2020-03-28 23:48:24.671 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 9.722 ms
+
+2020-03-28 23:48:24.750 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.102 ms
+
+2020-03-28 23:49:32.908 - info: Employee service record saved and uploaded successfully!!
+2020-03-28 23:49:32.914 - info: ::1 - POST /api/employees HTTP/1.1 200 2647 - 177.241 ms
+
+2020-03-28 23:49:33.005 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 2.006 ms
+
+2020-03-28 23:49:33.012 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 1.229 ms
+
+2020-03-28 23:49:33.017 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 1.065 ms
+
+2020-03-28 23:49:33.093 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.179 ms
+
+2020-03-28 23:50:39.449 - info: ::1 - GET /viewAllRecord HTTP/1.1 304 - - 6.165 ms
+
+2020-03-28 23:50:39.697 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 1.163 ms
+
+2020-03-28 23:50:39.714 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 0.933 ms
+
+2020-03-28 23:50:39.720 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 1.862 ms
+
+2020-03-28 23:50:39.722 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 304 - - 3.596 ms
+
+2020-03-28 23:50:39.726 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 0.878 ms
+
+2020-03-28 23:50:39.855 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 200 2 - 25.120 ms
+
+2020-03-28 23:50:39.858 - info: ::1 - GET /css/search_icon.png HTTP/1.1 304 - - 8.163 ms
+
+2020-03-28 23:57:08.984 - info: ::1 - GET / HTTP/1.1 304 - - 57.083 ms
+
+2020-03-28 23:57:09.199 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 3.396 ms
+
+2020-03-28 23:57:09.206 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 1.959 ms
+
+2020-03-28 23:57:09.214 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 8.139 ms
+
+2020-03-28 23:57:09.265 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 4.248 ms
+
+2020-03-29 19:59:30.077 - error: uncaughtException: await is only valid in async function
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecController.js:72
+			const records = await RecordHistory.findByEmployeeId(empId);
+			                ^^^^^
+
+SyntaxError: await is only valid in async function
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:15:31)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-29 19:59:50.188 - error: uncaughtException: Identifier 'record' has already been declared
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\employeeController.js:98
+		const record = new RecordHistory(req.body)
+		      ^
+
+SyntaxError: Identifier 'record' has already been declared
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:16:21)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-29 19:59:58.115 - error: uncaughtException: Identifier 'record' has already been declared
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\employeeController.js:98
+		const record = new RecordHistory(req.body)
+		      ^
+
+SyntaxError: Identifier 'record' has already been declared
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:16:21)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-29 20:00:27.458 - info: ::1 - GET / HTTP/1.1 200 2536 - 13.088 ms
+
+2020-03-29 20:00:27.525 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 200 1855 - 3.377 ms
+
+2020-03-29 20:00:27.527 - info: ::1 - GET /css/service.css HTTP/1.1 200 10576 - 7.063 ms
+
+2020-03-29 20:00:27.529 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 200 31004 - 10.698 ms
+
+2020-03-29 20:00:27.756 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 200 77160 - 1.309 ms
+
+2020-03-29 20:00:27.865 - info: ::1 - GET /favicon.ico HTTP/1.1 404 150 - 1.361 ms
+
+2020-03-29 20:00:29.094 - info: ::1 - GET /updateServiceRecord HTTP/1.1 200 4958 - 5.469 ms
+
+2020-03-29 20:00:29.132 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 3.742 ms
+
+2020-03-29 20:00:29.137 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 2.556 ms
+
+2020-03-29 20:00:29.140 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 0.520 ms
+
+2020-03-29 20:00:29.146 - info: ::1 - GET /js/jquery.js HTTP/1.1 200 282113 - 4.911 ms
+
+2020-03-29 20:00:37.130 - error: Employee record not found
+2020-03-29 20:00:37.133 - info: ::1 - GET /api/employees/e0101?empId=e0101 HTTP/1.1 401 5080 - 24.056 ms
+
+2020-03-29 20:00:40.777 - info: ::1 - GET / HTTP/1.1 304 - - 3.107 ms
+
+2020-03-29 20:00:40.835 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 1.131 ms
+
+2020-03-29 20:00:40.839 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 1.189 ms
+
+2020-03-29 20:00:40.843 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 3.853 ms
+
+2020-03-29 20:01:05.747 - error: uncaughtException: Unexpected token ':'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\employeeController.js:95
+		createTime:format('dd-MM-yyyy hh.mm.ss',new Date()),createdBy:'Admin',employeeId:req.body.empId}
+		                                                             ^
+
+SyntaxError: Unexpected token ':'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:16:21)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-29 20:01:17.654 - error: uncaughtException: Unexpected token ':'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\employeeController.js:96
+		createTime:format('dd-MM-yyyy hh.mm.ss',new Date()),createdBy:'Admin',employeeId:req.body.empId}
+		                                                             ^
+
+SyntaxError: Unexpected token ':'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:16:21)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-29 20:01:18.779 - error: uncaughtException: Unexpected token ':'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\employeeController.js:96
+		createTime:format('dd-MM-yyyy hh.mm.ss',new Date()),createdBy:'Admin',employeeId:req.body.empId}
+		                                                             ^
+
+SyntaxError: Unexpected token ':'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:16:21)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-29 20:01:23.752 - error: uncaughtException: Unexpected token ':'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\employeeController.js:96
+		createTime:format('dd-MM-yyyy hh.mm.ss',new Date()),createdBy:'Admin',employeeId:req.body.empId}
+		                                                             ^
+
+SyntaxError: Unexpected token ':'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:16:21)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-29 20:01:24.853 - error: uncaughtException: Unexpected token ':'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\employeeController.js:96
+		createTime:format('dd-MM-yyyy hh.mm.ss',new Date()),createdBy:'Admin',employeeId:req.body.empId}
+		                                                             ^
+
+SyntaxError: Unexpected token ':'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:16:21)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-29 20:01:26.256 - error: uncaughtException: Unexpected token ':'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\employeeController.js:96
+		createTime:format('dd-MM-yyyy hh.mm.ss',new Date()),createdBy:'Admin',employeeId:req.body.empId}
+		                                                             ^
+
+SyntaxError: Unexpected token ':'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:16:21)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-29 20:02:23.331 - info: ::1 - GET / HTTP/1.1 304 - - 11.013 ms
+
+2020-03-29 20:02:23.369 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 5.321 ms
+
+2020-03-29 20:02:23.371 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 4.406 ms
+
+2020-03-29 20:02:23.376 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 7.326 ms
+
+2020-03-29 20:02:23.489 - info: ::1 - GET / HTTP/1.1 304 - - 2.482 ms
+
+2020-03-29 20:02:23.526 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 5.327 ms
+
+2020-03-29 20:02:23.529 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 8.137 ms
+
+2020-03-29 20:02:23.531 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 7.596 ms
+
+2020-03-29 20:02:51.241 - info: Employee service record saved and uploaded successfully!!
+2020-03-29 20:02:51.244 - info: ::1 - POST /api/employees HTTP/1.1 200 2647 - 75.932 ms
+
+2020-03-29 20:02:51.283 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 3.306 ms
+
+2020-03-29 20:02:51.286 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 0.639 ms
+
+2020-03-29 20:02:51.287 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 1.210 ms
+
+2020-03-29 20:06:56.457 - info: ::1 - GET /viewAllRecord HTTP/1.1 200 1882 - 3.569 ms
+
+2020-03-29 20:06:56.516 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 1.198 ms
+
+2020-03-29 20:06:56.523 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 3.412 ms
+
+2020-03-29 20:06:56.524 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 4.779 ms
+
+2020-03-29 20:06:56.525 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 5.607 ms
+
+2020-03-29 20:06:56.528 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 200 5650 - 9.645 ms
+
+2020-03-29 20:06:56.583 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 200 191 - 14.463 ms
+
+2020-03-29 20:06:56.594 - info: ::1 - GET /css/search_icon.png HTTP/1.1 200 164467 - 3.039 ms
+
+2020-03-29 20:07:22.596 - info: Request to donwload service record for employee id ::e101
+2020-03-29 20:07:22.596 - info: Source files dir::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e101 will be merged into a file having filepath ::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e101\e101_Merged_SR.pdf
+2020-03-29 20:07:22.619 - error: uncaughtException: reject is not defined
+ReferenceError: reject is not defined
+    at C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecController.js:49:8
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\easy-pdf-merge\distribution\lib\PDFMerger.js:55:14
+    at checkSrc (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\easy-pdf-merge\distribution\lib\PDFMerger.js:11:12)
+    at module.exports (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\easy-pdf-merge\distribution\lib\PDFMerger.js:53:3)
+    at C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecController.js:47:6
+    at FSReqCallback.oncomplete (fs.js:146:23)
+2020-03-29 20:16:51.045 - info: ::1 - GET /viewAllRecord HTTP/1.1 304 - - 13.679 ms
+
+2020-03-29 20:16:51.088 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 2.033 ms
+
+2020-03-29 20:16:51.092 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 304 - - 1.076 ms
+
+2020-03-29 20:16:51.093 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 2.087 ms
+
+2020-03-29 20:16:51.099 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 6.836 ms
+
+2020-03-29 20:16:51.107 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 10.123 ms
+
+2020-03-29 20:16:51.190 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 200 94 - 28.796 ms
+
+2020-03-29 20:16:51.192 - info: ::1 - GET /css/search_icon.png HTTP/1.1 304 - - 0.773 ms
+
+2020-03-29 20:16:58.784 - info: ::1 - GET /updateServiceRecord HTTP/1.1 304 - - 2.362 ms
+
+2020-03-29 20:16:58.833 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.658 ms
+
+2020-03-29 20:16:58.836 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 0.533 ms
+
+2020-03-29 20:16:58.839 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 0.895 ms
+
+2020-03-29 20:16:58.840 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 1.551 ms
+
+2020-03-29 20:16:58.852 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 0.463 ms
+
+2020-03-29 20:17:02.103 - error: Employee record not found
+2020-03-29 20:17:02.106 - info: ::1 - GET /api/employees/e101?empId=e101 HTTP/1.1 401 5080 - 9.147 ms
+
+2020-03-29 20:17:03.958 - error: Employee record not found
+2020-03-29 20:17:03.965 - info: ::1 - GET /api/employees/e101?empId=e101 HTTP/1.1 401 5080 - 10.499 ms
+
+2020-03-29 20:17:06.648 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 2.831 ms
+
+2020-03-29 20:17:06.652 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 5.535 ms
+
+2020-03-29 20:17:17.200 - info: ::1 - GET /viewAllRecord HTTP/1.1 304 - - 1.090 ms
+
+2020-03-29 20:17:17.240 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.791 ms
+
+2020-03-29 20:17:17.243 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 0.906 ms
+
+2020-03-29 20:17:17.246 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 304 - - 1.133 ms
+
+2020-03-29 20:17:17.247 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 1.685 ms
+
+2020-03-29 20:17:17.249 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 2.843 ms
+
+2020-03-29 20:17:17.317 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 304 - - 3.577 ms
+
+2020-03-29 20:17:17.321 - info: ::1 - GET /css/search_icon.png HTTP/1.1 304 - - 0.471 ms
+
+2020-03-29 20:17:18.249 - info: ::1 - GET /serviceRecordHistory?empId=e101?empName=Bhuwan%20Joshi HTTP/1.1 200 1698 - 2.487 ms
+
+2020-03-29 20:17:18.313 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 1.752 ms
+
+2020-03-29 20:17:18.315 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 2.988 ms
+
+2020-03-29 20:17:18.317 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 4.334 ms
+
+2020-03-29 20:17:18.318 - info: ::1 - GET /js/recordHistory.js HTTP/1.1 304 - - 5.514 ms
+
+2020-03-29 20:17:18.378 - info: Fething record history of empID ::e101
+2020-03-29 20:17:18.381 - info: ::1 - GET /api/servicerecords/history/e101 HTTP/1.1 304 - - 3.815 ms
+
+2020-03-29 20:17:34.677 - info: ::1 - GET /viewAllRecord HTTP/1.1 304 - - 1.311 ms
+
+2020-03-29 20:17:34.711 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.694 ms
+
+2020-03-29 20:17:34.717 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 1.251 ms
+
+2020-03-29 20:17:34.720 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 304 - - 1.380 ms
+
+2020-03-29 20:17:34.723 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 2.799 ms
+
+2020-03-29 20:17:34.725 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 5.671 ms
+
+2020-03-29 20:17:34.788 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 304 - - 6.792 ms
+
+2020-03-29 20:17:34.797 - info: ::1 - GET /css/search_icon.png HTTP/1.1 304 - - 0.368 ms
+
+2020-03-29 20:22:31.157 - info: ::1 - GET /serviceRecordHistory?empId=e101?empName=Bhuwan%20Joshi HTTP/1.1 304 - - 12.070 ms
+
+2020-03-29 20:22:31.220 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 3.025 ms
+
+2020-03-29 20:22:31.222 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 3.828 ms
+
+2020-03-29 20:22:31.226 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 7.499 ms
+
+2020-03-29 20:22:31.229 - info: ::1 - GET /js/recordHistory.js HTTP/1.1 304 - - 2.628 ms
+
+2020-03-29 20:22:31.278 - info: Fething record history of empID ::e101
+2020-03-29 20:22:31.295 - info: ::1 - GET /api/servicerecords/history/e101 HTTP/1.1 304 - - 17.014 ms
+
+2020-03-29 20:22:56.737 - info: Fething record history of empID ::e101
+2020-03-29 20:22:56.740 - info: ::1 - GET /api/servicerecords/history/e101 HTTP/1.1 304 - - 2.850 ms
+
+2020-03-29 20:24:44.305 - error: Employee record not found
+2020-03-29 20:24:44.307 - info: ::1 - GET /api/employees/e101 HTTP/1.1 401 5080 - 4.561 ms
+
+2020-03-29 20:24:44.359 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.910 ms
+
+2020-03-29 20:24:44.368 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 2.723 ms
+
+2020-03-29 20:24:44.372 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 7.991 ms
+
+2020-03-29 20:24:44.374 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 10.343 ms
+
+2020-03-29 20:24:44.489 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 0.499 ms
+
+2020-03-29 20:33:33.857 - info: ::1 - GET /api/employees/e101 HTTP/1.1 200 146 - 14.430 ms
+
+2020-03-29 20:33:50.688 - info: ::1 - GET /serviceRecordHistory?empId=e101?empName=Bhuwan%20Joshi HTTP/1.1 304 - - 5.466 ms
+
+2020-03-29 20:33:50.739 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 4.578 ms
+
+2020-03-29 20:33:50.744 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 9.470 ms
+
+2020-03-29 20:33:50.746 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 10.651 ms
+
+2020-03-29 20:33:50.748 - info: ::1 - GET /js/recordHistory.js HTTP/1.1 304 - - 10.624 ms
+
+2020-03-29 20:33:50.807 - info: Fething record history of empID ::e101
+2020-03-29 20:33:50.815 - info: ::1 - GET /api/servicerecords/history/e101 HTTP/1.1 200 191 - 10.533 ms
+
+2020-03-29 20:33:59.922 - info: ::1 - GET /viewAllRecord HTTP/1.1 304 - - 3.023 ms
+
+2020-03-29 20:33:59.953 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.755 ms
+
+2020-03-29 20:33:59.958 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 1.249 ms
+
+2020-03-29 20:33:59.962 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 1.390 ms
+
+2020-03-29 20:33:59.970 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 304 - - 8.543 ms
+
+2020-03-29 20:33:59.971 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 2.912 ms
+
+2020-03-29 20:34:00.070 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 304 - - 17.799 ms
+
+2020-03-29 20:34:00.074 - info: ::1 - GET /css/search_icon.png HTTP/1.1 304 - - 1.642 ms
+
+2020-03-29 20:34:05.493 - info: ::1 - GET /serviceRecordHistory?empId=e101?empName=Bhuwan%20Joshi HTTP/1.1 304 - - 3.225 ms
+
+2020-03-29 20:34:05.555 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.501 ms
+
+2020-03-29 20:34:05.558 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 0.549 ms
+
+2020-03-29 20:34:05.561 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 0.696 ms
+
+2020-03-29 20:34:05.562 - info: ::1 - GET /js/recordHistory.js HTTP/1.1 304 - - 1.907 ms
+
+2020-03-29 20:34:05.582 - info: Fething record history of empID ::e101
+2020-03-29 20:34:05.593 - info: ::1 - GET /api/servicerecords/history/e101 HTTP/1.1 304 - - 11.760 ms
+
+2020-03-29 20:34:14.538 - info: ::1 - GET /updateServiceRecord HTTP/1.1 304 - - 3.956 ms
+
+2020-03-29 20:34:14.566 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.550 ms
+
+2020-03-29 20:34:14.574 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 4.885 ms
+
+2020-03-29 20:34:14.578 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 8.584 ms
+
+2020-03-29 20:34:14.581 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 8.240 ms
+
+2020-03-29 20:34:14.610 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.273 ms
+
+2020-03-29 20:34:19.005 - info: ::1 - GET /viewAllRecord HTTP/1.1 304 - - 1.608 ms
+
+2020-03-29 20:34:19.068 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.878 ms
+
+2020-03-29 20:34:19.070 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 0.626 ms
+
+2020-03-29 20:34:19.072 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 2.070 ms
+
+2020-03-29 20:34:19.074 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 304 - - 1.897 ms
+
+2020-03-29 20:34:19.076 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 0.647 ms
+
+2020-03-29 20:34:19.093 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 304 - - 3.498 ms
+
+2020-03-29 20:34:19.098 - info: ::1 - GET /css/search_icon.png HTTP/1.1 304 - - 0.724 ms
+
+2020-03-29 20:34:19.637 - info: ::1 - GET /updateServiceRecord HTTP/1.1 304 - - 1.801 ms
+
+2020-03-29 20:34:19.666 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.928 ms
+
+2020-03-29 20:34:19.668 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 2.099 ms
+
+2020-03-29 20:34:19.669 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 3.184 ms
+
+2020-03-29 20:34:19.671 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 0.410 ms
+
+2020-03-29 20:34:19.694 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 0.709 ms
+
+2020-03-29 20:34:23.688 - info: ::1 - GET /api/employees/e101?empId=e101 HTTP/1.1 200 146 - 3.295 ms
+
+2020-03-29 20:34:35.144 - info: Updating service record for emp id ::e101 and record type ::Pension
+2020-03-29 20:34:35.145 - info: Unique token generated is :: datYZcuNF01ZYOrW
+2020-03-29 20:34:35.164 - info: Service record update is successfull.
+2020-03-29 20:34:35.166 - info: ::1 - PUT /api/employees?_method=PUT HTTP/1.1 200 5108 - 33.346 ms
+
+2020-03-29 20:34:35.231 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 5.963 ms
+
+2020-03-29 20:34:35.233 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 4.853 ms
+
+2020-03-29 20:34:35.235 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 4.534 ms
+
+2020-03-29 20:34:35.238 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 1.872 ms
+
+2020-03-29 20:34:37.061 - info: ::1 - GET /viewAllRecord HTTP/1.1 304 - - 1.189 ms
+
+2020-03-29 20:34:37.090 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.561 ms
+
+2020-03-29 20:34:37.092 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 0.583 ms
+
+2020-03-29 20:34:37.095 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 2.462 ms
+
+2020-03-29 20:34:37.097 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 304 - - 3.006 ms
+
+2020-03-29 20:34:37.098 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 3.943 ms
+
+2020-03-29 20:34:37.137 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 304 - - 6.994 ms
+
+2020-03-29 20:34:37.143 - info: ::1 - GET /css/search_icon.png HTTP/1.1 304 - - 0.728 ms
+
+2020-03-29 20:34:38.819 - info: ::1 - GET /serviceRecordHistory?empId=e101?empName=Bhuwan%20Joshi HTTP/1.1 304 - - 1.524 ms
+
+2020-03-29 20:34:38.875 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.734 ms
+
+2020-03-29 20:34:38.878 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 0.946 ms
+
+2020-03-29 20:34:38.880 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 2.161 ms
+
+2020-03-29 20:34:38.881 - info: ::1 - GET /js/recordHistory.js HTTP/1.1 304 - - 3.317 ms
+
+2020-03-29 20:34:38.896 - info: Fething record history of empID ::e101
+2020-03-29 20:34:38.900 - info: ::1 - GET /api/servicerecords/history/e101 HTTP/1.1 200 387 - 4.411 ms
+
+2020-03-29 20:37:30.677 - info: Fething record history of empID ::e101
+2020-03-29 20:37:30.700 - info: ::1 - GET /api/servicerecords/history/e101 HTTP/1.1 304 - - 24.356 ms
+
+2020-03-29 20:41:27.096 - info: ::1 - GET / HTTP/1.1 304 - - 10.620 ms
+
+2020-03-29 20:41:27.124 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 2.911 ms
+
+2020-03-29 20:41:27.126 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 4.704 ms
+
+2020-03-29 20:41:27.131 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 8.747 ms
+
+2020-03-29 20:41:27.171 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.153 ms
+
+2020-03-29 20:43:05.017 - info: ::1 - GET / HTTP/1.1 304 - - 19.022 ms
+
+2020-03-29 20:43:05.080 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 4.156 ms
+
+2020-03-29 20:43:05.084 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 0.864 ms
+
+2020-03-29 20:43:05.090 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 2.449 ms
+
+2020-03-29 20:43:05.191 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 0.447 ms
+
+2020-03-29 20:43:14.558 - error: error: recordhistory validation failed: createTimestamp: Path `createTimestamp` is required. Error [ValidationError]: recordhistory validation failed: createTimestamp: Path `createTimestamp` is required.
+    at ValidationError.inspect (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at Object.transform (C:\Bhuwan\Learning\GIT\srmgmt\config\winston.js:7:35)
+    at Format.transform (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\logform\combine.js:20:24)
+    at DerivedLogger._transform (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\winston\lib\winston\logger.js:305:29)
+    at DerivedLogger.Transform._read (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\winston\node_modules\readable-stream\lib\_stream_transform.js:177:10)
+    at DerivedLogger.Transform._write (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\winston\node_modules\readable-stream\lib\_stream_transform.js:164:83)
+    at doWrite (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\winston\node_modules\readable-stream\lib\_stream_writable.js:409:139)
+    at writeOrBuffer (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\winston\node_modules\readable-stream\lib\_stream_writable.js:398:5)
+    at DerivedLogger.Writable.write (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\winston\node_modules\readable-stream\lib\_stream_writable.js:307:11)
+    at DerivedLogger.log (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\winston\lib\winston\logger.js:244:14)
+    at DerivedLogger.<computed> [as error] (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\winston\lib\winston\create-logger.js:95:19)
+    at C:\Bhuwan\Learning\GIT\srmgmt\controllers\employeeController.js:80:11 {
+  errors: {
+    createTimestamp: MongooseError [ValidatorError]: Path `createTimestamp` is required.
+        at new ValidatorError (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\document.js:2367:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `createTimestamp` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'createTimestamp',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'recordhistory validation failed',
+  name: 'ValidationError'
+}
+2020-03-29 20:43:14.565 - info: ::1 - POST /api/employees HTTP/1.1 500 2649 - 62.358 ms
+
+2020-03-29 20:43:14.605 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.538 ms
+
+2020-03-29 20:43:14.609 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 1.512 ms
+
+2020-03-29 20:43:14.611 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 2.426 ms
+
+2020-03-29 20:43:14.632 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.296 ms
+
+2020-03-29 20:45:44.403 - error: error: recordhistory validation failed: createTimestamp: Path `createTimestamp` is required. Error [ValidationError]: recordhistory validation failed: createTimestamp: Path `createTimestamp` is required.
+    at ValidationError.inspect (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at Object.transform (C:\Bhuwan\Learning\GIT\srmgmt\config\winston.js:7:35)
+    at Format.transform (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\logform\combine.js:20:24)
+    at DerivedLogger._transform (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\winston\lib\winston\logger.js:305:29)
+    at DerivedLogger.Transform._read (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\winston\node_modules\readable-stream\lib\_stream_transform.js:177:10)
+    at DerivedLogger.Transform._write (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\winston\node_modules\readable-stream\lib\_stream_transform.js:164:83)
+    at doWrite (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\winston\node_modules\readable-stream\lib\_stream_writable.js:409:139)
+    at writeOrBuffer (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\winston\node_modules\readable-stream\lib\_stream_writable.js:398:5)
+    at DerivedLogger.Writable.write (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\winston\node_modules\readable-stream\lib\_stream_writable.js:307:11)
+    at DerivedLogger.log (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\winston\lib\winston\logger.js:244:14)
+    at DerivedLogger.<computed> [as error] (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\winston\lib\winston\create-logger.js:95:19)
+    at C:\Bhuwan\Learning\GIT\srmgmt\controllers\employeeController.js:80:11 {
+  errors: {
+    createTimestamp: MongooseError [ValidatorError]: Path `createTimestamp` is required.
+        at new ValidatorError (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\document.js:2367:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `createTimestamp` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'createTimestamp',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'recordhistory validation failed',
+  name: 'ValidationError'
+}
+2020-03-29 20:45:44.417 - info: ::1 - POST /api/employees HTTP/1.1 500 2649 - 45.702 ms
+
+2020-03-29 20:45:44.465 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 5.291 ms
+
+2020-03-29 20:45:44.470 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 1.284 ms
+
+2020-03-29 20:45:44.473 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 3.076 ms
+
+2020-03-29 20:45:44.499 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 0.562 ms
+
+2020-03-29 21:02:06.089 - info: ::1 - GET / HTTP/1.1 304 - - 22.518 ms
+
+2020-03-29 21:02:06.158 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 3.687 ms
+
+2020-03-29 21:02:06.162 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 5.903 ms
+
+2020-03-29 21:02:06.165 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 7.745 ms
+
+2020-03-29 21:02:06.244 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 0.815 ms
+
+2020-03-29 21:02:07.131 - info: ::1 - GET / HTTP/1.1 304 - - 1.845 ms
+
+2020-03-29 21:02:07.178 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 1.488 ms
+
+2020-03-29 21:02:07.183 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 4.464 ms
+
+2020-03-29 21:02:07.188 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 6.567 ms
+
+2020-03-29 21:02:07.331 - info: ::1 - GET / HTTP/1.1 304 - - 2.366 ms
+
+2020-03-29 21:02:07.390 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.783 ms
+
+2020-03-29 21:02:07.397 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 1.971 ms
+
+2020-03-29 21:02:07.400 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 4.178 ms
+
+2020-03-29 21:02:18.531 - info: Employee service record saved and uploaded successfully!!
+2020-03-29 21:02:18.536 - info: ::1 - POST /api/employees HTTP/1.1 200 2647 - 102.508 ms
+
+2020-03-29 21:02:18.610 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 1.476 ms
+
+2020-03-29 21:02:18.616 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 1.751 ms
+
+2020-03-29 21:02:18.619 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 3.916 ms
+
+2020-03-29 21:02:24.629 - info: ::1 - GET /viewAllRecord HTTP/1.1 304 - - 3.818 ms
+
+2020-03-29 21:02:24.750 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 2.896 ms
+
+2020-03-29 21:02:24.766 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 6.217 ms
+
+2020-03-29 21:02:24.771 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 8.088 ms
+
+2020-03-29 21:02:24.775 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 304 - - 10.893 ms
+
+2020-03-29 21:02:24.786 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 1.881 ms
+
+2020-03-29 21:02:24.940 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 200 94 - 30.580 ms
+
+2020-03-29 21:02:24.942 - info: ::1 - GET /css/search_icon.png HTTP/1.1 304 - - 15.312 ms
+
+2020-03-29 21:02:26.729 - info: ::1 - GET /serviceRecordHistory?empId=e101?empName=Bhuwan%20Joshi HTTP/1.1 304 - - 3.730 ms
+
+2020-03-29 21:02:26.789 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.882 ms
+
+2020-03-29 21:02:26.797 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 1.851 ms
+
+2020-03-29 21:02:26.800 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 4.530 ms
+
+2020-03-29 21:02:26.802 - info: ::1 - GET /js/recordHistory.js HTTP/1.1 304 - - 6.384 ms
+
+2020-03-29 21:02:26.847 - info: Fething record history of empID ::e101
+2020-03-29 21:02:26.862 - info: ::1 - GET /api/servicerecords/history/e101 HTTP/1.1 200 196 - 17.472 ms
+
+2020-03-29 21:02:31.460 - info: ::1 - GET /viewAllRecord HTTP/1.1 304 - - 2.851 ms
+
+2020-03-29 21:02:31.594 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 1.773 ms
+
+2020-03-29 21:02:31.611 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 3.674 ms
+
+2020-03-29 21:02:31.615 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 10.402 ms
+
+2020-03-29 21:02:31.620 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 304 - - 11.685 ms
+
+2020-03-29 21:02:31.624 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 14.553 ms
+
+2020-03-29 21:02:31.720 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 304 - - 7.261 ms
+
+2020-03-29 21:02:31.727 - info: ::1 - GET /css/search_icon.png HTTP/1.1 304 - - 1.082 ms
+
+2020-03-29 21:02:35.470 - info: Request to donwload service record for employee id ::e101
+2020-03-29 21:02:35.471 - info: Source files dir::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e101 will be merged into a file having filepath ::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e101\e101_Merged_SR.pdf
+2020-03-29 21:02:35.524 - error: uncaughtException: reject is not defined
+ReferenceError: reject is not defined
+    at C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecController.js:50:8
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\easy-pdf-merge\distribution\lib\PDFMerger.js:55:14
+    at checkSrc (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\easy-pdf-merge\distribution\lib\PDFMerger.js:11:12)
+    at module.exports (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\easy-pdf-merge\distribution\lib\PDFMerger.js:53:3)
+    at C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecController.js:48:6
+    at FSReqCallback.oncomplete (fs.js:146:23)
+2020-03-29 21:04:21.793 - error: uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1301:14)
+    at listenInCluster (net.js:1349:12)
+    at Server.listen (net.js:1437:7)
+    at Function.listen (c:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\application.js:618:24)
+    at Object.<anonymous> (c:\Bhuwan\Learning\GIT\srmgmt\app.js:85:5)
+    at Module._compile (internal/modules/cjs/loader.js:956:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-03-29 21:04:30.455 - info: ::1 - GET /viewAllRecord HTTP/1.1 304 - - 19.368 ms
+
+2020-03-29 21:04:30.575 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 10.906 ms
+
+2020-03-29 21:04:30.591 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 4.621 ms
+
+2020-03-29 21:04:30.653 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 9.252 ms
+
+2020-03-29 21:04:30.663 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 304 - - 17.375 ms
+
+2020-03-29 21:04:30.673 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 24.136 ms
+
+2020-03-29 21:04:30.744 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 304 - - 39.027 ms
+
+2020-03-29 21:04:30.747 - info: ::1 - GET /css/search_icon.png HTTP/1.1 304 - - 22.461 ms
+
+2020-03-29 21:04:34.226 - info: Request to donwload service record for employee id ::e101
+2020-03-29 21:04:34.228 - info: Source files dir::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e101 will be merged into a file having filepath ::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e101\e101_Merged_SR.pdf
+2020-03-29 21:04:34.231 - info: All records merger into PDF is successfull.
+2020-03-29 21:04:34.234 - info: Removing merged file !!
+2020-03-29 21:04:34.276 - error: uncaughtException: ENOENT: no such file or directory, unlink 'C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e101\e101_Merged_SR.pdf'
+Error: ENOENT: no such file or directory, unlink 'C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e101\e101_Merged_SR.pdf'
+    at Object.unlinkSync (fs.js:1035:3)
+    at C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecController.js:53:10
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\easy-pdf-merge\distribution\lib\PDFMerger.js:55:14
+    at checkSrc (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\easy-pdf-merge\distribution\lib\PDFMerger.js:11:12)
+    at module.exports (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\easy-pdf-merge\distribution\lib\PDFMerger.js:53:3)
+    at C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecController.js:47:6
+    at FSReqCallback.oncomplete (fs.js:146:23)
+2020-03-29 21:10:24.755 - info: ::1 - GET / HTTP/1.1 304 - - 18.151 ms
+
+2020-03-29 21:10:24.812 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 5.956 ms
+
+2020-03-29 21:10:24.815 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 5.752 ms
+
+2020-03-29 21:10:24.818 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 7.411 ms
+
+2020-03-29 21:10:36.373 - error: error: E11000 duplicate key error collection: srmgmt.recordhistory index: tokenNumber_1 dup key: { tokenNumber: "--" } MongoError: E11000 duplicate key error collection: srmgmt.recordhistory index: tokenNumber_1 dup key: { tokenNumber: "--" }
+    at Function.create (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongodb\lib\core\error.js:43:12)
+    at toError (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongodb\lib\utils.js:149:22)
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongodb\lib\operations\common_functions.js:265:39
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongodb\lib\core\connection\pool.js:404:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+  driver: true,
+  name: 'MongoError',
+  index: 0,
+  code: 11000,
+  keyPattern: { tokenNumber: 1 },
+  keyValue: { tokenNumber: '--' },
+  errmsg: 'E11000 duplicate key error collection: srmgmt.recordhistory index: tokenNumber_1 dup key: { tokenNumber: "--" }',
+  [Symbol(mongoErrorContextSymbol)]: {}
+}
+2020-03-29 21:10:36.386 - info: ::1 - POST /api/employees HTTP/1.1 500 2649 - 176.945 ms
+
+2020-03-29 21:10:36.473 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 1.829 ms
+
+2020-03-29 21:10:36.478 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 6.804 ms
+
+2020-03-29 21:10:36.482 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 0.914 ms
+
+2020-03-29 21:13:42.238 - info: Employee service record saved and uploaded successfully!!
+2020-03-29 21:13:42.265 - info: ::1 - POST /api/employees HTTP/1.1 200 2647 - 112.611 ms
+
+2020-03-29 21:13:42.323 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 7.550 ms
+
+2020-03-29 21:13:42.327 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 7.798 ms
+
+2020-03-29 21:13:42.329 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 9.308 ms
+
+2020-03-29 21:13:44.235 - info: ::1 - GET /viewAllRecord HTTP/1.1 304 - - 5.065 ms
+
+2020-03-29 21:13:44.345 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 3.464 ms
+
+2020-03-29 21:13:44.357 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 3.030 ms
+
+2020-03-29 21:13:44.405 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 4.257 ms
+
+2020-03-29 21:13:44.412 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 304 - - 8.993 ms
+
+2020-03-29 21:13:44.420 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 10.085 ms
+
+2020-03-29 21:13:44.602 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 200 181 - 74.269 ms
+
+2020-03-29 21:13:44.610 - info: ::1 - GET /css/search_icon.png HTTP/1.1 304 - - 47.352 ms
+
+2020-03-29 21:13:48.514 - info: Request to donwload service record for employee id ::e102
+2020-03-29 21:13:48.515 - info: Source files dir::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e102 will be merged into a file having filepath ::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e102\e102_Merged_SR.pdf
+2020-03-29 21:13:48.520 - info: All records merger into PDF is successfull.
+2020-03-29 21:13:48.521 - info: Removing merged file !!
+2020-03-29 21:13:48.556 - error: uncaughtException: ENOENT: no such file or directory, unlink 'C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e102\e102_Merged_SR.pdf'
+Error: ENOENT: no such file or directory, unlink 'C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e102\e102_Merged_SR.pdf'
+    at Object.unlinkSync (fs.js:1035:3)
+    at C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecController.js:52:10
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\easy-pdf-merge\distribution\lib\PDFMerger.js:55:14
+    at checkSrc (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\easy-pdf-merge\distribution\lib\PDFMerger.js:11:12)
+    at module.exports (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\easy-pdf-merge\distribution\lib\PDFMerger.js:53:3)
+    at C:\Bhuwan\Learning\GIT\srmgmt\controllers\serviceRecController.js:46:6
+    at FSReqCallback.oncomplete (fs.js:146:23)
+2020-03-29 21:15:39.352 - info: Request to donwload service record for employee id ::e102
+2020-03-29 21:15:39.358 - info: Source files dir::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e102 will be merged into a file having filepath ::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e102\e102_Merged_SR.pdf
+2020-03-29 21:17:39.352 - info: ::ffff:127.0.0.1 - GET /api/servicerecords/download/e102 HTTP/1.1 - - - - ms
+
+2020-03-29 21:19:52.882 - info: ::1 - GET /viewAllRecord HTTP/1.1 304 - - 26.092 ms
+
+2020-03-29 21:19:52.967 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 3.879 ms
+
+2020-03-29 21:19:52.984 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 2.965 ms
+
+2020-03-29 21:19:52.987 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 4.546 ms
+
+2020-03-29 21:19:52.996 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 304 - - 1.757 ms
+
+2020-03-29 21:19:53.016 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 2.530 ms
+
+2020-03-29 21:19:53.149 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 304 - - 37.965 ms
+
+2020-03-29 21:19:53.152 - info: ::1 - GET /css/search_icon.png HTTP/1.1 304 - - 25.301 ms
+
+2020-03-29 21:19:54.800 - info: Request to donwload service record for employee id ::e102
+2020-03-29 21:19:54.801 - info: Source files dir::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e102 will be merged into a file having filepath ::C:\Bhuwan\Learning\GIT\srmgmt\tmp_uploads\e102\e102_Merged_SR.pdf
+2020-03-29 21:19:54.803 - info: Only one file found hence no merging is performed !!
+2020-03-29 21:19:54.821 - info: ::1 - GET /api/servicerecords/download/e102 HTTP/1.1 200 - - 11.056 ms
+
+2020-03-29 21:20:28.011 - info: ::1 - GET /serviceRecordHistory?empId=e101?empName=Bhuwan%20Joshi HTTP/1.1 304 - - 7.561 ms
+
+2020-03-29 21:20:28.171 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 1.064 ms
+
+2020-03-29 21:20:28.177 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 1.470 ms
+
+2020-03-29 21:20:28.184 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 3.034 ms
+
+2020-03-29 21:20:28.187 - info: ::1 - GET /js/recordHistory.js HTTP/1.1 304 - - 4.835 ms
+
+2020-03-29 21:20:28.215 - info: Fething record history of empID ::e101
+2020-03-29 21:20:28.226 - info: ::1 - GET /api/servicerecords/history/e101 HTTP/1.1 304 - - 12.161 ms
+
+2020-03-29 21:20:33.109 - info: ::1 - GET /updateServiceRecord HTTP/1.1 304 - - 5.350 ms
+
+2020-03-29 21:20:33.189 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 1.413 ms
+
+2020-03-29 21:20:33.207 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 3.062 ms
+
+2020-03-29 21:20:33.211 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 5.571 ms
+
+2020-03-29 21:20:33.215 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 8.827 ms
+
+2020-03-29 21:20:34.042 - info: ::1 - GET / HTTP/1.1 304 - - 3.640 ms
+
+2020-03-29 21:20:34.131 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 1.184 ms
+
+2020-03-29 21:20:34.137 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 1.231 ms
+
+2020-03-29 21:20:34.141 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 1.017 ms
+
