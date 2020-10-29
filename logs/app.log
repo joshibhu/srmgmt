@@ -1363,3 +1363,1059 @@ Error: ENOENT: no such file or directory, unlink 'C:\Bhuwan\Learning\GIT\srmgmt\
 
 2020-03-29 21:20:34.141 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 1.017 ms
 
+2020-10-28 16:05:57.506 - info: ::1 - GET / HTTP/1.1 200 2536 - 18.284 ms
+
+2020-10-28 16:05:57.700 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 200 31004 - 2.931 ms
+
+2020-10-28 16:05:57.702 - info: ::1 - GET /css/service.css HTTP/1.1 200 10576 - 4.346 ms
+
+2020-10-28 16:05:57.711 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 200 1855 - 11.585 ms
+
+2020-10-28 16:05:58.463 - info: ::1 - GET /css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 200 77160 - 1.667 ms
+
+2020-10-28 16:06:02.850 - info: ::1 - GET /updateServiceRecord HTTP/1.1 200 4958 - 4.759 ms
+
+2020-10-28 16:06:02.901 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 3.344 ms
+
+2020-10-28 16:06:02.906 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 1.360 ms
+
+2020-10-28 16:06:02.908 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 2.260 ms
+
+2020-10-28 16:06:02.914 - info: ::1 - GET /js/jquery.js HTTP/1.1 200 282113 - 10.404 ms
+
+2020-10-28 16:06:03.723 - info: ::1 - GET /viewAllRecord HTTP/1.1 200 1882 - 3.209 ms
+
+2020-10-28 16:06:03.762 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.938 ms
+
+2020-10-28 16:06:03.766 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 3.041 ms
+
+2020-10-28 16:06:03.768 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 6.152 ms
+
+2020-10-28 16:06:03.774 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 0.792 ms
+
+2020-10-28 16:06:03.776 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 200 5650 - 3.717 ms
+
+2020-10-28 16:06:03.829 - info: ::1 - GET /css/search_icon.png HTTP/1.1 200 164467 - 2.438 ms
+
+2020-10-28 16:06:04.064 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 200 181 - 261.222 ms
+
+2020-10-28 16:06:04.566 - info: ::1 - GET / HTTP/1.1 304 - - 2.077 ms
+
+2020-10-28 16:06:04.599 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 1.664 ms
+
+2020-10-28 16:06:04.603 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 4.316 ms
+
+2020-10-28 16:06:04.610 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 9.993 ms
+
+2020-10-28 16:06:07.036 - info: ::1 - GET /updateServiceRecord HTTP/1.1 304 - - 2.663 ms
+
+2020-10-28 16:06:07.080 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 5.466 ms
+
+2020-10-28 16:06:07.083 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 5.598 ms
+
+2020-10-28 16:06:07.086 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 6.152 ms
+
+2020-10-28 16:06:07.090 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 0.942 ms
+
+2020-10-28 16:06:09.521 - info: ::1 - GET /viewAllRecord HTTP/1.1 304 - - 3.444 ms
+
+2020-10-28 16:06:09.559 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 4.478 ms
+
+2020-10-28 16:06:09.561 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 5.714 ms
+
+2020-10-28 16:06:09.563 - info: ::1 - GET /js/jquery.js HTTP/1.1 304 - - 6.770 ms
+
+2020-10-28 16:06:09.582 - info: ::1 - GET /js/recordViewer.js HTTP/1.1 304 - - 22.929 ms
+
+2020-10-28 16:06:09.601 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 21.114 ms
+
+2020-10-28 16:06:09.613 - info: ::1 - GET /api/servicerecords/viewAll HTTP/1.1 304 - - 8.273 ms
+
+2020-10-28 16:06:09.626 - info: ::1 - GET /css/search_icon.png HTTP/1.1 304 - - 0.533 ms
+
+2020-10-28 16:06:13.582 - info: ::1 - GET / HTTP/1.1 304 - - 1.552 ms
+
+2020-10-28 16:06:13.622 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 3.117 ms
+
+2020-10-28 16:06:13.625 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 2.391 ms
+
+2020-10-28 16:06:13.635 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 13.298 ms
+
+2020-10-28 16:06:15.032 - info: ::1 - GET / HTTP/1.1 304 - - 1.399 ms
+
+2020-10-28 16:06:15.065 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 2.323 ms
+
+2020-10-28 16:06:15.067 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 4.015 ms
+
+2020-10-28 16:06:15.070 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 5.636 ms
+
+2020-10-28 16:06:16.421 - info: ::1 - GET / HTTP/1.1 304 - - 1.414 ms
+
+2020-10-28 16:06:16.454 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 2.993 ms
+
+2020-10-28 16:06:16.456 - info: ::1 - GET /js/serviceJS.js HTTP/1.1 304 - - 2.158 ms
+
+2020-10-28 16:06:16.466 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 12.040 ms
+
+2020-10-28 16:07:08.156 - info: ::1 - GET /css/font-awesome/css/font-awesome.min.css HTTP/1.1 304 - - 0.722 ms
+
+2020-10-28 16:07:08.158 - info: ::1 - GET /css/service.css HTTP/1.1 304 - - 2.159 ms
+
+2020-10-29 15:47:41.465 - error: uncaughtException: Virtual path "fileName" conflicts with a real path in the schema
+Error: Virtual path "fileName" conflicts with a real path in the schema
+    at Schema.virtual (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:1817:11)
+    at aliasFields (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:172:7)
+    at Schema.add (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:527:3)
+    at new Schema (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:130:10)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\models\file.js:3:20)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:5:14)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+2020-10-29 15:49:02.187 - error: uncaughtException: Virtual path "fileId" conflicts with a real path in the schema
+Error: Virtual path "fileId" conflicts with a real path in the schema
+    at Schema.virtual (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:1817:11)
+    at aliasFields (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:172:7)
+    at Schema.add (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:527:3)
+    at new Schema (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:130:10)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\models\file.js:3:20)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:5:14)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+2020-10-29 15:49:44.405 - error: uncaughtException: Virtual path "amount" conflicts with a real path in the schema
+Error: Virtual path "amount" conflicts with a real path in the schema
+    at Schema.virtual (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:1817:11)
+    at aliasFields (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:172:7)
+    at Schema.add (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:527:3)
+    at new Schema (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:130:10)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\models\file.js:3:20)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:5:14)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+2020-10-29 15:49:47.653 - error: uncaughtException: Virtual path "financialYear" conflicts with a real path in the schema
+Error: Virtual path "financialYear" conflicts with a real path in the schema
+    at Schema.virtual (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:1817:11)
+    at aliasFields (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:172:7)
+    at Schema.add (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:527:3)
+    at new Schema (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:130:10)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\models\file.js:3:20)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:5:14)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+2020-10-29 15:49:50.843 - error: uncaughtException: Virtual path "dealer" conflicts with a real path in the schema
+Error: Virtual path "dealer" conflicts with a real path in the schema
+    at Schema.virtual (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:1817:11)
+    at aliasFields (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:172:7)
+    at Schema.add (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:527:3)
+    at new Schema (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:130:10)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\models\file.js:3:20)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:5:14)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+2020-10-29 15:49:53.289 - error: uncaughtException: Virtual path "contact" conflicts with a real path in the schema
+Error: Virtual path "contact" conflicts with a real path in the schema
+    at Schema.virtual (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:1817:11)
+    at aliasFields (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:172:7)
+    at Schema.add (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:527:3)
+    at new Schema (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:130:10)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\models\file.js:3:20)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:5:14)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+2020-10-29 15:49:55.923 - error: uncaughtException: Virtual path "observation" conflicts with a real path in the schema
+Error: Virtual path "observation" conflicts with a real path in the schema
+    at Schema.virtual (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:1817:11)
+    at aliasFields (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:172:7)
+    at Schema.add (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:527:3)
+    at new Schema (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:130:10)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\models\file.js:3:20)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:5:14)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+2020-10-29 15:49:59.684 - error: uncaughtException: Virtual path "observation" conflicts with a real path in the schema
+Error: Virtual path "observation" conflicts with a real path in the schema
+    at Schema.virtual (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:1817:11)
+    at aliasFields (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:172:7)
+    at Schema.add (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:527:3)
+    at new Schema (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\schema.js:130:10)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\models\file.js:3:20)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:5:14)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+2020-10-29 15:50:18.888 - error: uncaughtException: employeeSchema is not defined
+ReferenceError: employeeSchema is not defined
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\models\file.js:62:1)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:5:14)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+2020-10-29 15:50:54.926 - error: uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1301:14)
+    at listenInCluster (net.js:1349:12)
+    at Server.listen (net.js:1437:7)
+    at Function.listen (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\application.js:618:24)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:88:5)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-10-29 15:51:01.139 - error: uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1301:14)
+    at listenInCluster (net.js:1349:12)
+    at Server.listen (net.js:1437:7)
+    at Function.listen (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\application.js:618:24)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:88:5)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-10-29 16:26:35.987 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 - - - - ms
+
+2020-10-29 16:27:43.030 - error: uncaughtException: Unexpected token 'const'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:49
+	const file_record = new FileRecord(...req.body, { uid: uniqueFileId, createTimestamp: format('dd-MM-yyyy hh.mm.ss', new Date()) });
+	^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 16:28:36.806 - error: uncaughtException: Unexpected token ';'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:48
+	const {body = req.body;
+	                      ^
+
+SyntaxError: Unexpected token ';'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 16:30:16.342 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 500 640 - 27.764 ms
+
+2020-10-29 16:33:35.913 - error: uncaughtException: Unexpected identifier
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:48
+	const { name, amount, financialYear, dealer, contact, category } = Object.create req.body;
+	                                                                                 ^^^
+
+SyntaxError: Unexpected identifier
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 16:33:38.052 - error: uncaughtException: missing ) after argument list
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:48
+	const { name, amount, financialYear, dealer, contact, category } = Object.create(req.body;
+	                                                                                     ^^^^
+
+SyntaxError: missing ) after argument list
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 16:34:07.139 - error: uncaughtException: Unexpected token 'const'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:50
+	const file_record = new FileRecord({ name, amount, financialYear, dealer, contact, category }, { uid: uniqueFileId, createTimestamp: format('dd-MM-yyyy hh.mm.ss', new Date()) });
+	^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 16:34:10.579 - error: uncaughtException: Unexpected token 'const'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:50
+	const file_record = new FileRecord({ name, amount, financialYear, dealer, contact, category }, { uid: uniqueFileId, createTimestamp: format('dd-MM-yyyy hh.mm.ss', new Date()) });
+	^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 16:34:13.384 - error: uncaughtException: Unexpected token 'const'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:50
+	const file_record = new FileRecord({ name, amount, financialYear, dealer, contact, category }, { uid: uniqueFileId, createTimestamp: format('dd-MM-yyyy hh.mm.ss', new Date()) });
+	^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 16:34:20.469 - error: uncaughtException: Unexpected token 'const'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:50
+	const file_record = new FileRecord({ name, amount, financialYear, dealer, contact, category }, );
+	^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 16:34:37.332 - error: uncaughtException: Unexpected token '.'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:50
+	const file_record = new FileRecord(..bodyObj );
+	                                   ^
+
+SyntaxError: Unexpected token '.'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 16:34:42.312 - error: uncaughtException: Unexpected token '.'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:50
+	const file_record = new FileRecord(..bodyObj, ...additionalObj );
+	                                   ^
+
+SyntaxError: Unexpected token '.'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 16:36:54.015 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 - - - - ms
+
+2020-10-29 16:40:47.878 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 - - - - ms
+
+2020-10-29 16:42:35.212 - error: uncaughtException: Unexpected token ')'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:51
+	const file_record = new FileRecord({...bodyObj, ...additionalObj);
+	                                                                ^
+
+SyntaxError: Unexpected token ')'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 16:42:44.981 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 500 1111 - 75.549 ms
+
+2020-10-29 16:43:20.979 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 500 387 - 96.081 ms
+
+2020-10-29 16:44:15.117 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 500 242 - 43.743 ms
+
+2020-10-29 16:45:30.333 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 500 242 - 46.069 ms
+
+2020-10-29 16:46:00.515 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 500 387 - 6.919 ms
+
+2020-10-29 16:46:19.605 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 500 242 - 2.848 ms
+
+2020-10-29 16:46:43.555 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 500 242 - 33.415 ms
+
+2020-10-29 16:46:51.546 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 500 242 - 3.296 ms
+
+2020-10-29 16:48:32.515 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 500 387 - 53.277 ms
+
+2020-10-29 16:50:05.124 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 500 387 - 62.384 ms
+
+2020-10-29 16:50:17.366 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 500 387 - 5.723 ms
+
+2020-10-29 16:50:18.512 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 500 387 - 3.120 ms
+
+2020-10-29 16:51:56.866 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 500 387 - 12171.042 ms
+
+2020-10-29 16:53:08.851 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 500 387 - 51621.604 ms
+
+2020-10-29 16:54:32.914 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 200 75 - 65.302 ms
+
+2020-10-29 16:55:23.434 - info: ::1 - PUT /tracker/api/files/nVIzsWqQ HTTP/1.1 500 246 - 26.862 ms
+
+2020-10-29 16:56:01.679 - info: ::1 - PUT /tracker/api/files/nVIzsWqQ HTTP/1.1 500 246 - 44.351 ms
+
+2020-10-29 16:56:51.854 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 200 75 - 63.668 ms
+
+2020-10-29 16:57:02.692 - info: ::1 - PUT /tracker/api/files/j9Zn0tGV HTTP/1.1 200 43 - 15.648 ms
+
+2020-10-29 16:57:47.895 - error: File records not found
+2020-10-29 16:57:47.897 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 500 42 - 3.513 ms
+
+2020-10-29 16:58:07.007 - info: ::1 - GET /tracker/api/files HTTP/1.1 200 - - 1.299 ms
+
+2020-10-29 16:58:07.118 - error: uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\response.js:771:10)
+    at ServerResponse.json (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\response.js:264:10)
+    at ServerResponse.send (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\response.js:158:21)
+    at C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:36:20
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\model.js:4837:16
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\query.js:4391:12
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+2020-10-29 16:58:42.795 - error: File records not foundFile is not defined ReferenceError: File is not defined
+    at Function.fileSchema.statics.findByUniqueId (C:\Bhuwan\Learning\GIT\srmgmt\models\file_record.js:56:18)
+    at exports.getFileRecord (C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:11:40)
+    at Layer.handle [as handle_request] (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\index.js:281:22
+    at param (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\body-parser\lib\types\json.js:110:7)
+    at Layer.handle [as handle_request] (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\index.js:317:13)
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\index.js:335:12)
+2020-10-29 16:58:42.858 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 500 42 - 67.553 ms
+
+2020-10-29 16:59:28.858 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 200 1110 - 23.189 ms
+
+2020-10-29 17:01:13.478 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 200 259 - 22.497 ms
+
+2020-10-29 17:01:57.602 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 200 0 - 21.130 ms
+
+2020-10-29 17:02:00.618 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 200 0 - 7.046 ms
+
+2020-10-29 17:02:17.407 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 200 0 - 6.047 ms
+
+2020-10-29 17:02:34.017 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 200 1110 - 24.754 ms
+
+2020-10-29 17:03:16.781 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 200 0 - 19.388 ms
+
+2020-10-29 17:04:42.271 - error: File records not foundCannot read property 'status' of null TypeError: Cannot read property 'status' of null
+    at exports.getFileRecord (C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:13:50)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+2020-10-29 17:04:42.295 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 500 42 - 52.986 ms
+
+2020-10-29 17:05:07.652 - error: uncaughtException: Unexpected token '.'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:12
+		const file_status = await FileStatus.find({file_record._id);
+		                                                      ^
+
+SyntaxError: Unexpected token '.'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 17:05:12.583 - error: uncaughtException: Unexpected token '.'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:12
+		const file_status = await FileStatus.find({file_record._id});
+		                                                      ^
+
+SyntaxError: Unexpected token '.'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 17:05:39.797 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 200 306 - 32.009 ms
+
+2020-10-29 17:06:01.820 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 200 1423 - 25.492 ms
+
+2020-10-29 17:06:40.219 - error: uncaughtException: Unexpected identifier
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:14
+		var jsonObj = { ...file_record, ...file_status };
+		    ^^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 17:07:20.653 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 200 259 - 33.600 ms
+
+2020-10-29 17:07:46.662 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 200 259 - 26.862 ms
+
+2020-10-29 17:07:48.873 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 200 259 - 5.771 ms
+
+2020-10-29 17:08:10.017 - error: uncaughtException: Invalid or unexpected token
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:13
+		file_record['status = status_arr;
+		            ^^^^^^^^^^^^^^^^^^^^^
+
+SyntaxError: Invalid or unexpected token
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 17:08:18.533 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 200 259 - 29.085 ms
+
+2020-10-29 17:08:22.464 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 200 259 - 5.652 ms
+
+2020-10-29 17:08:49.478 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 200 306 - 20.734 ms
+
+2020-10-29 17:09:25.709 - info: ::1 - GET /tracker/api/files HTTP/1.1 200 - - 1.424 ms
+
+2020-10-29 17:09:25.767 - error: uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\response.js:771:10)
+    at ServerResponse.json (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\response.js:264:10)
+    at ServerResponse.send (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\response.js:158:21)
+    at C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:36:20
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\model.js:4837:16
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\query.js:4391:12
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+2020-10-29 17:11:54.498 - error: uncaughtException: Unexpected token ')'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:14
+		res.status(200).send({...file_record, ...{status: status_arr});
+		                                                             ^
+
+SyntaxError: Unexpected token ')'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 17:11:57.376 - error: uncaughtException: Unexpected token ')'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:14
+		res.status(200).send({ ...file_record, ...{ status: status_arr });
+		                                                                ^
+
+SyntaxError: Unexpected token ')'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 17:12:23.650 - info: ::1 - GET /tracker/api/files/j9Zn0tGV HTTP/1.1 200 1426 - 38.255 ms
+
+2020-10-29 17:14:57.139 - error: uncaughtException: Schema is not defined
+ReferenceError: Schema is not defined
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\models\file_record.js:53:15)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:5:20)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+2020-10-29 17:32:44.557 - error: uncaughtException: Schema is not defined
+ReferenceError: Schema is not defined
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\models\file_record.js:53:15)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:5:20)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+2020-10-29 17:33:06.329 - error: uncaughtException: Schema is not defined
+ReferenceError: Schema is not defined
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\models\file_record.js:53:15)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:5:20)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+2020-10-29 17:33:10.636 - error: uncaughtException: Schema is not defined
+ReferenceError: Schema is not defined
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\models\file_record.js:53:15)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:5:20)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+2020-10-29 17:34:00.666 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 200 75 - 123.555 ms
+
+2020-10-29 17:35:31.438 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 200 75 - 78.427 ms
+
+2020-10-29 17:38:10.524 - error: uncaughtException: missing ) after argument list
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:119
+}
+^
+
+SyntaxError: missing ) after argument list
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 17:39:53.387 - error: uncaughtException: Unexpected identifier
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:96
+			amount: req.body.amount, observation: req.body.observation, const filter = { uid: inputfileId };
+			                                                                  ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 17:39:54.672 - error: uncaughtException: Unexpected identifier
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:96
+			amount: req.body.amount, observation: req.body.observation, const filter = { uid: inputfileId };
+			                                                                  ^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 17:40:03.991 - error: uncaughtException: Unexpected token '{'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:95
+		const update = { amount: req.body.amount, observation: req.body.observation, {$push: {reviews: dbReview._id}} };
+		                                                                             ^
+
+SyntaxError: Unexpected token '{'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 17:40:16.878 - error: uncaughtException: missing ) after argument list
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:95
+		const update = { amount: req.body.amount, observation: req.body.observation,$push: {reviews: dbReview._id}} };
+		                                                                                                            ^
+
+SyntaxError: missing ) after argument list
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 17:41:58.754 - info: ::1 - PUT /tracker/api/files/8sUeimcm HTTP/1.1 200 260 - 69.596 ms
+
+2020-10-29 17:43:55.051 - info: ::1 - GET /tracker/api/files/8sUeimcm HTTP/1.1 200 1218 - 17.093 ms
+
+2020-10-29 17:44:31.288 - info: ::1 - PUT /tracker/api/files/8sUeimcm HTTP/1.1 200 325 - 44.707 ms
+
+2020-10-29 17:46:16.886 - info: ::1 - PUT /tracker/api/files/8sUeimcm HTTP/1.1 200 - - 55.466 ms
+
+2020-10-29 17:48:55.610 - info: ::1 - PUT /tracker/api/files/8sUeimcm HTTP/1.1 200 404 - 55.954 ms
+
+2020-10-29 17:50:01.064 - info: ::1 - POST /tracker/api/files/ HTTP/1.1 200 264 - 58.936 ms
+
+2020-10-29 17:56:35.527 - info: ::1 - GET /tracker/api/files/8sUeimcm HTTP/1.1 200 - - 4.138 ms
+
+2020-10-29 17:57:29.667 - info: ::1 - GET /tracker/api/files/vnW6m38D HTTP/1.1 200 345 - 28.615 ms
+
+2020-10-29 17:57:58.209 - info: ::1 - GET /tracker/api/files/8sUeimcm HTTP/1.1 200 837 - 6.679 ms
+
+2020-10-29 17:59:21.633 - info: ::1 - GET /tracker/api/files HTTP/1.1 200 - - 1.169 ms
+
+2020-10-29 17:59:21.754 - error: uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\response.js:771:10)
+    at ServerResponse.json (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\response.js:264:10)
+    at ServerResponse.send (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\response.js:158:21)
+    at C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:37:20
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\model.js:4837:16
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\query.js:4391:12
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+2020-10-29 18:02:22.636 - info: ::1 - GET /tracker/api/files HTTP/1.1 200 - - 5.840 ms
+
+2020-10-29 18:02:40.023 - info: ::1 - GET /tracker/api/files HTTP/1.1 200 1419 - 27.449 ms
+
+2020-10-29 18:03:13.404 - error: uncaughtException: Missing catch or finally after try
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController.js:50
+};
+^
+
+SyntaxError: Missing catch or finally after try
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:1:24)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:17:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-10-29 18:03:29.791 - info: ::1 - GET /tracker/api/files HTTP/1.1 200 1419 - 27.081 ms
+
+2020-10-29 18:11:02.405 - info: ::1 - GET /tracker/api/files HTTP/1.1 200 1419 - 33.058 ms
+
+2020-10-29 18:51:47.862 - info: ::1 - PUT /tracker/api/files/8728971984/action/accept HTTP/1.1 200 0 - 54.380 ms
+
+2020-10-29 18:52:25.324 - info: ::1 - GET /tracker/api/files/8sUeimcm HTTP/1.1 200 837 - 35.366 ms
+
+2020-10-29 18:52:39.403 - info: ::1 - PUT /tracker/api/files/8sUeimcm/action/accept HTTP/1.1 200 431 - 39.204 ms
+
+2020-10-29 18:52:46.481 - info: ::1 - GET /tracker/api/files/8sUeimcm HTTP/1.1 200 959 - 8.225 ms
+
+2020-10-29 18:53:08.437 - info: ::1 - PUT /tracker/api/files/8sUeimcm/action/reject HTTP/1.1 200 458 - 10.438 ms
+
+2020-10-29 18:53:10.593 - info: ::1 - GET /tracker/api/files/8sUeimcm HTTP/1.1 200 1074 - 9.551 ms
+
+2020-10-29 18:53:21.683 - info: ::1 - PUT /tracker/api/files/8sUeimcm/action/approved HTTP/1.1 200 485 - 4.455 ms
+
+2020-10-29 18:53:24.801 - info: ::1 - GET /tracker/api/files/8sUeimcm HTTP/1.1 200 1179 - 8.434 ms
+
+2020-10-29 18:54:21.959 - info: ::1 - GET /tracker/api/files/8sUeimcm HTTP/1.1 200 1179 - 26.209 ms
+

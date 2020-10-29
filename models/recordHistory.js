@@ -6,7 +6,7 @@ const recordSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    tokenNumber: {        
+    tokenNumber: {
         type: String,
         unique: true,
         required: true,
@@ -35,7 +35,7 @@ recordSchema.statics.findByEmployeeId = async (empId) => {
 
     if (!records) {
         throw new Error('Invalid employee Id')
-    }    
+    }
 
     return records;
 }

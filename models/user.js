@@ -3,14 +3,14 @@ const validator = require('validator')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const config = require('../config/config.js')
- 
-const userSchema = new mongoose.Schema({       
+
+const userSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
         trim: true
     },
-    email: {       
+    email: {
         type: String,
         trim: true,
         unique: true,
@@ -22,17 +22,17 @@ const userSchema = new mongoose.Schema({
             }
         }
     },
-    password: {       
+    password: {
         type: String,
         maxlength: 50,
         minlength: 7,
         trim: true
     },
-    createdTimestamp: {       
+    createdTimestamp: {
         type: String,
         maxlength: 50
     },
-    lastlogin: {       
+    lastlogin: {
         type: String,
         maxlength: 50
     },
@@ -42,8 +42,8 @@ const userSchema = new mongoose.Schema({
             required: true
         }
     }],
-    roles: [{       
-        type: mongoose.Schema.Types.ObjectId, ref : 'Role'
+    roles: [{
+        type: mongoose.Schema.Types.ObjectId, ref: 'role'
     }]
 }, { collection: 'user' });
 
@@ -66,7 +66,7 @@ userSchema.statics.findByCredentials = async (email, password) => {
 
     const isMatch = await bcrypt.compare(password, user.password)
 
-    if (!isMatch) { 
+    if (!isMatch) {
         throw new Error('Unable to login')
     }
 
