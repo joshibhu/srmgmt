@@ -161,6 +161,26 @@ input[class="form-input"] {
 
 }
 
+/* inputs form  */
+input[class="form-select"] {
+    width: 240px;
+    height: 50px;
+
+    margin-top: 2%;
+    padding: 15px;
+
+    font-size: 16px;
+    font-family: 'Abel', sans-serif;
+    color: #5E6472;
+
+    outline: none;
+    border: none;
+
+    border-radius: 0px 5px 5px 0px;
+    transition: 0.2s linear;
+
+}
+
 input[id="txt-input"] {
     width: 250px;
 }
@@ -507,7 +527,7 @@ label {
     z-index: 1000;
     top: 0px;
     left: 0px;
-    opacity: .5; /* in FireFox */ 
+    opacity: .5; /* in FireFox */
     filter: alpha(opacity=50); /* in IE */
 }
 

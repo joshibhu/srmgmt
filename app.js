@@ -9,6 +9,9 @@ const methodOverride = require('method-override');
 var morgan = require('morgan');
 var logger = require('./config/winston');
 
+
+
+
 // var serviceRecordController = require('./controllers/serviceRecordController');
 // var empController = require('./controllers/empController');
 
@@ -23,9 +26,12 @@ app.use(morgan('short', { stream: logger.stream }));
 app.use('/assets', express.static(__dirname + '/public'));
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
-app.use(methodOverride('_method'));
+//app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(methodOverride("_method", {
+	methods: ["POST", "GET"]
+}));
 
 var logDirectory = path.join(__dirname, "logs");
 // ensure log directory exists
@@ -78,7 +84,7 @@ app.use(function (err, req, res, next) {
 	res.locals.error = req.app.get('env') === 'development' ? err : {};
 
 	// added this line to include winston logging
-	winston.error(`${err.status || 500} - ${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`);
+	logger.error(`${err.status || 500} - ${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`);
 
 	// render the error page
 	res.status(err.status || 500);

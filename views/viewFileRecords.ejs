@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>View File Records</title>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/css/service.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/fileRecord.js"></script>
+</head>
+
+<body>
+    <%- include header.ejs %>
+    <div id="message"><i class="fa fa-check" aria-hidden="true"></i></div>
+    <!--<form  method="POST">-->
+    <div class="emptable">
+        <header class="table-header">
+            <h2>Files Records</h2>
+        </header>
+
+        <div class="search-container">
+            <input onkeyup="searchFunction()" type="text" id="search" placeholder="Search.." name="search">
+        </div>
+        <table id="employees">
+            <thead>
+                <tr>
+                    <th>File ID</th>
+                    <th>File Name</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Create Time</th>
+                    <th>Last Update Time</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%table.forEach(function(entry) {%>
+                <tr>
+                    <td><%=entry.uid%></td>
+                    <td><%=entry.name%></td>
+                    <td><%=entry.amount%></td>
+                    <td><%=entry.category%></td>
+                    <td><%=entry.createTimestamp%></td>
+                    <td><%=entry.createTimestamp%></td>
+                    <td>
+                        <a href="/tracker/update/<%=entry.uid%>" class="list-group-item text-dark">Edit</a>
+                        <!-- <button onclick="updateRecord('<%=entry.uid%>')" class="submitbtn">Edit</button> -->
+                        <button onclick="deleteFile('<%=entry.uid%>')" class="submitbtn">Delete</button>
+                        <button onclick="changeStatus('<%=entry.uid%>','accept')" class="submitbtn">Accept</button>
+                    </td>
+                </tr>
+                <%});%>
+            </tbody>
+        </table>
+        <div id="pagination"></div>
+    </div>
+    <!--</form>-->
+
+
+</body>
+
+
+</html>
