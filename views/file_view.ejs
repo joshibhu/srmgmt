@@ -284,7 +284,7 @@
                     url: '/tracker/api/files/' + fileId,
                     complete: function (res) {
                         let status_arr = res.responseJSON;
-                        let html = '<table class="table table-striped" id="mytable"><thead><tr><th>From (Status)</th><th>Changed To (Status)</th><th>Date</th></tr></thead><tbody>';
+                        let html = '<table class="table table-sm w-auto small" id="mytable"><thead><tr><th>From (Status)</th><th>Changed To (Status)</th><th>Date</th></tr></thead><tbody>';
                         status_arr.forEach((item, i) => {
                             if (i !== 0) {
                                 html += '<tr><td>' + status_arr[i - 1].status + ' </td><td>' + item.status + '</td><td>' + item.createdOn + '</td></tr>'
