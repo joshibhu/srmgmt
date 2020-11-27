@@ -13,9 +13,8 @@ module.exports = function(app) {
 	app.get('/api/servicerecords/viewAll',async function(req, res) {
 		// get that data from database
 		try {
-			const employees = await Employee.find({});		
+			const employees = await Employee.find({});
 			var jsonObj = JSON.parse(JSON.stringify(employees));	
-			console.log(jsonObj);
 			res.status(200).send(jsonObj);
 		} catch (err) {
 			logger.error("error: ", err);
@@ -23,7 +22,7 @@ module.exports = function(app) {
 		}
 		res.end();
 	});
-	
+
 
 	app.get('/api/servicerecords/download/:empId', function(req, res) {
 		let empId =  req.params.empId;
@@ -36,7 +35,7 @@ module.exports = function(app) {
 			fs.readdir(sourcefilespath, function (err, files) {
 				//handling error
 				if (err) {
-					logger.error('Error while reading source file dir. Hence rejecting.');					
+					logger.error('Error while reading source file dir. Hence rejecting.');
 				}else{
 					//listing all files using forEach
 					let sourcefilearray = [];
@@ -46,19 +45,19 @@ module.exports = function(app) {
 						res.set('Content-Type', 'text/pdf');
 						fs.createReadStream(path.join(sourcefilespath,files[0])).pipe(res);
 					}else{
-						files.forEach(function (file) {						
-							sourcefilearray.push(path.join(sourcefilespath,file)); 
+						files.forEach(function (file) {
+							sourcefilearray.push(path.join(sourcefilespath,file));
 						});
-						merge(sourcefilearray,destinationfilepath,function(err){						
+						merge(sourcefilearray,destinationfilepath,function(err){
 							res.setHeader('Content-disposition', 'attachment; filename='+empId+'_Merged_SR.pdf');
 							res.set('Content-Type', 'text/pdf');
 							logger.info('All records merger into PDF is successfull.');
 							fs.createReadStream(destinationfilepath).pipe(res);
 							logger.info('Removing merged file !!');
-							fs.unlinkSync(destinationfilepath);                    
+							fs.unlinkSync(destinationfilepath);
 						});
-					}					
-				}			
+					}
+				}
 			});
 		}else{
 			logger.error('Employee id is missing!');
@@ -72,7 +71,7 @@ module.exports = function(app) {
 		logger.info('Fething record history of empID ::%s',empId);
 		try {
 			const records = await RecordHistory.findByEmployeeId(empId);
-			var jsonObj = JSON.parse(JSON.stringify(records));	
+			var jsonObj = JSON.parse(JSON.stringify(records));
 			console.log('######'+ jsonObj);
 			res.status(200).send(jsonObj);
 		} catch (err) {

@@ -4,6 +4,8 @@ const format = require('date-format');
 var logger = require('../config/winston');
 const FileRecord = require('../models/file_record');
 const FileStatus = require('../models/file_status');
+const Designation = require('../models/designation_mapping');
+const User = require('../models/user');
 
 // fetch employee detail based on employee id
 exports.getFileRecord = async function (req, res) {
@@ -47,33 +49,53 @@ exports.getFileRecordForUpdate = async function (req, res) {
 
 // fetch employee detail based on employee id
 exports.getAllFiles = async function (req, res) {
-	FileRecord.find().populate('status')
-		.then(function (db_records) {
-			//iterate over db records and find and add current status and next status value
-			db_records.forEach((item) => {
-				let currStatus = item.status[item.status.length - 1].status;
-				let nextActions = findNextActions(currStatus);
-				item.currStatus = currStatus;
-				item.nextActions = nextActions;
-			})
-			// If we were able to successfully find an Product with the given id, send it back to the client
-			//res.status(200).send(db_records);
-			let currentYear = new Date().getFullYear();
-			res.status(200).render('file_view', { table: db_records, categories: config.file_categories, years: [currentYear, currentYear - 1, currentYear - 2], status: Object.keys(config.file_status) })
-		})
-		.catch(function (err) {
-			// If an error occurred, send it to the client
+	let query = {};
+	User.findById(req.userId).populate('roles').exec(async (err, db_user) => {
+		if (err) {
 			res.status(500).render('file_view', { message: "Error while fetching file record" });
-		});
+			return;
+		}
+		//admin can see all files
+		//fx user can only see those files having prepared by reportee users
+		//user can only see those files created by him
+		if (db_user.roles.find(elem => elem.name === 'admin')) {
+			query = {}
+		} else if (db_user.roles.find(elem => elem.name === 'fx')) {
+			let designation_ids = await Designation.findUserDesignationIds(db_user.designation);
+			//find users having these designations
+			let user_ids = await User.findByDesingations(designation_ids);
+			query = { createdBy: { $in: user_ids } };
+		} else {
+			query = { createdBy: db_user._id };
+		}
+		FileRecord.find(query).populate('status')
+			.then(function (db_records) {
+				//iterate over db records and find and add current status and next status value
+				db_records.forEach((item) => {
+					let currStatus = item.status[item.status.length - 1].status;
+					let nextActions = findNextActions(currStatus, db_user);
+					item.currStatus = currStatus;
+					item.nextActions = nextActions;
+				})
+				// If we were able to successfully find an Product with the given id, send it back to the client
+				//res.status(200).send(db_records);
+				let currentYear = new Date().getFullYear();
+				res.status(200).render('file_view', { table: db_records, categories: config.file_categories, years: [currentYear, currentYear - 1, currentYear - 2], status: Object.keys(config.file_status), page: 'file_mgmt', username: req.username, roles: req.roles })
+			})
+			.catch(function (err) {
+				// If an error occurred, send it to the client
+				res.status(500).render('file_view', { message: "Error while fetching file record" });
+			});
+	});
 };
 
-function findNextActions(currStatus) {
-	return config.action_status_map_arr.filter((item) => (currStatus === item.curr_status)).map(item => item.action);
+function findNextActions(currStatus, db_user) {
+	let user_roles = db_user.roles.map(elem => elem.name);
+	return config.action_status_map_arr.filter((item) => (currStatus === item.curr_status && user_roles.includes(item.scope))).map(item => item.action);
 }
 
 // fetch employee detail based on employee id
 exports.deleteFileRecord = async function (req, res) {
-	console.log('########################', req.body.uid)
 	FileRecord.findOneAndDelete({ uid: req.body.uid }, (err, db_record) => {
 		if (err) {
 			res.status(500).send({ message: err });
@@ -98,13 +120,14 @@ exports.deleteFileRecord = async function (req, res) {
 exports.createFileRecord = async function (req, res) {
 	// save status first and then file record
 	const fileStatus = new FileStatus({ status: config.file_status.FILE_RECORD_SAVED, createdOn: format('dd-MM-yyyy hh.mm.ss', new Date()) });
-	fileStatus.save((err, db_status) => {
+	fileStatus.save(async (err, db_status) => {
 		if (err) {
 			res.status(500).render('addRecord', { message: err });
 			return;
 		}
 		const uniqueFileId = uid(8);
-		let additionalObj = { uid: uniqueFileId, createTimestamp: format('dd-MM-yyyy hh.mm.ss', new Date()), status: db_status._id };
+		let db_user = await User.findById(req.userId);
+		let additionalObj = { uid: uniqueFileId, createdBy: db_user._id, createTimestamp: format('dd-MM-yyyy hh.mm.ss', new Date()), status: db_status._id };
 		const file_record = new FileRecord({ ...req.body, ...additionalObj });
 		file_record.save((err, db_record) => {
 			if (err) {
@@ -121,8 +144,9 @@ exports.updateFileRecord = async function (req, res) {
 	let { uid, ...body } = req.body;
 	FileRecord.findOneAndUpdate({ uid: uid }, body, { new: true }, (err, db_record) => {
 		if (err) {
-			res.status(500).redirect('/');
-			return;
+			req.flash('error', 'Error while updating record !');
+		} else {
+			req.flash('success', 'The record is updated successfully !');
 		}
 		res.redirect('/tracker');
 	});

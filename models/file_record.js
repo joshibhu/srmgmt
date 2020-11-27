@@ -41,13 +41,15 @@ const fileSchema = new mongoose.Schema({
         type: String,
     },
     createdBy: {
-        type: String
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'user'
     },
     updateTimestamp: {
         type: String,
     },
     updatedBy: {
-        type: String
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'user'
     },
     status: [{
         type: mongoose.Schema.Types.ObjectId,

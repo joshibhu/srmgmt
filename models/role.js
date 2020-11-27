@@ -1,30 +1,12 @@
 const mongoose = require('mongoose')
- 
+// role - admin, fx, user
+
 const roleSchema = new mongoose.Schema({
-    title: {
-        alias: 'title',
+    name: {
         type: String,
         required: true,
         trim: true,
         maxlength: 15,
-    },
-    description: {
-        alias: 'description',
-        type: String,
-        unique: true,
-        required: true,
-        trim: true,
-        maxlength: 150
-    },
-    createdTimestamp: {       
-        type: String,
-        trim: true,
-        maxlength: 50
-    },
-    updatedTimestamp: {       
-        type: String,
-        trim: true,
-        maxlength: 50
     }
 }, { collection: 'role' });
 

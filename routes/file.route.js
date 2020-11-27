@@ -1,5 +1,6 @@
 const fileController = require("../controllers/fileController");
 const fileController_bs = require("../controllers/fileController_bs");
+const auth = require("../middleware/auth");
 
 module.exports = function (app) {
 
@@ -7,11 +8,11 @@ module.exports = function (app) {
     //     res.render('file_view', { message: {} });
     // });
 
-    app.get('/tracker', fileController_bs.getAllFiles);
+    app.get('/tracker', auth.verifyToken, fileController_bs.getAllFiles);
 
     app.put('/tracker/files/update', fileController_bs.updateFileRecord);
 
-    app.post('/tracker/files/save', fileController_bs.createFileRecord);
+    app.post('/tracker/files/save', auth.verifyToken, auth.isUser, fileController_bs.createFileRecord);
 
     app.delete('/tracker/files/delete', fileController_bs.deleteFileRecord);
 

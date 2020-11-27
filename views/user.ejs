@@ -1,0 +1,188 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>File Management</title>
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+
+    <script src="/assets/js/jquery-3.3.1.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+</head>
+
+<body>
+    <div class="container">
+        <%- include navigation.ejs %>
+        <table class="table table-striped table-sm" id="mytable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Designation</th>
+                    <th>Report To</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%table.forEach(function(entry) {%>
+                <tr>
+                    <td><%=entry.name%></td>
+                    <td><%=entry.email%></td>
+                    <td><%=(!entry.designation)?'':entry.designation.designation%></td>
+                    <td><%=(!entry.designation)?'':entry.designation.mappedTo%></td>
+                    <!-- <td><%=(entry.roles.length === 0)?'':entry.roles[0].name%></td> -->
+                    <td>
+                        <% if(entry.roles.length === 0) {%>
+                        <a href="javascript:void(0);" class="btn btn-sm btn-primary approve"
+                            data-email="<%=entry.email%>">Approve</a>
+                        <% }else{%>
+                        <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-email="<%=entry.email%>"
+                            data-desgn="<%=entry.designation._id%>" data-role="<%=entry.roles[0].name%>">Edit</a>
+                        <% }%>
+                        <a href="javascript:void(0);" class="btn btn-sm btn-danger delete"
+                            data-email="<%=entry.email%>">Delete</a>
+                    </td>
+                </tr>
+                <%});%>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- File Record Info-->
+    <form action="" method="post">
+        <div class="modal fade" id="InfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">File Status History</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="uid" class="uid">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Approve and assign designation role to user-->
+    <form action="/user?_method=put" method="post">
+        <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Update User</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="designation">Designation</label>
+                            <select class="form-control designation" id="designation" name="designation"
+                                aria-placeholder="Designation" required>
+                                <option value="" selected disabled>Select Designation</option>
+                                <%
+                                for ( var i = 0; i < designation_map.length; i++ )
+                                {%>
+                                <option value="<%=designation_map[i]._id %>">
+                                    <%=designation_map[i].designation%></option>
+                                <%}%>
+                            </select>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="role">Role</label>
+                            <select class="form-control role" id="role" name="role"
+                                aria-placeholder="role" required>
+                                <option value="" selected disabled>Select Role</option>
+                                <option value="user">ROLE_USER</option>
+                                <option value="fx">ROLE_FX</option>
+                                <option value="admin">ROLE_ADMIN</option>
+                            </select>
+                        </div> -->
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="email" class="email">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Delete User-->
+    <form id="add-row-form" action="/user?_method=delete" method="post">
+        <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="myModalLabel">Delete User</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <strong>Are You Sure To Delete This Data?</strong>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="email2" class="form-control email2" required>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            $('#mytable').DataTable({
+                "order": [[2, 'desc']],
+            });
+            $('.dataTables_length').addClass('bs-select');
+            //showing data to modal for approve record
+            $('#mytable').on('click', '.approve', function () {
+                var email = $(this).data('email');
+                $('#EditModal').modal('show');
+                $('.email').val(email);
+            });
+            //showing data to modal for edit record
+            $('#mytable').on('click', '.edit', function () {
+                var email = $(this).data('email');
+                var desgn_id = $(this).data('desgn');
+                var role = $(this).data('role');
+                console.log(desgn_id, role, '#############');
+                $('#EditModal').modal('show');
+                $('#EditModal .designation').val(desgn_id);
+                $('#EditModal .role').val(role);
+                $('.email').val(email);
+            });
+            //showing modal for delete record
+            $('#mytable').on('click', '.delete', function () {
+                var email = $(this).data('email');
+                $('#DeleteModal').modal('show');
+                $('.email2').val(email);
+            });
+        });
+    </script>
+</body>
+
+</html>

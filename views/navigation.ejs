@@ -1,0 +1,42 @@
+<!-- Modal for error and success message -->
+<% if (typeof success !== 'undefined' && success.length > 0) { %>
+<div class="alert alert-success alert-dismissible fade-in" role="alert">
+    <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">×</span>
+    </button>
+    <p><%=success%></p>
+</div>
+<%}else { %>
+<% } %>
+<% if (typeof error !== 'undefined' && error.length > 0) { %>
+<div class="alert alert-danger alert-dismissible fade-in" role="alert">
+    <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">×</span>
+    </button>
+    <p><%=error%></p>
+</div>
+<%}else { %>
+<% } %>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Tracker System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li <%if (page === 'file_mgmt') { %> class=" nav-item active" <% } %>>
+                <a class="nav-link" href="/tracker">File Management</a>
+            </li>
+            <% if(roles.includes('admin')) {%>
+            <li <%if (page === 'user_mgmt') { %> class=" nav-item active" <% } %>>
+                <a class="nav-link" href="/user">User Management</a>
+            </li>
+            <%}%>
+        </ul>
+    </div>
+    <div><span class="badge badge-pill badge-light">Hi, <%=username%></span>
+    </div>
+    <div style="align-text:center;margin-bottom:10px;margin-top:15px"> <a class="nav-link" href='/signout'>signout</a>
+    </div>
+</nav>
