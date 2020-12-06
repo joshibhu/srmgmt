@@ -1,5 +1,4 @@
 const config = require('../config/config.js');
-const uid = require('rand-token').uid;
 const format = require('date-format');
 var logger = require('../config/winston');
 const FileRecord = require('../models/file_record');
@@ -196,14 +195,14 @@ exports.approveFileRecordStatus = async function (req, res) {
 		}
 		const filter = { uid: inputfileId };
 		const update = { $push: { status: db_status._id }, vettedAmount: req.body.vettedAmount };
-	FileRecord.findOneAndUpdate(filter, update, { new: true }, (err, db_record) => {
-		if (err) {
-			res.status(500).send({ message: err });
-			return;
-		}
-		res.redirect('/tracker');
+		FileRecord.findOneAndUpdate(filter, update, { new: true }, (err, db_record) => {
+			if (err) {
+				res.status(500).send({ message: err });
+				return;
+			}
+			res.redirect('/tracker');
+		});
 	});
-});
 }
 
 function getFinancialYears() {

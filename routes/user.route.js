@@ -1,4 +1,4 @@
-const userController = require("../controllers/userController_bs");
+const userController = require("../controllers/user.controller");
 const auth = require("../middleware/auth");
 
 module.exports = function (app) {

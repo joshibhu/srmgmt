@@ -9,7 +9,7 @@ const file_status = {
 }
 
 module.exports = {
-    upload_dir: 'C:/Bhuwan/Learning/GIT/srmgmt/tmp_uploads',
+    mongo_db_uri: 'mongodb://127.0.0.1:27017/srmgmt',
     authKey: 'JWTKeyForSecurity',
     file_status,
     action_status_map_arr: [

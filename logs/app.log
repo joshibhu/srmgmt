@@ -21609,3 +21609,43 @@ Cannot read property '_id' of undefined - /user - GET - ::1
 
 2020-12-06 22:40:52.267 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 200 282115 - 9.785 ms
 
+2020-12-06 23:11:21.806 - info: ::1 - GET /signout HTTP/1.1 304 - - 31.527 ms
+
+2020-12-06 23:11:22.225 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 3.489 ms
+
+2020-12-06 23:11:22.436 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 3.807 ms
+
+2020-12-06 23:11:35.465 - info: ::1 - POST /signin HTTP/1.1 200 16 - 345.266 ms
+
+2020-12-06 23:11:35.714 - info: ::1 - GET /tracker HTTP/1.1 200 31180 - 121.568 ms
+
+2020-12-06 23:11:35.849 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 4.183 ms
+
+2020-12-06 23:11:35.862 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 4.584 ms
+
+2020-12-06 23:11:35.871 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 11.176 ms
+
+2020-12-06 23:11:35.881 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 1.215 ms
+
+2020-12-06 23:11:36.192 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 2.505 ms
+
+2020-12-06 23:11:43.614 - info: ::1 - DELETE /tracker/files/delete?_method=delete HTTP/1.1 302 60 - 56.587 ms
+
+2020-12-06 23:11:43.744 - info: ::1 - GET /tracker HTTP/1.1 200 30097 - 111.302 ms
+
+2020-12-06 23:11:43.892 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 3.619 ms
+
+2020-12-06 23:11:43.911 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 8.575 ms
+
+2020-12-06 23:11:43.958 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 48.010 ms
+
+2020-12-06 23:11:43.981 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 26.160 ms
+
+2020-12-06 23:11:48.359 - info: ::1 - GET /user HTTP/1.1 200 16734 - 102.918 ms
+
+2020-12-06 23:11:48.457 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 3.184 ms
+
+2020-12-06 23:11:48.460 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 4.625 ms
+
+2020-12-06 23:11:48.483 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 0.763 ms
+

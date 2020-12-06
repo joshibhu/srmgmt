@@ -3,7 +3,6 @@ flash = require('connect-flash'),
 	require('./db/mongoose')
 var bodyParser = require('body-parser');
 var app = express();
-var mysql = require('mysql');
 var path = require('path');
 var fs = require('fs');
 const methodOverride = require('method-override');
@@ -12,13 +11,6 @@ var logger = require('./config/winston');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
 
-
-
-// var serviceRecordController = require('./controllers/serviceRecordController');
-// var empController = require('./controllers/empController');
-
-var serviceRecordController = require('./controllers/serviceRecController');
-var empController = require('./controllers/employeeController');
 var fileRoute = require('./routes/file.route');
 var userRoute = require('./routes/user.route');
 var authRoute = require('./routes/auth.route');
@@ -52,22 +44,6 @@ app.use(function (req, res, next) {
 var logDirectory = path.join(__dirname, "logs");
 // ensure log directory exists
 fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory);
-
-const db = mysql.createConnection({
-	host: 'localhost',
-	user: 'root',
-	password: "1qaz!QAZ",
-	database: "srmgmt"
-});
-
-db.connect((err) => {
-	if (err) {
-		throw err;
-	}
-	console.log('Connected to MYSQL database');
-});
-
-global.db = db;
 
 //error handling for invalid url
 /**

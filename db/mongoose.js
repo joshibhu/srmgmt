@@ -6,7 +6,7 @@ const config = require('../config/config');
 
 class db {
     default_args = {
-        MONGODB_URI: 'mongodb://127.0.0.1:27017/srmgmt_new'
+        MONGODB_URI: config.mongo_db_uri
     }
 
     constructor() {
