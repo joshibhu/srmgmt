@@ -47,7 +47,7 @@ exports.getAllUsers = async function (req, res) {
 		.then(function (db_records) {
 			//filter out super admin
 			db_records = db_records.filter((obj) => {
-				return !obj.roles.includes(obj.roles.find(role => role.name === 'super_admin'));
+				return !obj.roles.includes(obj.roles.find(role => role.name === 'admin'));
 			});
 			Designation.find().then(function (db_desn_records) {
 				res.status(200).render('user', { table: db_records, designation_map: db_desn_records, page: 'user_mgmt', username: req.username, roles: req.roles })

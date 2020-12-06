@@ -13,8 +13,8 @@ function printTableRecords() {
                 var cell3 = row.insertCell(2);
                 cell1.innerHTML = JsonRes[i].employeeId;
                 cell2.innerHTML = JsonRes[i].employeeName;
-                cell3.innerHTML = "<button onclick=downloadFile(" + "'" + JsonRes[i].employeeId + "'" + ")  id=download" + JsonRes[i].employeeId + " class=submitbtn>Download</button>" 
-               +"&nbsp;&nbsp;" + "<button onclick=" + "getRecordHistory(" + "'" + JsonRes[i].employeeId + "'" + "," + "'" +encodeURIComponent(JsonRes[i].employeeName) + "'" + ") class=" + "submitbtn" + ">History</button>";
+                cell3.innerHTML = "<button onclick=downloadFile(" + "'" + JsonRes[i].employeeId + "'" + ")  id=download" + JsonRes[i].employeeId + " class=submitbtn>Download</button>"
+                    + "&nbsp;&nbsp;" + "<button onclick=" + "getRecordHistory(" + "'" + JsonRes[i].employeeId + "'" + "," + "'" + encodeURIComponent(JsonRes[i].employeeName) + "'" + ") class=" + "submitbtn" + ">History</button>";
             }
             pagination();
 
@@ -22,31 +22,30 @@ function printTableRecords() {
     });
 }
 
-//Redirect to serviceRecordHistory.html 
-function getRecordHistory(empId,empName) {
-    window.location.href = "/serviceRecordHistory?empId=" + empId + "?empName=" +empName;
+//Redirect to serviceRecordHistory.html
+function getRecordHistory(empId, empName) {
+    window.location.href = "/serviceRecordHistory?empId=" + empId + "?empName=" + empName;
 }
 
 function downloadFile(empId) {
     disableScreen();
     $.ajax({
-        url: '/api/servicerecords/download/'+empId,
+        url: '/api/servicerecords/download/' + empId,
         method: 'GET',
         xhrFields: {
             responseType: 'blob'
         },
         success: function (data) {
-            console.log(data);
             var a = document.createElement('a');
             var url = window.URL.createObjectURL(data);
             a.href = url;
-            a.download = empId+'_SR.pdf';
+            a.download = empId + '_SR.pdf';
             document.body.append(a);
             a.click();
             a.remove();
             window.URL.revokeObjectURL(url);
-            element = document.querySelector('.disable_overlay'); 
-            element.style.visibility = 'hidden'; 
+            element = document.querySelector('.disable_overlay');
+            element.style.visibility = 'hidden';
             element.parentNode.removeChild(element)
         }
     });
@@ -62,7 +61,7 @@ function downloadFileFunction(empId) {
         url: '/api/servicerecords/download/' + empId,
         complete: function (r) {
             console.log(r.responseText);
-           // var path = r.responseText.split(":");
+            // var path = r.responseText.split(":");
             window.open(r);
         }
     });
@@ -88,8 +87,7 @@ function searchFunction() {
             tr[i].style.display = "none";
         }
     }
-    if(filter.length==0)
-    {
+    if (filter.length == 0) {
         var req_num_row = 5;
         var $tr = jQuery('tbody tr');
         var total_num_row = $tr.length;
@@ -107,10 +105,10 @@ function searchFunction() {
             if (i + 1 <= req_num_row) {
                 $tr.eq(i).show();
             }
-    
+
         });
         document.getElementById("pagination").style.display = "";
-    } 
+    }
     else
         document.getElementById("pagination").style.display = "none";
 

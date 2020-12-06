@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 
 const designationSchema = new mongoose.Schema({
     designation: String,
-    mappedTo: String
+    mappedTo: String,
+    fileCount: {
+        type: Number,
+        default: 0
+    } // specifically for FX user to maintain file id
 }, { collection: 'designation_mapping' });
 
 designationSchema.statics.findUserDesignationIds = async (fx_desgn_id) => {

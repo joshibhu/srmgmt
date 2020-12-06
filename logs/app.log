@@ -20264,3 +20264,1348 @@ SyntaxError: Unexpected token ')'
 
 2020-11-28 02:16:41.162 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 19.210 ms
 
+2020-11-29 13:53:59.792 - info: ::1 - GET /tracker HTTP/1.1 200 26281 - 174.016 ms
+
+2020-11-29 13:54:00.019 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 7.405 ms
+
+2020-11-29 13:54:00.045 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 3.002 ms
+
+2020-11-29 13:54:00.063 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 19.053 ms
+
+2020-11-29 13:55:59.592 - info: ::1 - GET /user HTTP/1.1 200 16008 - 162.032 ms
+
+2020-11-29 13:55:59.705 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 4.266 ms
+
+2020-11-29 13:55:59.717 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 4.504 ms
+
+2020-11-29 13:55:59.740 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 23.545 ms
+
+2020-11-29 13:56:02.835 - info: ::1 - GET /tracker HTTP/1.1 304 - - 66.493 ms
+
+2020-11-29 13:56:02.889 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 1.801 ms
+
+2020-11-29 13:56:02.910 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 4.633 ms
+
+2020-11-29 13:56:02.938 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 38.151 ms
+
+2020-11-29 13:56:04.421 - info: ::1 - GET /user HTTP/1.1 304 - - 121.279 ms
+
+2020-11-29 13:56:04.508 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 5.164 ms
+
+2020-11-29 13:56:04.527 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 4.179 ms
+
+2020-11-29 13:56:04.568 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 42.315 ms
+
+2020-11-29 13:56:26.735 - info: ::1 - GET /tracker HTTP/1.1 304 - - 76.569 ms
+
+2020-11-29 13:56:26.799 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 9.136 ms
+
+2020-11-29 13:56:26.811 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 3.229 ms
+
+2020-11-29 13:56:26.846 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 36.919 ms
+
+2020-11-29 13:56:30.263 - info: ::1 - GET /user HTTP/1.1 304 - - 113.767 ms
+
+2020-11-29 13:56:30.345 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 3.779 ms
+
+2020-11-29 13:56:30.370 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 6.905 ms
+
+2020-11-29 13:56:30.387 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 22.336 ms
+
+2020-11-29 13:56:44.659 - info: ::1 - GET /tracker HTTP/1.1 304 - - 69.502 ms
+
+2020-11-29 13:56:44.700 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 2.891 ms
+
+2020-11-29 13:56:44.708 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 2.400 ms
+
+2020-11-29 13:56:44.731 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 22.497 ms
+
+2020-11-29 14:03:27.992 - info: ::1 - GET /tracker HTTP/1.1 200 22172 - 184.504 ms
+
+2020-11-29 14:03:28.099 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 1.693 ms
+
+2020-11-29 14:03:28.104 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 1.781 ms
+
+2020-11-29 14:03:28.107 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 3.624 ms
+
+2020-11-29 14:23:38.806 - info: ::1 - GET /tracker HTTP/1.1 200 26854 - 303.758 ms
+
+2020-11-29 14:23:39.024 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 5.687 ms
+
+2020-11-29 14:23:39.045 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 2.353 ms
+
+2020-11-29 14:23:39.048 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 3.735 ms
+
+2020-11-29 14:24:01.295 - error: 500 - C:\Bhuwan\Learning\GIT\srmgmt\views\file_view.ejs:82
+    80|                     <td><%=entry.createTimestamp%></td>
+    81|                     <td><%=entry.currStatus%></td>
+ >> 82|                     <td><%=entry.createdBy.name%></td>
+    83|                     <td>
+    84|                         <!--Edit and delete are only applicable for user and admin-->
+    85|                         <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-id="<%=entry.uid%>"
+
+Cannot read property 'name' of undefined - /tracker - GET - ::1
+2020-11-29 14:24:01.529 - info: ::1 - GET /tracker HTTP/1.1 500 1884 - 158.140 ms
+
+2020-11-29 14:24:04.709 - error: 500 - C:\Bhuwan\Learning\GIT\srmgmt\views\file_view.ejs:82
+    80|                     <td><%=entry.createTimestamp%></td>
+    81|                     <td><%=entry.currStatus%></td>
+ >> 82|                     <td><%=entry.createdBy.name%></td>
+    83|                     <td>
+    84|                         <!--Edit and delete are only applicable for user and admin-->
+    85|                         <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-id="<%=entry.uid%>"
+
+Cannot read property 'name' of undefined - /tracker - GET - ::1
+2020-11-29 14:24:04.964 - info: ::1 - GET /tracker HTTP/1.1 500 1884 - 235.688 ms
+
+2020-11-29 14:24:47.407 - info: ::1 - GET /tracker HTTP/1.1 200 27254 - 34.860 ms
+
+2020-11-29 14:24:47.438 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 1.374 ms
+
+2020-11-29 14:24:47.452 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 1.696 ms
+
+2020-11-29 14:24:47.460 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 1.315 ms
+
+2020-11-29 14:25:21.820 - error: 500 - C:\Bhuwan\Learning\GIT\srmgmt\views\file_view.ejs:82
+    80|                     <td><%=entry.createTimestamp%></td>
+    81|                     <td><%=entry.currStatus%></td>
+ >> 82|                     <td><%=(entry.createdBy)?entry.createdBy.designation.designation:''%></td>
+    83|                     <td>
+    84|                         <!--Edit and delete are only applicable for user and admin-->
+    85|                         <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-id="<%=entry.uid%>"
+
+Cannot read property 'designation' of undefined - /tracker - GET - ::1
+2020-11-29 14:25:22.103 - info: ::1 - GET /tracker HTTP/1.1 500 1884 - 219.852 ms
+
+2020-11-29 14:25:33.194 - info: ::1 - GET /tracker HTTP/1.1 200 27291 - 110.801 ms
+
+2020-11-29 14:25:33.386 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 4.608 ms
+
+2020-11-29 14:25:33.422 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 3.709 ms
+
+2020-11-29 14:25:33.463 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 4.391 ms
+
+2020-11-29 14:25:52.010 - info: ::1 - GET /tracker HTTP/1.1 200 27254 - 92.474 ms
+
+2020-11-29 14:25:52.117 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 3.159 ms
+
+2020-11-29 14:25:52.142 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 5.672 ms
+
+2020-11-29 14:25:52.208 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 65.128 ms
+
+2020-11-29 14:26:28.189 - info: ::1 - GET /tracker HTTP/1.1 200 27353 - 147.884 ms
+
+2020-11-29 14:26:28.309 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 3.725 ms
+
+2020-11-29 14:26:28.339 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 5.364 ms
+
+2020-11-29 14:26:28.387 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 49.193 ms
+
+2020-11-29 14:36:34.388 - error: 500 - Unexpected token '{' in C:\Bhuwan\Learning\GIT\srmgmt\views\file_view.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option. - /tracker - GET - ::1
+2020-11-29 14:36:34.565 - info: ::1 - GET /tracker HTTP/1.1 500 1884 - 164.556 ms
+
+2020-11-29 14:37:04.625 - error: 500 - Unexpected token '{' in C:\Bhuwan\Learning\GIT\srmgmt\views\file_view.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option. - /tracker - GET - ::1
+2020-11-29 14:37:04.860 - info: ::1 - GET /tracker HTTP/1.1 500 1884 - 181.745 ms
+
+2020-11-29 14:37:10.352 - info: ::1 - GET /user HTTP/1.1 304 - - 102.620 ms
+
+2020-11-29 14:37:10.467 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 10.218 ms
+
+2020-11-29 14:37:10.493 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 4.027 ms
+
+2020-11-29 14:37:10.553 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 62.074 ms
+
+2020-11-29 14:37:12.783 - error: 500 - Unexpected token '{' in C:\Bhuwan\Learning\GIT\srmgmt\views\file_view.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option. - /tracker - GET - ::1
+2020-11-29 14:37:13.009 - info: ::1 - GET /tracker HTTP/1.1 500 1884 - 147.359 ms
+
+2020-11-29 14:42:16.718 - info: ::1 - GET /user HTTP/1.1 304 - - 71.919 ms
+
+2020-11-29 14:42:16.767 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 5.332 ms
+
+2020-11-29 14:42:16.780 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 1.725 ms
+
+2020-11-29 14:42:16.814 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 2.398 ms
+
+2020-11-29 14:42:18.332 - info: ::1 - GET /tracker HTTP/1.1 200 24311 - 114.853 ms
+
+2020-11-29 14:42:18.406 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 6.940 ms
+
+2020-11-29 14:42:18.419 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 17.599 ms
+
+2020-11-29 14:42:18.473 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 1.535 ms
+
+2020-11-29 14:42:27.974 - info: ::1 - GET /tracker HTTP/1.1 200 16248 - 41.162 ms
+
+2020-11-29 14:42:28.075 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 1.671 ms
+
+2020-11-29 14:42:28.094 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 1.518 ms
+
+2020-11-29 14:42:28.114 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 2.146 ms
+
+2020-11-29 14:50:54.530 - error: uncaughtException: Unexpected identifier
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController_bs.js:131
+		let additionalObj = { uid: uniqueFileId, createdBy: db_user._id, createTimestamp: format('dd-MM-yyyy hh.mm.ss', new Date()), status: db_status._id };
+		    ^^^^^^^^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:2:27)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:22:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-11-29 14:51:00.730 - error: uncaughtException: Unexpected identifier
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController_bs.js:131
+		let additionalObj = { uid: uniqueFileId, createdBy: db_user._id, createTimestamp: format('dd-MM-yyyy hh.mm.ss', new Date()), status: db_status._id };
+		    ^^^^^^^^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:2:27)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:22:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-11-29 14:51:45.446 - error: uncaughtException: Unexpected identifier
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController_bs.js:131
+		let additionalObj = { uid: uniqueFileId, createdBy: db_user._id, createTimestamp: format('dd-MM-yyyy hh.mm.ss', new Date()), status: db_status._id };
+		    ^^^^^^^^^^^^^
+
+SyntaxError: Unexpected identifier
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:2:27)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:22:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-11-29 15:20:26.327 - info: ::1 - GET /tracker HTTP/1.1 200 16248 - 249.319 ms
+
+2020-11-29 15:20:26.785 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 3.758 ms
+
+2020-11-29 15:20:26.796 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 5.909 ms
+
+2020-11-29 15:20:26.811 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 19.652 ms
+
+2020-11-29 15:20:26.835 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 25.018 ms
+
+2020-11-29 15:20:26.851 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 20.987 ms
+
+2020-11-29 15:20:26.855 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 6.819 ms
+
+2020-11-29 15:20:30.671 - info: ::1 - GET /tracker HTTP/1.1 304 - - 55.365 ms
+
+2020-11-29 15:20:30.740 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 5.458 ms
+
+2020-11-29 15:20:30.745 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 6.325 ms
+
+2020-11-29 15:20:30.770 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 29.466 ms
+
+2020-11-29 15:20:30.865 - info: ::1 - GET /tracker HTTP/1.1 304 - - 38.651 ms
+
+2020-11-29 15:20:30.954 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 2.624 ms
+
+2020-11-29 15:20:30.957 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 3.935 ms
+
+2020-11-29 15:20:30.972 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 18.395 ms
+
+2020-11-29 15:20:31.038 - info: ::1 - GET /tracker HTTP/1.1 304 - - 46.406 ms
+
+2020-11-29 15:20:31.189 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 10.311 ms
+
+2020-11-29 15:20:31.196 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 12.642 ms
+
+2020-11-29 15:20:31.229 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 40.776 ms
+
+2020-11-29 15:20:52.115 - info: ::1 - POST /tracker/files/save HTTP/1.1 302 60 - 111.625 ms
+
+2020-11-29 15:20:52.152 - info: ::1 - GET /tracker HTTP/1.1 200 17704 - 25.291 ms
+
+2020-11-29 15:20:52.229 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 5.958 ms
+
+2020-11-29 15:20:52.232 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 3.966 ms
+
+2020-11-29 15:20:52.251 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 22.520 ms
+
+2020-11-29 15:21:51.537 - info: ::1 - GET /tracker HTTP/1.1 200 17704 - 132.340 ms
+
+2020-11-29 15:21:51.621 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 7.889 ms
+
+2020-11-29 15:21:51.625 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 9.861 ms
+
+2020-11-29 15:21:51.657 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 5.332 ms
+
+2020-11-29 15:21:54.095 - info: ::1 - GET /tracker HTTP/1.1 304 - - 100.855 ms
+
+2020-11-29 15:21:54.156 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 4.927 ms
+
+2020-11-29 15:21:54.159 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 5.469 ms
+
+2020-11-29 15:21:54.177 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 21.526 ms
+
+2020-11-29 15:22:14.273 - info: ::1 - POST /tracker/files/save HTTP/1.1 302 60 - 230.785 ms
+
+2020-11-29 15:22:14.379 - info: ::1 - GET /tracker HTTP/1.1 200 19149 - 87.220 ms
+
+2020-11-29 15:22:14.585 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 5.815 ms
+
+2020-11-29 15:22:14.649 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 8.647 ms
+
+2020-11-29 15:22:14.668 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 25.450 ms
+
+2020-11-29 15:22:29.077 - info: ::1 - PUT /tracker/files/changeStatus?_method=put HTTP/1.1 302 60 - 16.745 ms
+
+2020-11-29 15:22:29.134 - info: ::1 - GET /tracker HTTP/1.1 200 18432 - 47.363 ms
+
+2020-11-29 15:22:29.205 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 3.569 ms
+
+2020-11-29 15:22:29.219 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 3.879 ms
+
+2020-11-29 15:22:29.249 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 31.615 ms
+
+2020-11-29 15:22:37.726 - info: ::1 - GET /tracker HTTP/1.1 200 26019 - 151.594 ms
+
+2020-11-29 15:22:37.895 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 3.548 ms
+
+2020-11-29 15:22:37.902 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 7.128 ms
+
+2020-11-29 15:22:37.922 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 200 182626 - 8.916 ms
+
+2020-11-29 15:22:38.054 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 5.826 ms
+
+2020-11-29 15:22:38.143 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 2.735 ms
+
+2020-11-29 16:02:01.173 - info: ::1 - GET /tracker HTTP/1.1 200 18462 - 319.735 ms
+
+2020-11-29 16:02:01.257 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 14.691 ms
+
+2020-11-29 16:02:01.264 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 16.486 ms
+
+2020-11-29 16:02:01.291 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 34.954 ms
+
+2020-11-29 16:12:28.093 - info: ::1 - GET /tracker HTTP/1.1 200 18830 - 190.339 ms
+
+2020-11-29 16:12:28.293 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 4.784 ms
+
+2020-11-29 16:12:28.298 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 6.155 ms
+
+2020-11-29 16:12:28.313 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 16.050 ms
+
+2020-11-29 16:12:40.324 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 3.645 ms
+
+2020-11-29 16:12:40.451 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 4.653 ms
+
+2020-11-29 16:12:40.480 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 2.212 ms
+
+2020-11-29 16:12:47.853 - info: ::1 - GET /tracker HTTP/1.1 304 - - 74.109 ms
+
+2020-11-29 16:12:47.912 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 3.071 ms
+
+2020-11-29 16:12:47.921 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 11.192 ms
+
+2020-11-29 16:12:47.930 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 8.929 ms
+
+2020-11-29 16:12:48.098 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 1.614 ms
+
+2020-11-29 16:12:48.152 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 2.816 ms
+
+2020-11-29 16:19:55.498 - info: ::1 - GET /tracker HTTP/1.1 200 18930 - 108.586 ms
+
+2020-11-29 16:19:55.698 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 6.000 ms
+
+2020-11-29 16:19:55.709 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 13.731 ms
+
+2020-11-29 16:19:55.731 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 200 39751 - 6.762 ms
+
+2020-11-29 16:19:55.754 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 2.266 ms
+
+2020-11-29 16:19:55.864 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 2.916 ms
+
+2020-11-29 16:19:56.014 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 3.511 ms
+
+2020-11-29 16:19:56.022 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 200 77160 - 20.736 ms
+
+2020-11-29 16:20:12.503 - info: ::1 - PUT /tracker/files/update?_method=put HTTP/1.1 302 60 - 286.708 ms
+
+2020-11-29 16:20:12.621 - info: ::1 - GET /tracker HTTP/1.1 200 19196 - 81.260 ms
+
+2020-11-29 16:20:12.751 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 3.542 ms
+
+2020-11-29 16:20:12.773 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 5.162 ms
+
+2020-11-29 16:20:12.805 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 34.568 ms
+
+2020-11-29 16:20:12.814 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 2.972 ms
+
+2020-11-29 16:20:12.962 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 1.584 ms
+
+2020-11-29 16:20:12.967 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.452 ms
+
+2020-11-29 16:20:13.032 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 6.649 ms
+
+2020-11-29 16:23:06.723 - info: ::1 - GET /tracker HTTP/1.1 200 18787 - 85.693 ms
+
+2020-11-29 16:23:06.852 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 5.669 ms
+
+2020-11-29 16:23:06.868 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 19.753 ms
+
+2020-11-29 16:23:06.884 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 16.826 ms
+
+2020-11-29 16:23:06.903 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 20.069 ms
+
+2020-11-29 16:23:06.994 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 1.715 ms
+
+2020-11-29 16:23:07.006 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.315 ms
+
+2020-11-29 16:23:07.079 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 2.377 ms
+
+2020-11-29 16:23:22.800 - info: ::1 - GET /tracker HTTP/1.1 304 - - 127.417 ms
+
+2020-11-29 16:23:23.034 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 4.639 ms
+
+2020-11-29 16:23:23.046 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 20.005 ms
+
+2020-11-29 16:23:23.084 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 7.809 ms
+
+2020-11-29 16:23:23.104 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 26.083 ms
+
+2020-11-29 16:23:23.213 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 1.925 ms
+
+2020-11-29 16:23:23.226 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.495 ms
+
+2020-11-29 16:23:23.305 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 3.700 ms
+
+2020-11-29 16:23:39.042 - info: ::1 - GET /tracker HTTP/1.1 200 18945 - 108.881 ms
+
+2020-11-29 16:23:39.121 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 1.432 ms
+
+2020-11-29 16:23:39.128 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 3.319 ms
+
+2020-11-29 16:23:39.151 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 24.810 ms
+
+2020-11-29 16:23:39.171 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 1.583 ms
+
+2020-11-29 16:23:39.278 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 3.385 ms
+
+2020-11-29 16:23:39.291 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.849 ms
+
+2020-11-29 16:23:39.371 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 7.978 ms
+
+2020-11-29 16:25:31.178 - info: ::1 - GET /tracker HTTP/1.1 200 18946 - 82.310 ms
+
+2020-11-29 16:25:31.306 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 1.682 ms
+
+2020-11-29 16:25:31.312 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 1.688 ms
+
+2020-11-29 16:25:31.334 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 2.752 ms
+
+2020-11-29 16:25:31.349 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 15.541 ms
+
+2020-11-29 16:25:31.446 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.167 ms
+
+2020-11-29 16:25:31.458 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 3.092 ms
+
+2020-11-29 16:25:31.514 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 1.758 ms
+
+2020-11-29 16:26:53.330 - info: ::1 - GET /tracker HTTP/1.1 200 19215 - 74.888 ms
+
+2020-11-29 16:26:53.472 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 4.733 ms
+
+2020-11-29 16:26:53.483 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 13.041 ms
+
+2020-11-29 16:26:53.500 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 1.263 ms
+
+2020-11-29 16:26:53.503 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 3.942 ms
+
+2020-11-29 16:26:53.620 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 2.881 ms
+
+2020-11-29 16:26:53.660 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 2.512 ms
+
+2020-11-29 16:26:53.691 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 2.029 ms
+
+2020-11-29 16:27:21.269 - info: ::1 - GET /tracker HTTP/1.1 200 18982 - 92.498 ms
+
+2020-11-29 16:27:21.396 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 5.514 ms
+
+2020-11-29 16:27:21.417 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 22.648 ms
+
+2020-11-29 16:27:21.452 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 3.866 ms
+
+2020-11-29 16:27:21.466 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 17.227 ms
+
+2020-11-29 16:27:21.576 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 1.463 ms
+
+2020-11-29 16:27:21.613 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.038 ms
+
+2020-11-29 16:27:21.640 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 1.853 ms
+
+2020-11-29 16:27:47.482 - info: ::1 - GET /tracker HTTP/1.1 200 18946 - 104.153 ms
+
+2020-11-29 16:27:47.584 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 2.156 ms
+
+2020-11-29 16:27:47.593 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 9.723 ms
+
+2020-11-29 16:27:47.618 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 1.421 ms
+
+2020-11-29 16:27:47.644 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 25.601 ms
+
+2020-11-29 16:27:47.788 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 1.981 ms
+
+2020-11-29 16:27:47.845 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.219 ms
+
+2020-11-29 16:27:47.862 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 1.479 ms
+
+2020-11-29 16:27:56.269 - info: ::1 - GET /tracker HTTP/1.1 200 18946 - 67.639 ms
+
+2020-11-29 16:27:56.382 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 3.524 ms
+
+2020-11-29 16:27:56.409 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 28.864 ms
+
+2020-11-29 16:27:56.455 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 2.034 ms
+
+2020-11-29 16:27:56.462 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 7.766 ms
+
+2020-11-29 16:27:56.577 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 2.135 ms
+
+2020-11-29 16:27:56.629 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.268 ms
+
+2020-11-29 16:27:56.657 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 2.670 ms
+
+2020-11-29 16:28:14.374 - info: ::1 - GET /tracker HTTP/1.1 304 - - 116.860 ms
+
+2020-11-29 16:28:14.485 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 2.784 ms
+
+2020-11-29 16:28:14.506 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 3.319 ms
+
+2020-11-29 16:28:14.519 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 14.348 ms
+
+2020-11-29 16:28:14.538 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 32.487 ms
+
+2020-11-29 16:28:14.650 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 2.010 ms
+
+2020-11-29 16:28:14.693 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.019 ms
+
+2020-11-29 16:28:14.719 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 3.452 ms
+
+2020-11-29 16:28:22.845 - info: ::1 - GET /tracker HTTP/1.1 200 18947 - 85.837 ms
+
+2020-11-29 16:28:22.994 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 3.052 ms
+
+2020-11-29 16:28:23.004 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 4.827 ms
+
+2020-11-29 16:28:23.023 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 21.428 ms
+
+2020-11-29 16:28:23.055 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 1.899 ms
+
+2020-11-29 16:28:23.171 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 1.620 ms
+
+2020-11-29 16:28:23.229 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 2.100 ms
+
+2020-11-29 16:28:23.248 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 1.480 ms
+
+2020-11-29 16:28:29.214 - info: ::1 - GET /tracker HTTP/1.1 200 28280 - 134.657 ms
+
+2020-11-29 16:28:29.387 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 200 39751 - 4.665 ms
+
+2020-11-29 16:28:29.410 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 8.165 ms
+
+2020-11-29 16:28:29.455 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 49.318 ms
+
+2020-11-29 16:28:29.500 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 93.205 ms
+
+2020-11-29 16:28:29.713 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 200 77160 - 5.308 ms
+
+2020-11-29 16:33:14.679 - info: ::1 - GET /tracker HTTP/1.1 304 - - 214.242 ms
+
+2020-11-29 16:33:14.829 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 7.458 ms
+
+2020-11-29 16:33:14.837 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 14.172 ms
+
+2020-11-29 16:33:14.858 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 21.814 ms
+
+2020-11-29 16:33:14.905 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 67.585 ms
+
+2020-11-29 16:33:15.065 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 2.077 ms
+
+2020-11-29 16:33:15.070 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 7.390 ms
+
+2020-11-29 16:33:15.162 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 3.343 ms
+
+2020-11-29 16:38:33.287 - info: ::1 - PUT /tracker/files/changeStatus?_method=put HTTP/1.1 302 60 - 103.097 ms
+
+2020-11-29 16:38:33.362 - info: ::1 - GET /tracker HTTP/1.1 200 20018 - 62.447 ms
+
+2020-11-29 16:38:33.513 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 10.282 ms
+
+2020-11-29 16:38:33.529 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 21.875 ms
+
+2020-11-29 16:38:33.558 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 4.795 ms
+
+2020-11-29 16:38:33.569 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 12.408 ms
+
+2020-11-29 16:38:44.416 - info: ::1 - GET /tracker HTTP/1.1 304 - - 123.481 ms
+
+2020-11-29 16:38:45.016 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 1.202 ms
+
+2020-11-29 16:38:45.023 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 1.996 ms
+
+2020-11-29 16:38:45.041 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 1.636 ms
+
+2020-11-29 16:38:45.044 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 4.037 ms
+
+2020-11-29 16:38:50.040 - info: ::1 - GET /signout HTTP/1.1 304 - - 17.210 ms
+
+2020-11-29 16:38:50.181 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 8.149 ms
+
+2020-11-29 16:39:35.119 - info: ::1 - GET /user HTTP/1.1 304 - - 111.821 ms
+
+2020-11-29 16:39:35.260 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 10.035 ms
+
+2020-11-29 16:39:35.280 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 2.792 ms
+
+2020-11-29 16:39:35.297 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 19.339 ms
+
+2020-11-29 16:40:01.292 - info: ::1 - GET /register HTTP/1.1 403 43 - 6.627 ms
+
+2020-11-29 16:40:07.969 - info: ::1 - GET /register HTTP/1.1 403 43 - 2.197 ms
+
+2020-11-29 16:41:29.721 - info: ::1 - GET / HTTP/1.1 304 - - 47.232 ms
+
+2020-11-29 16:41:29.902 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 10.579 ms
+
+2020-11-29 16:41:30.008 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 2.636 ms
+
+2020-11-29 16:41:31.799 - info: ::1 - GET /register HTTP/1.1 200 5234 - 18.953 ms
+
+2020-11-29 16:41:31.942 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 14.082 ms
+
+2020-11-29 16:41:32.001 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 4.318 ms
+
+2020-11-29 16:41:32.005 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 4.415 ms
+
+2020-11-29 16:41:59.296 - info: ::1 - POST /signup HTTP/1.1 200 5570 - 366.203 ms
+
+2020-11-29 16:41:59.481 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 2.891 ms
+
+2020-11-29 16:41:59.497 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 5.960 ms
+
+2020-11-29 16:41:59.543 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 49.066 ms
+
+2020-11-29 16:42:03.125 - info: ::1 - GET / HTTP/1.1 304 - - 12.822 ms
+
+2020-11-29 16:42:03.245 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 7.521 ms
+
+2020-11-29 16:42:03.326 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 1.120 ms
+
+2020-11-29 16:42:17.153 - info: ::1 - POST /signin HTTP/1.1 200 16 - 123.253 ms
+
+2020-11-29 16:42:17.339 - info: ::1 - GET /tracker HTTP/1.1 200 16635 - 37.199 ms
+
+2020-11-29 16:42:17.389 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 2.916 ms
+
+2020-11-29 16:42:17.404 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 3.150 ms
+
+2020-11-29 16:42:17.407 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 4.717 ms
+
+2020-11-29 16:42:17.439 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 1.643 ms
+
+2020-11-29 16:42:29.826 - info: ::1 - GET /user HTTP/1.1 200 16684 - 135.898 ms
+
+2020-11-29 16:42:29.914 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 4.043 ms
+
+2020-11-29 16:42:29.939 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 3.267 ms
+
+2020-11-29 16:42:29.986 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 2.550 ms
+
+2020-11-29 16:42:37.882 - info: ::1 - PUT /user?_method=put HTTP/1.1 302 54 - 76.669 ms
+
+2020-11-29 16:42:37.963 - info: ::1 - GET /user HTTP/1.1 200 16734 - 65.403 ms
+
+2020-11-29 16:42:38.011 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 3.107 ms
+
+2020-11-29 16:42:38.026 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 4.763 ms
+
+2020-11-29 16:42:38.035 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 10.700 ms
+
+2020-11-29 16:42:43.620 - info: ::1 - GET /tracker HTTP/1.1 200 16977 - 85.644 ms
+
+2020-11-29 16:42:43.693 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 2.270 ms
+
+2020-11-29 16:42:43.701 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 3.143 ms
+
+2020-11-29 16:42:43.735 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 33.642 ms
+
+2020-11-29 16:42:43.748 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 14.625 ms
+
+2020-11-29 16:43:24.611 - info: ::1 - PUT /user?_method=put HTTP/1.1 302 54 - 29.308 ms
+
+2020-11-29 16:43:24.770 - info: ::1 - GET /user HTTP/1.1 200 16734 - 136.898 ms
+
+2020-11-29 16:43:24.824 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 2.833 ms
+
+2020-11-29 16:43:24.833 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 3.893 ms
+
+2020-11-29 16:43:24.853 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 21.557 ms
+
+2020-11-29 16:43:27.720 - info: ::1 - GET /tracker HTTP/1.1 200 21644 - 159.243 ms
+
+2020-11-29 16:43:27.782 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 1.751 ms
+
+2020-11-29 16:43:27.792 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 4.607 ms
+
+2020-11-29 16:43:27.814 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 1.406 ms
+
+2020-11-29 16:43:27.819 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 5.375 ms
+
+2020-11-29 16:43:50.203 - info: ::1 - PUT /tracker/files/changeStatus?_method=put HTTP/1.1 302 60 - 27.436 ms
+
+2020-11-29 16:43:50.407 - info: ::1 - GET /tracker HTTP/1.1 200 21454 - 172.716 ms
+
+2020-11-29 16:43:50.653 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 2.724 ms
+
+2020-11-29 16:43:50.664 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 3.231 ms
+
+2020-11-29 16:43:50.682 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 19.650 ms
+
+2020-11-29 16:43:50.719 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 6.077 ms
+
+2020-11-29 16:43:56.920 - info: ::1 - GET /tracker HTTP/1.1 200 30722 - 121.939 ms
+
+2020-11-29 16:43:56.968 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 7.070 ms
+
+2020-11-29 16:43:56.974 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 1.182 ms
+
+2020-11-29 16:43:56.991 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 1.253 ms
+
+2020-11-29 16:43:57.010 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 18.652 ms
+
+2020-11-29 16:43:57.094 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.968 ms
+
+2020-11-29 16:44:08.483 - info: ::1 - GET /tracker/api/files/FX20002 HTTP/1.1 200 341 - 19.878 ms
+
+2020-11-29 16:50:36.016 - error: uncaughtException: Route.put() requires a callback function but got a [object Undefined]
+Error: Route.put() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as put] (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\route.js:202:15)
+    at Function.app.<computed> [as put] (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\application.js:482:19)
+    at module.exports (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:21:9)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:103:1)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-11-29 16:50:46.793 - error: uncaughtException: Route.put() requires a callback function but got a [object Undefined]
+Error: Route.put() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as put] (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\route.js:202:15)
+    at Function.app.<computed> [as put] (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\application.js:482:19)
+    at module.exports (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:21:9)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:103:1)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-11-29 16:50:53.417 - error: uncaughtException: Route.put() requires a callback function but got a [object Undefined]
+Error: Route.put() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as put] (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\route.js:202:15)
+    at Function.app.<computed> [as put] (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\application.js:482:19)
+    at module.exports (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:21:9)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:103:1)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-11-29 16:51:57.682 - error: uncaughtException: Route.put() requires a callback function but got a [object Undefined]
+Error: Route.put() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as put] (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\route.js:202:15)
+    at Function.app.<computed> [as put] (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\application.js:482:19)
+    at module.exports (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:21:9)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:103:1)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-11-29 16:52:03.525 - error: uncaughtException: Unexpected token '{'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController_bs.js:198
+		const update = { $push: { status: db_status._id }, { }};
+		                                                   ^
+
+SyntaxError: Unexpected token '{'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:2:27)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:22:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-11-29 16:52:07.254 - error: uncaughtException: Unexpected token '{'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController_bs.js:198
+		const update = { $push: { status: db_status._id }, { }};
+		                                                   ^
+
+SyntaxError: Unexpected token '{'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:2:27)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:22:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-11-29 16:52:11.919 - error: uncaughtException: Unexpected token '{'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController_bs.js:198
+		const update = { $push: { status: db_status._id }, {vettedAmount:  }};
+		                                                   ^
+
+SyntaxError: Unexpected token '{'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:2:27)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:22:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-11-29 16:52:21.041 - error: uncaughtException: Unexpected token '{'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController_bs.js:198
+		const update = { $push: { status: db_status._id }, {vettedAmount: req.body. }};
+		                                                   ^
+
+SyntaxError: Unexpected token '{'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:2:27)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:22:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-11-29 16:52:24.930 - error: uncaughtException: Unexpected token '{'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController_bs.js:198
+		const update = { $push: { status: db_status._id }, { vettedAmount: req.body.vettedAmount }
+		                                                   ^
+
+SyntaxError: Unexpected token '{'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:2:27)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:22:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-11-29 16:52:37.954 - error: uncaughtException: Unexpected token '{'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController_bs.js:198
+		const update = { $push: { status: db_status._id }, { vettedAmount: req.body.vettedAmount }};
+		                                                   ^
+
+SyntaxError: Unexpected token '{'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:2:27)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:22:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-11-29 16:52:42.420 - error: uncaughtException: Unexpected token '{'
+C:\Bhuwan\Learning\GIT\srmgmt\controllers\fileController_bs.js:198
+		const update = { $push: { status: db_status._id }, {vettedAmount: req.body.vettedAmount }};
+		                                                   ^
+
+SyntaxError: Unexpected token '{'
+    at Module._compile (internal/modules/cjs/loader.js:895:18)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:2:27)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Module.require (internal/modules/cjs/loader.js:852:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:22:17)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+2020-11-29 16:52:54.071 - error: uncaughtException: Route.put() requires a callback function but got a [object Undefined]
+Error: Route.put() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as put] (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\router\route.js:202:15)
+    at Function.app.<computed> [as put] (C:\Bhuwan\Learning\GIT\srmgmt\node_modules\express\lib\application.js:482:19)
+    at module.exports (C:\Bhuwan\Learning\GIT\srmgmt\routes\file.route.js:21:9)
+    at Object.<anonymous> (C:\Bhuwan\Learning\GIT\srmgmt\app.js:103:1)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
+2020-11-29 17:07:52.989 - info: ::1 - GET /tracker HTTP/1.1 200 21314 - 224.061 ms
+
+2020-11-29 17:07:53.561 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 15.023 ms
+
+2020-11-29 17:07:53.606 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 55.202 ms
+
+2020-11-29 17:07:53.640 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 3.833 ms
+
+2020-11-29 17:07:53.680 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 42.029 ms
+
+2020-11-29 17:08:01.265 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 7.836 ms
+
+2020-11-29 17:08:01.273 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 9.858 ms
+
+2020-11-29 17:08:01.386 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 10.309 ms
+
+2020-11-29 17:08:01.476 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 2.610 ms
+
+2020-11-29 17:08:07.830 - info: ::1 - GET /tracker HTTP/1.1 200 31610 - 76.222 ms
+
+2020-11-29 17:08:07.922 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 4.585 ms
+
+2020-11-29 17:08:07.932 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 1.572 ms
+
+2020-11-29 17:08:07.963 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 3.838 ms
+
+2020-11-29 17:08:07.980 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 17.752 ms
+
+2020-11-29 17:08:08.139 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 6.176 ms
+
+2020-11-29 17:08:11.961 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 3.405 ms
+
+2020-11-29 17:08:11.967 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 6.497 ms
+
+2020-11-29 17:08:12.072 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 2.286 ms
+
+2020-11-29 17:08:12.121 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 1.586 ms
+
+2020-11-29 17:10:13.985 - info: ::1 - PUT /tracker/files/approve?_method=put HTTP/1.1 - - - - ms
+
+2020-11-29 17:10:16.019 - info: ::1 - GET /tracker HTTP/1.1 304 - - 143.018 ms
+
+2020-11-29 17:10:16.177 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 6.219 ms
+
+2020-11-29 17:10:16.196 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 22.120 ms
+
+2020-11-29 17:10:16.274 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 3.638 ms
+
+2020-11-29 17:10:16.337 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 65.873 ms
+
+2020-11-29 17:10:16.479 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 2.299 ms
+
+2020-11-29 17:10:16.504 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.921 ms
+
+2020-11-29 17:10:16.526 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 2.858 ms
+
+2020-11-29 17:12:20.830 - info: ::1 - GET /tracker HTTP/1.1 200 31686 - 65.577 ms
+
+2020-11-29 17:12:20.878 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 7.810 ms
+
+2020-11-29 17:12:20.892 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 2.806 ms
+
+2020-11-29 17:12:20.926 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 34.875 ms
+
+2020-11-29 17:12:20.931 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 5.581 ms
+
+2020-11-29 17:12:21.070 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 4.961 ms
+
+2020-11-29 17:12:21.075 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 3.840 ms
+
+2020-11-29 17:12:21.162 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 5.779 ms
+
+2020-11-29 17:12:27.631 - info: ::1 - PUT /tracker/files/approve?_method=put HTTP/1.1 302 60 - 121.745 ms
+
+2020-11-29 17:12:27.801 - info: ::1 - GET /tracker HTTP/1.1 200 31180 - 156.083 ms
+
+2020-11-29 17:12:27.850 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 2.479 ms
+
+2020-11-29 17:12:27.860 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 2.331 ms
+
+2020-11-29 17:12:27.894 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 1.544 ms
+
+2020-11-29 17:12:27.927 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 33.019 ms
+
+2020-11-29 17:12:28.020 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 6.388 ms
+
+2020-11-29 17:12:28.033 - info: ::1 - GET /assets/js/bootstrap.js.map HTTP/1.1 200 211967 - 2.028 ms
+
+2020-11-29 17:12:28.117 - info: ::1 - GET /assets/css/bootstrap.css.map HTTP/1.1 200 430003 - 3.564 ms
+
+2020-11-29 17:18:30.702 - info: ::1 - GET /user HTTP/1.1 304 - - 162.513 ms
+
+2020-11-29 17:18:30.876 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 2.422 ms
+
+2020-11-29 17:18:30.885 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 2.067 ms
+
+2020-11-29 17:18:30.888 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 3.402 ms
+
+2020-11-29 17:18:32.279 - info: ::1 - GET /tracker HTTP/1.1 304 - - 134.993 ms
+
+2020-11-29 17:18:32.364 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 12.305 ms
+
+2020-11-29 17:18:32.367 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 12.035 ms
+
+2020-11-29 17:18:32.402 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 1.167 ms
+
+2020-11-29 17:18:32.407 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 6.431 ms
+
+2020-11-29 17:18:32.457 - info: ::1 - GET /assets/css/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1 304 - - 1.689 ms
+
+2020-11-29 17:18:34.191 - info: ::1 - GET /user HTTP/1.1 304 - - 87.742 ms
+
+2020-11-29 17:18:34.276 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 3.718 ms
+
+2020-11-29 17:18:34.309 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 3.709 ms
+
+2020-11-29 17:18:34.390 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 85.194 ms
+
+2020-11-29 17:18:35.322 - info: ::1 - GET /tracker HTTP/1.1 304 - - 153.159 ms
+
+2020-11-29 17:18:35.419 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 4.496 ms
+
+2020-11-29 17:18:35.441 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 23.491 ms
+
+2020-11-29 17:18:35.472 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 34.433 ms
+
+2020-11-29 17:18:35.501 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 28.107 ms
+
+2020-11-29 17:24:08.949 - info: ::1 - GET / HTTP/1.1 200 3319 - 48.244 ms
+
+2020-11-29 17:24:09.067 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 9.122 ms
+
+2020-11-29 17:24:09.519 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 1.756 ms
+
+2020-11-29 17:24:22.942 - error: uncaughtException: Cannot read property 'roles' of null
+TypeError: Cannot read property 'roles' of null
+    at C:\Bhuwan\Learning\GIT\srmgmt\middleware\auth.js:116:34
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\model.js:4837:16
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\helpers\promiseOrCallback.js:24:16
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\model.js:4860:21
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\query.js:4366:11
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\kareem\index.js:135:16
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+2020-11-29 17:25:26.197 - error: uncaughtException: Cannot read property 'roles' of null
+TypeError: Cannot read property 'roles' of null
+    at C:\Bhuwan\Learning\GIT\srmgmt\middleware\auth.js:116:34
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\model.js:4837:16
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\helpers\promiseOrCallback.js:24:16
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\model.js:4860:21
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\query.js:4366:11
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\kareem\index.js:135:16
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+2020-11-29 17:27:38.218 - error: uncaughtException: Cannot read property 'roles' of null
+TypeError: Cannot read property 'roles' of null
+    at C:\Bhuwan\Learning\GIT\srmgmt\middleware\auth.js:117:34
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\model.js:4837:16
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\helpers\promiseOrCallback.js:24:16
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\model.js:4860:21
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\query.js:4366:11
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\kareem\index.js:135:16
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+2020-11-29 17:29:21.177 - error: uncaughtException: Cannot read property 'roles' of null
+TypeError: Cannot read property 'roles' of null
+    at C:\Bhuwan\Learning\GIT\srmgmt\middleware\auth.js:118:34
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\model.js:4837:16
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\helpers\promiseOrCallback.js:24:16
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\model.js:4860:21
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\query.js:4366:11
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\kareem\index.js:135:16
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+2020-11-29 17:31:59.132 - error: uncaughtException: Cannot read property 'roles' of null
+TypeError: Cannot read property 'roles' of null
+    at C:\Bhuwan\Learning\GIT\srmgmt\middleware\auth.js:118:34
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\model.js:4837:16
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\helpers\promiseOrCallback.js:24:16
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\model.js:4860:21
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\query.js:4366:11
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\kareem\index.js:135:16
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+2020-11-29 17:37:14.934 - error: uncaughtException: Cannot read property 'roles' of null
+TypeError: Cannot read property 'roles' of null
+    at C:\Bhuwan\Learning\GIT\srmgmt\middleware\auth.js:118:34
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\model.js:4837:16
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\helpers\promiseOrCallback.js:24:16
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\model.js:4860:21
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\mongoose\lib\query.js:4366:11
+    at C:\Bhuwan\Learning\GIT\srmgmt\node_modules\kareem\index.js:135:16
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+2020-12-06 22:17:23.984 - info: ::1 - GET / HTTP/1.1 200 3319 - 49.119 ms
+
+2020-12-06 22:17:24.107 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 5.970 ms
+
+2020-12-06 22:17:24.256 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 1.204 ms
+
+2020-12-06 22:17:24.384 - info: ::1 - GET /favicon.ico HTTP/1.1 404 150 - 1.791 ms
+
+2020-12-06 22:17:45.941 - info: ::1 - POST /signin HTTP/1.1 404 3319 - 152.923 ms
+
+2020-12-06 22:17:50.035 - info: ::1 - GET /register HTTP/1.1 200 5234 - 12.521 ms
+
+2020-12-06 22:17:50.170 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 6.882 ms
+
+2020-12-06 22:17:50.184 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 3.877 ms
+
+2020-12-06 22:17:50.211 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 28.004 ms
+
+2020-12-06 22:18:32.809 - info: ::1 - POST /signin HTTP/1.1 404 3319 - 12.614 ms
+
+2020-12-06 22:18:46.270 - info: ::1 - POST /signin HTTP/1.1 404 3319 - 7.009 ms
+
+2020-12-06 22:22:31.453 - info: ::1 - POST /signin HTTP/1.1 200 16 - 322.367 ms
+
+2020-12-06 22:22:31.634 - info: ::1 - GET /tracker HTTP/1.1 200 17034 - 109.356 ms
+
+2020-12-06 22:22:31.719 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 8.091 ms
+
+2020-12-06 22:22:31.746 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 32.354 ms
+
+2020-12-06 22:22:31.751 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 6.336 ms
+
+2020-12-06 22:22:31.770 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 24.319 ms
+
+2020-12-06 22:25:58.497 - info: ::1 - GET /signout HTTP/1.1 200 3319 - 59.467 ms
+
+2020-12-06 22:25:58.562 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 5.543 ms
+
+2020-12-06 22:25:58.660 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 1.847 ms
+
+2020-12-06 22:26:09.284 - info: ::1 - POST /signin HTTP/1.1 401 50 - 202.990 ms
+
+2020-12-06 22:26:22.938 - info: ::1 - POST /signin HTTP/1.1 200 16 - 91.459 ms
+
+2020-12-06 22:26:23.181 - info: ::1 - GET /tracker HTTP/1.1 304 - - 134.560 ms
+
+2020-12-06 22:26:23.276 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 7.799 ms
+
+2020-12-06 22:26:23.289 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 18.493 ms
+
+2020-12-06 22:26:23.363 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 75.193 ms
+
+2020-12-06 22:26:23.374 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 15.823 ms
+
+2020-12-06 22:26:52.421 - info: ::1 - GET /signout HTTP/1.1 304 - - 4.572 ms
+
+2020-12-06 22:26:52.523 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 1.872 ms
+
+2020-12-06 22:26:52.627 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 1.475 ms
+
+2020-12-06 22:26:54.919 - info: ::1 - GET /register HTTP/1.1 304 - - 9.084 ms
+
+2020-12-06 22:26:54.988 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 5.890 ms
+
+2020-12-06 22:26:54.993 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 7.515 ms
+
+2020-12-06 22:26:55.037 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 1.760 ms
+
+2020-12-06 22:27:13.486 - info: ::1 - POST /signup HTTP/1.1 200 5570 - 103.897 ms
+
+2020-12-06 22:27:13.567 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 2.801 ms
+
+2020-12-06 22:27:13.581 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 6.095 ms
+
+2020-12-06 22:27:13.607 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 1.437 ms
+
+2020-12-06 22:27:19.700 - info: ::1 - GET / HTTP/1.1 304 - - 3.734 ms
+
+2020-12-06 22:27:19.767 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 3.000 ms
+
+2020-12-06 22:27:19.845 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 1.361 ms
+
+2020-12-06 22:27:37.169 - info: ::1 - POST /signin HTTP/1.1 200 16 - 77.112 ms
+
+2020-12-06 22:27:37.322 - info: ::1 - GET /tracker HTTP/1.1 304 - - 127.769 ms
+
+2020-12-06 22:27:37.446 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 4.699 ms
+
+2020-12-06 22:27:37.459 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 12.702 ms
+
+2020-12-06 22:27:37.481 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 1.700 ms
+
+2020-12-06 22:27:37.498 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 16.414 ms
+
+2020-12-06 22:27:39.671 - error: 500 - C:\Bhuwan\Learning\GIT\srmgmt\views\user.ejs:49
+    47|                         <% }else{%>
+    48|                         <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-email="<%=entry.email%>"
+ >> 49|                             data-desgn="<%=entry.designation._id%>" data-role="<%=entry.roles[0].name%>">Edit</a>
+    50|                         <% }%>
+    51|                         <a href="javascript:void(0);" class="btn btn-sm btn-danger delete"
+    52|                             data-email="<%=entry.email%>">Delete</a>
+
+Cannot read property '_id' of undefined - /user - GET - ::1
+2020-12-06 22:27:39.903 - info: ::1 - GET /user HTTP/1.1 500 1884 - 178.300 ms
+
+2020-12-06 22:31:39.948 - error: 500 - C:\Bhuwan\Learning\GIT\srmgmt\views\user.ejs:50
+    48|                         <label><%=entry.roles.length%></label>
+    49|                         <!-- <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-email="<%=entry.email%>"
+ >> 50|                             data-desgn="<%=entry.designation._id%>" data-role="<%=entry.roles[0].name%>">Edit</a> -->
+    51|                         <% }%>
+    52|                         <a href="javascript:void(0);" class="btn btn-sm btn-danger delete"
+    53|                             data-email="<%=entry.email%>">Delete</a>
+
+Cannot read property '_id' of undefined - /user - GET - ::1
+2020-12-06 22:31:40.046 - info: ::1 - GET /user HTTP/1.1 500 1884 - 195.945 ms
+
+2020-12-06 22:31:55.169 - error: 500 - C:\Bhuwan\Learning\GIT\srmgmt\views\user.ejs:50
+    48|                         <label><%=entry.roles.length%></label>
+    49|                         <!-- <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-email="<%=entry.email%>"
+ >> 50|                             data-desgn="<%=entry.designation._id%>" data-role="<%=entry.roles[0].name%>">Edit</a> -->
+    51|                         <% }%>
+    52|                         <a href="javascript:void(0);" class="btn btn-sm btn-danger delete"
+    53|                             data-email="<%=entry.email%>">Delete</a>
+
+Cannot read property '_id' of undefined - /user - GET - ::1
+2020-12-06 22:31:55.423 - info: ::1 - GET /user HTTP/1.1 500 1884 - 317.827 ms
+
+2020-12-06 22:32:18.701 - info: ::1 - GET /user HTTP/1.1 200 14281 - 275.316 ms
+
+2020-12-06 22:32:18.815 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 2.290 ms
+
+2020-12-06 22:32:18.826 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 4.287 ms
+
+2020-12-06 22:32:18.855 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 1.827 ms
+
+2020-12-06 22:38:29.152 - info: ::1 - GET /user HTTP/1.1 200 13709 - 286.087 ms
+
+2020-12-06 22:38:29.221 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 6.312 ms
+
+2020-12-06 22:38:29.233 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 4.305 ms
+
+2020-12-06 22:38:29.251 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 14.304 ms
+
+2020-12-06 22:38:41.130 - info: ::1 - PUT /user?_method=put HTTP/1.1 302 54 - 116.025 ms
+
+2020-12-06 22:38:41.266 - info: ::1 - GET /user HTTP/1.1 200 13775 - 101.580 ms
+
+2020-12-06 22:38:41.352 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 4.706 ms
+
+2020-12-06 22:38:41.358 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 6.634 ms
+
+2020-12-06 22:38:41.373 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 15.416 ms
+
+2020-12-06 22:40:21.049 - info: ::1 - GET /tracker HTTP/1.1 304 - - 141.349 ms
+
+2020-12-06 22:40:21.538 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 304 - - 2.262 ms
+
+2020-12-06 22:40:21.541 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 304 - - 3.524 ms
+
+2020-12-06 22:40:21.554 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 304 - - 2.806 ms
+
+2020-12-06 22:40:21.557 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 304 - - 4.015 ms
+
+2020-12-06 22:40:37.534 - info: ::1 - GET /tracker HTTP/1.1 403 43 - 1.655 ms
+
+2020-12-06 22:40:41.794 - info: ::1 - GET / HTTP/1.1 200 3319 - 3.479 ms
+
+2020-12-06 22:40:41.900 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 10.942 ms
+
+2020-12-06 22:40:42.357 - info: ::1 - GET /$%7BcontextPath%7D/resources/js/bootstrap.min.js HTTP/1.1 404 187 - 2.977 ms
+
+2020-12-06 22:40:51.990 - info: ::1 - POST /signin HTTP/1.1 200 16 - 175.840 ms
+
+2020-12-06 22:40:52.111 - info: ::1 - GET /tracker HTTP/1.1 200 16874 - 91.595 ms
+
+2020-12-06 22:40:52.186 - info: ::1 - GET /assets/css/font-awesome/css/font-awesome.css HTTP/1.1 200 39751 - 6.921 ms
+
+2020-12-06 22:40:52.230 - info: ::1 - GET /assets/css/bootstrap.css HTTP/1.1 200 182626 - 9.648 ms
+
+2020-12-06 22:40:52.240 - info: ::1 - GET /assets/js/bootstrap.js HTTP/1.1 200 127709 - 13.334 ms
+
+2020-12-06 22:40:52.267 - info: ::1 - GET /assets/js/jquery-3.3.1.js HTTP/1.1 200 282115 - 9.785 ms
+

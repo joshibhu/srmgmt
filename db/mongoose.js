@@ -6,7 +6,7 @@ const config = require('../config/config');
 
 class db {
     default_args = {
-        MONGODB_URI: 'mongodb://127.0.0.1:27017/srmgmt'
+        MONGODB_URI: 'mongodb://127.0.0.1:27017/srmgmt_new'
     }
 
     constructor() {
@@ -58,7 +58,7 @@ function initial() {
                         //create an temp admin account by default
                         User.estimatedDocumentCount((err, count) => {
                             if (!err && count === 0) {
-                                new User({ name: 'sys_admin', email: 'sys_admin@gmail.com', password: 'sys_admin', roles: [admin_role_id, user_role_id, fx_role_id] }).save(err => {
+                                new User({ name: 'sys_admin', email: 'sys_admin@gmail.com', password: 'sys_admin', roles: [admin_role_id] }).save(err => {
                                     if (err) {
                                         console.log("error", err);
                                     }

@@ -4,19 +4,17 @@ const auth = require("../middleware/auth");
 
 module.exports = function (app) {
 
-    // app.get('/tracker', function (req, res) {
-    //     res.render('file_view', { message: {} });
-    // });
+    app.get('/tracker', auth.verifyToken, auth.isUser, fileController_bs.getAllFiles);
 
-    app.get('/tracker', auth.verifyToken, fileController_bs.getAllFiles);
-
-    app.put('/tracker/files/update', fileController_bs.updateFileRecord);
+    app.put('/tracker/files/update', auth.verifyToken, fileController_bs.updateFileRecord);
 
     app.post('/tracker/files/save', auth.verifyToken, auth.isUser, fileController_bs.createFileRecord);
 
-    app.delete('/tracker/files/delete', fileController_bs.deleteFileRecord);
+    app.delete('/tracker/files/delete', auth.verifyToken, fileController_bs.deleteFileRecord);
 
-    app.put('/tracker/files/changeStatus', fileController_bs.updateFileRecordStatus);
+    app.put('/tracker/files/changeStatus', auth.verifyToken, fileController_bs.updateFileRecordStatus);
+
+    app.put('/tracker/files/approve', auth.verifyToken, auth.isAdmin, fileController_bs.approveFileRecordStatus);
 
     app.get('/tracker/api/files/:fileId', fileController_bs.getFileRecord);
 

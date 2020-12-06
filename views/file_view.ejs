@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>File Management</title>
+    <link href="/assets/css/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
@@ -26,18 +27,31 @@
         <table class="table table-striped table-sm" id="mytable">
             <thead>
                 <tr>
+                    <% if(roles.includes('user')) {%>
                     <th>File ID</th>
                     <th>File Name</th>
                     <th>Amount</th>
                     <th>Category</th>
                     <th>Create Time</th>
                     <th>Current Status</th>
-                    <th>Action</th>
+                    <th>Actions</th>
+                    <%} if(roles.includes('admin') || roles.includes('fx')) {%>
+                    <th>File ID</th>
+                    <th>File Name</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Create Time</th>
+                    <th>Current Status</th>
+                    <th>Created By</th>
+                    <th>Actions</th>
+                    <%}%>
                 </tr>
             </thead>
             <tbody>
                 <%table.forEach(function(entry) {%>
                 <tr>
+                    <% if(roles.includes('user')) {%>
+                    <!--USER ROLE-->
                     <td><a href="javascript:void(0);" class="badge badge-info info"
                             data-id="<%=entry.uid%>"><%=entry.uid%></a></td>
                     <td><%=entry.name%></td>
@@ -47,20 +61,68 @@
                     <td><%=entry.createTimestamp%></td>
                     <td><%=entry.currStatus%></td>
                     <td>
-                        <!--Edit and delete are only applicable for user and admin-->
-                        <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-id="<%=entry.uid%>"
-                            data-file_amount="<%=entry.amount%>" data-dealer="<%=entry.dealer%>"
-                            data-contact="<%=entry.contact%>">Edit</a>
-                        <a href="javascript:void(0);" class="btn btn-sm btn-danger delete"
-                            data-id="<%=entry.uid%>">Delete</a>
+                        <!--Edit and Delete can only be done by user if the status is saved or rejected-->
+                        <%if(entry.currStatus === 'File Record Saved' || entry.currStatus === 'Returned with Observations'){ %>
+                        <!--Delete only applicable for user and admin-->
+                        <button class="btn btn-success btn-sm rounded-0 edit" type="button" data-toggle="tooltip"
+                            data-id="<%=entry.uid%>" data-file_amount="<%=entry.amount%>"
+                            data-dealer="<%=entry.dealer%>" data-contact="<%=entry.contact%>" data-placement="top"
+                            title="Edit"><i class="fa fa-edit"></i></button>
+                        <button class="btn btn-danger btn-sm rounded-0 delete" type="button" data-toggle="tooltip"
+                            data-placement="top" title="Delete" data-id="<%=entry.uid%>"><i
+                                class="fa fa-trash"></i></button>
+                        <%}%>
                         <%for ( var i = 0; i < entry.nextActions.length; i++ ){%>
                         <a href="javascript:void(0);" class="btn btn-sm btn-primary action" data-id="<%=entry.uid%>"
                             data-action="<%=entry.nextActions[i]%>"><%=entry.nextActions[i]%></a>
                         <%}%>
                     </td>
+                    <%} if(roles.includes('fx')) {%>
+                        <!--FX ROLE-->
+                    <td><a href="javascript:void(0);" class="badge badge-info info"
+                            data-id="<%=entry.uid%>"><%=entry.uid%></a></td>
+                    <td><%=entry.name%></td>
+                    <td><%=entry.amount%></td>
+                    <td><%=categories.find(obj => obj.priority === parseInt(entry.category)).text%></td>
+                    <!-- <td><%=entry.category%></td> -->
+                    <td><%=entry.createTimestamp%></td>
+                    <td><%=entry.currStatus%></td>
+                    <td><%=(entry.createdBy)?entry.createdBy.name:''%></td>
+                    <td>
+                        <%for ( var i = 0; i < entry.nextActions.length; i++ ){%>
+                        <a href="javascript:void(0);" class="btn btn-sm btn-primary action" data-id="<%=entry.uid%>"
+                            data-action="<%=entry.nextActions[i]%>"><%=entry.nextActions[i]%></a>
+                        <%}%>
+                    </td>
+                    <%} if(roles.includes('admin')){%>
+                        <!--ADMIN ROLE-->
+                    <td><a href="javascript:void(0);" class="badge badge-info info"
+                            data-id="<%=entry.uid%>"><%=entry.uid%></a></td>
+                    <td><%=entry.name%></td>
+                    <td><%=entry.amount%></td>
+                    <td><%=categories.find(obj => obj.priority === parseInt(entry.category)).text%></td>
+                    <!-- <td><%=entry.category%></td> -->
+                    <td><%=entry.createTimestamp%></td>
+                    <td><%=entry.currStatus%></td>
+                    <td><%=(entry.createdBy)?entry.createdBy.name:''%></td>
+                    <td>
+                        <!--Delete can be done by admin anytime-->
+
+                        <button class="btn btn-danger btn-sm rounded-0 delete" type="button" data-toggle="tooltip"
+                            data-placement="top" title="Delete" data-id="<%=entry.uid%>"><i
+                                class="fa fa-trash"></i></button>
+                        <!--To approve a different action is called-->
+                        <%for ( var i = 0; i < entry.nextActions.length; i++ ){%>
+                        <a href="javascript:void(0);" <%if(entry.nextActions[i] === 'Approve'){%>
+                            class="btn btn-sm btn-primary approve" <%}else{%> class="btn btn-sm btn-primary action" <%}%>
+                            data-id="<%=entry.uid%>"
+                            data-action="<%=entry.nextActions[i]%>"><%=entry.nextActions[i]%></a>
+                        <%}%>
+                    </td>
+                    <%}%>
                 </tr>
                 <%});%>
-            </tbody>
+                </tbody>
         </table>
     </div>
 
@@ -241,6 +303,35 @@
         </div>
     </form>
 
+     <!-- Approve File Record-->
+     <form action="/tracker/files/approve?_method=put" method="post">
+        <div class="modal fade" id="ApproveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Approve File Record</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="amount">Vetted Amount</label>
+                            <input type="text" name="vettedAmount" class="form-control amount" placeholder="Vetted Amount" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="uid" class="uid4">
+                        <input type="hidden" name="action" class="action">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Approve</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
       <script>
         $(document).ready(function () {
             $('#mytable').DataTable({
@@ -275,6 +366,15 @@
                 var action = $(this).data('action');
                 $('#StatusModal').modal('show');
                 $('.uid3').val(fileId);
+                $('.action').val(action);
+            });
+
+            //showing modal for approve file record
+            $('#mytable').on('click', '.approve', function () {
+                var fileId = $(this).data('id');
+                var action = $(this).data('action');
+                $('#ApproveModal').modal('show');
+                $('.uid4').val(fileId);
                 $('.action').val(action);
             });
             //showing modal for file info view

@@ -7,7 +7,6 @@ function deleteFile(fileId) {
             method: 'DELETE',
         })
             .done(function (data) {
-                console.log("Sample of data:", data);
                 if (!data.message) {
                     $('#message').html('File Deleted Successfully !!!');
                 } else {
@@ -19,7 +18,7 @@ function deleteFile(fileId) {
 }
 
 function updateRecord(fileId) {
-   
+
 }
 
 
@@ -30,7 +29,6 @@ function changeStatus(fileId, action) {
         method: 'PUT',
     })
         .done(function (data) {
-            console.log("Sample of data:", data);
             if (!data.message) {
                 $('#message').html('Successfully changed !!!');
             } else {

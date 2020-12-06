@@ -31,6 +31,9 @@ const fileSchema = new mongoose.Schema({
     observation: {
         type: String
     },
+    vettedAmount: {
+        type: Number
+    },
     category: {
         type: String,
         required: true,

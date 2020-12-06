@@ -68,7 +68,7 @@ exports.getAllFiles = async function (req, res) {
 		} else {
 			query = { createdBy: db_user._id };
 		}
-		FileRecord.find(query).populate('status')
+		FileRecord.find(query).populate('status').populate('createdBy')
 			.then(function (db_records) {
 				//iterate over db records and find and add current status and next status value
 				db_records.forEach((item) => {
@@ -80,7 +80,7 @@ exports.getAllFiles = async function (req, res) {
 				// If we were able to successfully find an Product with the given id, send it back to the client
 				//res.status(200).send(db_records);
 				let currentYear = new Date().getFullYear();
-				res.status(200).render('file_view', { table: db_records, categories: config.file_categories, years: [currentYear, currentYear - 1, currentYear - 2], status: Object.keys(config.file_status), page: 'file_mgmt', username: req.username, roles: req.roles })
+				res.status(200).render('file_view', { table: db_records, categories: config.file_categories, years: getFinancialYears(), status: Object.keys(config.file_status), page: 'file_mgmt', username: req.username, roles: req.roles })
 			})
 			.catch(function (err) {
 				// If an error occurred, send it to the client
@@ -125,8 +125,12 @@ exports.createFileRecord = async function (req, res) {
 			res.status(500).render('addRecord', { message: err });
 			return;
 		}
-		const uniqueFileId = uid(8);
-		let db_user = await User.findById(req.userId);
+		let db_user = await User.findById(req.userId).populate('designation');
+		//find desingation object of FX user to find count
+		let db_desgn = await Designation.findOneAndUpdate({ designation: db_user.designation.mappedTo }, { $inc: { fileCount: 1 } });
+		// desing unique file id based on the user designation mapped to which FX
+		let num = ++db_desgn.fileCount
+		const uniqueFileId = db_user.designation.mappedTo.replace('-', '') + num.toString().padStart(4, "0");
 		let additionalObj = { uid: uniqueFileId, createdBy: db_user._id, createTimestamp: format('dd-MM-yyyy hh.mm.ss', new Date()), status: db_status._id };
 		const file_record = new FileRecord({ ...req.body, ...additionalObj });
 		file_record.save((err, db_record) => {
@@ -175,4 +179,49 @@ exports.updateFileRecordStatus = async function (req, res) {
 			res.redirect('/tracker');
 		});
 	});
+}
+
+// update by admin
+exports.approveFileRecordStatus = async function (req, res) {
+	// delete from the database
+	let inputfileId = req.body.uid;
+	let action = req.body.action;
+	let status_to_be_added = config.action_status_map_arr.find((item) => (action === item.action)).new_status;
+	let fileStatus = new FileStatus({ status: status_to_be_added, createdOn: format('dd-MM-yyyy hh.mm.ss', new Date()) })
+	// add status and then update file record
+	fileStatus.save((err, db_status) => {
+		if (err) {
+			res.status(500).send({ message: err });
+			return;
+		}
+		const filter = { uid: inputfileId };
+		const update = { $push: { status: db_status._id }, vettedAmount: req.body.vettedAmount };
+	FileRecord.findOneAndUpdate(filter, update, { new: true }, (err, db_record) => {
+		if (err) {
+			res.status(500).send({ message: err });
+			return;
+		}
+		res.redirect('/tracker');
+	});
+});
+}
+
+function getFinancialYears() {
+	let financialYears = [];
+	let fiscalyear = "";
+	let today = new Date();
+	if ((today.getMonth() + 1) <= 3) {
+		fiscalyear = (today.getFullYear() - 1) + "-" + today.getFullYear()
+	} else {
+		fiscalyear = today.getFullYear() + "-" + (today.getFullYear() + 1)
+	}
+	financialYears.push(fiscalyear);
+	let count = 1;
+	while (count < 3) {
+		let left = parseInt(fiscalyear.split('-')[0]) - count;
+		let right = parseInt(fiscalyear.split('-')[1]) - count;
+		financialYears.push(left + '-' + right);
+		++count;
+	}
+	return financialYears;
 }
