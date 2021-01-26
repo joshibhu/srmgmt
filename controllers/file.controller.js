@@ -1,4 +1,5 @@
 const config = require('../config/config.js');
+const utility = require('../config/utility.js');
 const format = require('date-format');
 var logger = require('../config/winston');
 const FileRecord = require('../models/file_record');
@@ -11,6 +12,7 @@ exports.getFileRecord = async function (req, res) {
 
 	FileRecord.findOne({ uid: req.params.fileId })
 		.populate('status')
+		.populate('createdBy')
 		.then(function (db_record) {
 			// If we were able to successfully find an Product with the given id, send it back to the client
 			let status_arr = db_record.status;
@@ -23,7 +25,7 @@ exports.getFileRecord = async function (req, res) {
 				}
 			});
 			//console.log(status_track_arr + '################');
-			res.status(200).send(status_arr);
+			res.status(200).send(db_record);
 		})
 		.catch(function (err) {
 			// If an error occurred, send it to the client
@@ -67,7 +69,13 @@ exports.getAllFiles = async function (req, res) {
 		} else {
 			query = { createdBy: db_user._id };
 		}
-		FileRecord.find(query).populate('status').populate('createdBy')
+		FileRecord.find(query).populate('status')
+			.populate({
+				path: 'createdBy',
+				populate: {
+					path: 'designation'
+				}
+			})
 			.then(function (db_records) {
 				//iterate over db records and find and add current status and next status value
 				db_records.forEach((item) => {
@@ -79,7 +87,7 @@ exports.getAllFiles = async function (req, res) {
 				// If we were able to successfully find an Product with the given id, send it back to the client
 				//res.status(200).send(db_records);
 				let currentYear = new Date().getFullYear();
-				res.status(200).render('file_view', { table: db_records, categories: config.file_categories, years: getFinancialYears(), status: Object.keys(config.file_status), page: 'file_mgmt', username: req.username, roles: req.roles })
+				res.status(200).render('file_view', { table: db_records, categories: config.file_categories, years: utility.getLastThreeFinancialYears(), status: Object.keys(config.file_status), page: 'file_mgmt', fundTypes: config.fundTypes, allocations: config.allocations, user: req.user, roles: req.roles })
 			})
 			.catch(function (err) {
 				// If an error occurred, send it to the client
@@ -93,21 +101,34 @@ function findNextActions(currStatus, db_user) {
 	return config.action_status_map_arr.filter((item) => (currStatus === item.curr_status && user_roles.includes(item.scope))).map(item => item.action);
 }
 
-// fetch employee detail based on employee id
+// delete a file record
 exports.deleteFileRecord = async function (req, res) {
 	FileRecord.findOneAndDelete({ uid: req.body.uid }, (err, db_record) => {
 		if (err) {
-			res.status(500).send({ message: err });
+			res.status(500).render('addRecord', { message: err });
 			return;
 		}
 		if (db_record) {
 			let status_id_arr = db_record.status.filter((item) => item._id);
 			FileStatus.deleteMany({ _id: { $in: status_id_arr } }, (err) => {
 				if (err) {
-					res.status(500).send({ message: err });
+					res.status(500).render('addRecord', { message: err });
 					return;
 				}
-				res.redirect('/tracker');
+				//update user record and add back the allocated amount of the file
+				let db_user = req.user;
+				let allocated_amount = db_record.amount;
+				let financialYear = db_record.financialYear;
+				let report = db_user.reports.find((report) => report.financial_year === financialYear);
+				report.available_amount += allocated_amount;
+				report.consumed_amount -= allocated_amount;
+				db_user.save((err, db_record) => {
+					if (err) {
+						res.status(500).render('addRecord', { message: err });
+						return;
+					}
+					res.redirect('/tracker');
+				});
 			});
 		} else {
 			res.status(400).send({ message: 'record does not exist !!' });
@@ -118,6 +139,7 @@ exports.deleteFileRecord = async function (req, res) {
 // create a file record
 exports.createFileRecord = async function (req, res) {
 	// save status first and then file record
+	console.log(req.user, 'creta file!!!!!!!!@@@@@@@');
 	const fileStatus = new FileStatus({ status: config.file_status.FILE_RECORD_SAVED, createdOn: format('dd-MM-yyyy hh.mm.ss', new Date()) });
 	fileStatus.save(async (err, db_status) => {
 		if (err) {
@@ -137,7 +159,20 @@ exports.createFileRecord = async function (req, res) {
 				res.status(500).render('addRecord', { message: err });
 				return;
 			}
-			res.redirect('/tracker');
+			// update user data reports value
+			let financialYear = req.body.financialYear;
+			let amount = parseInt(req.body.amount);
+			let db_user = req.user;
+			let report = db_user.reports.find((report) => report.financial_year === financialYear);
+			report.available_amount -= amount;
+			report.consumed_amount += amount;
+			db_user.save((err, db_record) => {
+				if (err) {
+					res.status(500).render('addRecord', { message: err });
+					return;
+				}
+				res.redirect('/tracker');
+			});
 		});
 	});
 };
@@ -145,13 +180,32 @@ exports.createFileRecord = async function (req, res) {
 // update by admin
 exports.updateFileRecord = async function (req, res) {
 	let { uid, ...body } = req.body;
-	FileRecord.findOneAndUpdate({ uid: uid }, body, { new: true }, (err, db_record) => {
+	console.log(req.user, 'first!!!!!!!!@@@@@@@');
+	FileRecord.findOneAndUpdate({ uid: uid }, body, (err, db_record) => {
 		if (err) {
 			req.flash('error', 'Error while updating record !');
-		} else {
-			req.flash('success', 'The record is updated successfully !');
+			res.redirect('/tracker');
+			return;
 		}
-		res.redirect('/tracker');
+		// update user records data as well, incase the file amount is changed
+		let db_user = req.user;
+		let prev_allocated_amount = db_record.amount;
+		let curr_allocated_amount = parseInt(req.body.amount);
+		let financialYear = db_record.financialYear;
+		console.log(req.user, '!!!!!!!!@@@@@@@');
+		let report = db_user.reports.find((report) => report.financial_year === financialYear);
+		//remove the previously allocated amount
+		report.available_amount += prev_allocated_amount;
+		report.consumed_amount -= prev_allocated_amount;
+		//add up the current allocated amount
+		report.available_amount -= curr_allocated_amount;
+		report.consumed_amount += curr_allocated_amount;
+		db_user.save((err, db_record) => {
+			if (err) {
+				req.flash('error', 'Error while updating record !');
+			}
+			res.redirect('/tracker');
+		});
 	});
 }
 
@@ -194,7 +248,7 @@ exports.approveFileRecordStatus = async function (req, res) {
 			return;
 		}
 		const filter = { uid: inputfileId };
-		const update = { $push: { status: db_status._id }, vettedAmount: req.body.vettedAmount };
+		const update = { $push: { status: db_status._id }, vettedAmount: req.body.vettedAmount, message: req.body.message };
 		FileRecord.findOneAndUpdate(filter, update, { new: true }, (err, db_record) => {
 			if (err) {
 				res.status(500).send({ message: err });
@@ -205,22 +259,27 @@ exports.approveFileRecordStatus = async function (req, res) {
 	});
 }
 
-function getFinancialYears() {
-	let financialYears = [];
-	let fiscalyear = "";
-	let today = new Date();
-	if ((today.getMonth() + 1) <= 3) {
-		fiscalyear = (today.getFullYear() - 1) + "-" + today.getFullYear()
-	} else {
-		fiscalyear = today.getFullYear() + "-" + (today.getFullYear() + 1)
-	}
-	financialYears.push(fiscalyear);
-	let count = 1;
-	while (count < 3) {
-		let left = parseInt(fiscalyear.split('-')[0]) - count;
-		let right = parseInt(fiscalyear.split('-')[1]) - count;
-		financialYears.push(left + '-' + right);
-		++count;
-	}
-	return financialYears;
+// update by admin
+exports.returnFileRecordStatus = async function (req, res) {
+	// delete from the database
+	let inputfileId = req.body.uid;
+	let action = req.body.action;
+	let status_to_be_added = config.action_status_map_arr.find((item) => (action === item.action)).new_status;
+	let fileStatus = new FileStatus({ status: status_to_be_added, createdOn: format('dd-MM-yyyy hh.mm.ss', new Date()) })
+	// add status and then update file record
+	fileStatus.save((err, db_status) => {
+		if (err) {
+			res.status(500).send({ message: err });
+			return;
+		}
+		const filter = { uid: inputfileId };
+		const update = { $push: { status: db_status._id }, message: req.body.message };
+		FileRecord.findOneAndUpdate(filter, update, { new: true }, (err, db_record) => {
+			if (err) {
+				res.status(500).send({ message: err });
+				return;
+			}
+			res.redirect('/tracker');
+		});
+	});
 }

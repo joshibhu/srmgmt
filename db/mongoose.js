@@ -75,15 +75,46 @@ function initial() {
 
         }
     });
+
     DesgMap.estimatedDocumentCount((err, count) => {
         if (!err && count === 0) {
             config.designation_mapping.forEach((obj) => {
-                new DesgMap({ designation: obj.designation, mappedTo: obj.mappedTo }).save(err => {
+                new DesgMap({ designation: obj.designation, mappedTo: obj.mappedTo, capping_per_file: obj.capping_per_file, capping_per_finyear: obj.capping_per_finyear }).save(err => {
                     if (err) {
                         console.log("error", err);
                     }
                 });
             });
+        } else {
+            DesgMap.find().select('-_id -__v -fileCount')
+                .then(function (db_desn_records) {
+                    if (db_desn_records && db_desn_records.length > 0) {
+                        let difference = config.designation_mapping.filter(x => {
+                            if (!db_desn_records.find((db_obj) => (db_obj.designation === x.designation))) {
+                                return x;
+                            }
+                        });
+                        difference.forEach((obj) => {
+                            new DesgMap(obj).save(err => {
+                                if (err) {
+                                    console.log("error", err);
+                                }
+                            });
+                        });
+
+                        // for (let obj of config.designation_mapping) {
+                        //     console.log(db_desn_records.find(db_obj => (db_obj.designation === obj.designation)));
+                        //     if (!db_desn_records.find(db_obj => (db_obj.designation === obj.designation))) {
+                        //         console.log(obj);
+                        //         // new DesgMap(obj).save(err => {
+                        //         //     if (err) {
+                        //         //         console.log("error", err);
+                        //         //     }
+                        //         // });
+                        //     }
+                        // }
+                    }
+                })
         }
     });
 }

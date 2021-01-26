@@ -15,7 +15,7 @@ const fileSchema = new mongoose.Schema({
         maxlength: 20,
     },
     amount: {
-        type: String,
+        type: Number,
         required: true
     },
     financialYear: {
@@ -31,8 +31,18 @@ const fileSchema = new mongoose.Schema({
     observation: {
         type: String
     },
+    fundType: {
+        type: String
+    },
+    allocation: {
+        type: String
+    },
     vettedAmount: {
         type: Number
+    },
+    message: {
+        type: String,
+        maxlength: 150
     },
     category: {
         type: String,

@@ -44,10 +44,8 @@
                         <% if(entry.roles.length === 0) {%>
                         <a href="javascript:void(0);" class="btn btn-sm btn-primary approve"
                             data-email="<%=entry.email%>">Approve</a>
-                        <% }else{%>
-                        <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-email="<%=entry.email%>"
-                            data-desgn="<%=entry.designation._id%>" data-role="<%=entry.roles[0].name%>">Edit</a>
                         <% }%>
+
                         <a href="javascript:void(0);" class="btn btn-sm btn-danger delete"
                             data-email="<%=entry.email%>">Delete</a>
                     </td>

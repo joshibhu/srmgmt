@@ -3,7 +3,7 @@ const auth = require("../middleware/auth");
 
 module.exports = function (app) {
 
-    app.get('/tracker', auth.verifyToken, auth.isUser, fileController.getAllFiles);
+    app.get('/tracker', auth.verifyToken, fileController.getAllFiles);
 
     app.put('/tracker/files/update', auth.verifyToken, fileController.updateFileRecord);
 
@@ -13,7 +13,9 @@ module.exports = function (app) {
 
     app.put('/tracker/files/changeStatus', auth.verifyToken, fileController.updateFileRecordStatus);
 
-    app.put('/tracker/files/approve', auth.verifyToken, auth.isAdmin, fileController.approveFileRecordStatus);
+    app.put('/tracker/files/approve', auth.verifyToken, auth.isFxUser, fileController.approveFileRecordStatus);
+
+    app.put('/tracker/files/return', auth.verifyToken, auth.isFxUser, fileController.returnFileRecordStatus);
 
     app.get('/tracker/api/files/:fileId', fileController.getFileRecord);
 

@@ -32,6 +32,13 @@ const userSchema = new mongoose.Schema({
     },
     roles: [{
         type: mongoose.Schema.Types.ObjectId, ref: 'role'
+    }],
+    reports: [{
+        _id: false,
+        consumed_amount: { type: Number },
+        available_amount: { type: Number },
+        limit_per_file: { type: Number },
+        financial_year: { type: String }
     }]
 }, { timestamps: true, collection: 'user' });
 
@@ -60,10 +67,10 @@ userSchema.statics.findByDesingations = async (designation_ids) => {
 // Hash the plain text password before saving
 userSchema.pre('save', async function (next) {
     const user = this
-
-    if (user.isModified('password')) {
-        user.password = await bcrypt.hash(user.password, 8)
-    }
+    // commented for development
+    // if (user.isModified('password')) {
+    //     user.password = await bcrypt.hash(user.password, 8)
+    // }
 
     next()
 })

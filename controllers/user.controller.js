@@ -1,4 +1,5 @@
 const config = require('../config/config.js');
+const utility = require('../config/utility.js');
 var logger = require('../config/winston');
 const User = require('../models/user');
 const Role = require('../models/role');
@@ -13,6 +14,7 @@ exports.register = async function (req, res) {
 // fetch employee detail based on employee id
 exports.updateUser = async function (req, res) {
 	let { email, designation, role } = req.body;
+
 	// Based on given designation id find designation mapping objection and then assign role accordingly
 	Designation.findById(designation, (err, db_desgn) => {
 		if (err) {
@@ -24,18 +26,35 @@ exports.updateUser = async function (req, res) {
 			query = { name: 'fx' }
 		} else {
 			query = { name: 'user' }
+
 		}
 		Role.findOne(query, (err, db_role_obj) => {
 			if (err) {
 				req.flash('error', 'Error while updating record !');
 			}
-			User.findOneAndUpdate({ email: email }, { designation: designation, roles: [db_role_obj._id] }, { new: true }, (err, db_record) => {
+			let update_stmt = { designation: designation, roles: [db_role_obj._id] };
+			if (!db_desgn.designation.includes('FX')) {
+				let reports = [];
+				// on role assignment by admin, put last 3 years financial years default records for user role only
+				let financialYears = utility.getLastThreeFinancialYears();
+				financialYears.forEach((finyear) => {
+					let report = {
+						consumed_amount: 0,
+						available_amount: db_desgn.capping_per_finyear,
+						financial_year: finyear,
+						limit_per_file: db_desgn.capping_per_file
+					}
+					reports.push(report);
+				})
+				update_stmt = { ...update_stmt, reports: reports }
+			}
+			User.findOneAndUpdate({ email: email }, update_stmt, { new: true }, (err, db_record) => {
+				console.log(err);
 				if (err) {
 					req.flash('error', 'Error while updating record !');
 				} else {
 					req.flash('success', 'The record is updated successfully !');
 				}
-
 			});
 		});
 	});
@@ -50,7 +69,10 @@ exports.getAllUsers = async function (req, res) {
 				return !obj.roles.includes(obj.roles.find(role => role.name === 'admin'));
 			});
 			Designation.find().then(function (db_desn_records) {
-				res.status(200).render('user', { table: db_records, designation_map: db_desn_records, page: 'user_mgmt', username: req.username, roles: req.roles })
+				if (db_desn_records && db_desn_records.length > 0) {
+					db_desn_records = db_desn_records.filter((obj) => !(obj.mappedTo === '' && obj.capping_per_file === 1000000))
+				}
+				res.status(200).render('user', { table: db_records, designation_map: db_desn_records, page: 'user_mgmt', user: req.user, roles: req.roles })
 			})
 		})
 		.catch(function (err) {

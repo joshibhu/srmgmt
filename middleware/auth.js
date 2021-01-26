@@ -21,13 +21,13 @@ verifyToken = ((req, res, next) => {
         return;
     }
 
-    return jwt.verify(token, config.authKey, (err, decoded) => {
+    return jwt.verify(token, config.authKey, async (err, decoded) => {
         if (err) {
             res.status(401).send({ message: "Unauthorized Access!" });
             return;
         }
         req.userId = decoded.id;
-        setUserNameandRole(req);
+        await setUserNameandRole(req);
         next();
     });
 });
@@ -35,7 +35,7 @@ verifyToken = ((req, res, next) => {
 async function setUserNameandRole(req) {
     let user = await User.findById(req.userId).populate('roles');
     if (user !== 'null') {
-        req.username = user.name;
+        req.user = user;
         req.roles = user.roles.map((obj) => obj.name);
     } else {
         res.status(500).send({ message: err });

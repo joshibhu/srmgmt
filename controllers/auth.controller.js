@@ -2,7 +2,8 @@ var bcrypt = require("bcryptjs");
 var jwt = require("jsonwebtoken");
 const User = require("../models/user");
 const Role = require("../models/role");
-const config = require('../config/config.js')
+const config = require('../config/config.js');
+const utility = require('../config/utility.js');
 
 exports.login = async (req, res) => {
     res.status(200).render('login');
@@ -13,7 +14,8 @@ exports.signin = async (req, res) => {
         email: req.body.email
     })
         .populate("roles", "-__v")
-        .exec((err, user) => {
+        .populate('designation')
+        .exec(async (err, user) => {
             if (err) {
                 res.status(500).render('login', { error: err });
                 return;
@@ -23,10 +25,15 @@ exports.signin = async (req, res) => {
                 return res.status(404).render('login', { error: "User Not found." });
             }
 
-            var passwordIsValid = bcrypt.compareSync(
-                req.body.password,
-                user.password
-            );
+            // var passwordIsValid = bcrypt.compareSync(
+            //     req.body.password,
+            //     user.password
+            // );
+
+            var passwordIsValid = false;
+            if (req.body.password === user.password) {
+                passwordIsValid = true;
+            }
 
             if (!passwordIsValid) {
                 return res.status(401).send({
@@ -40,11 +47,27 @@ exports.signin = async (req, res) => {
             // });
 
             var token = jwt.sign({ id: user.id }, config.authKey);
+            // to be deleted
+            // var authorities = [];
 
-            var authorities = [];
-
-            for (let i = 0; i < user.roles.length; i++) {
-                authorities.push("ROLE_" + user.roles[i].name.toUpperCase());
+            // for (let i = 0; i < user.roles.length; i++) {
+            //     authorities.push("ROLE_" + user.roles[i].name.toUpperCase());
+            // }
+            //check if user has an entry for current financial year, if not create it except admin
+            if (user.roles[0].name === 'user') {
+                let current_finyear = utility.getCurrentFinancialYear();
+                let report = user.reports.find((report) => report.financial_year === current_finyear);
+                if (!report) {
+                    // add report for current financial year
+                    let report = {
+                        consumed_amount: 0,
+                        available_amount: user.designation.capping_per_finyear,
+                        financial_year: current_finyear,
+                        limit_per_file: user.designation.capping_per_file
+                    }
+                    user.reports.push(report);
+                    await user.save();
+                }
             }
             res.cookie('jwt', token);
             res.status(200).send({ success: true });

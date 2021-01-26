@@ -23,8 +23,10 @@
 <body>
     <div class="container">
         <%- include navigation.ejs %>
+        <% if(roles.includes('user')) {%>
         <button class="btn btn-sm btn-success" data-toggle="modal" data-target="#myModalAdd">Add New</button>
-        <table class="table table-striped table-sm" id="mytable">
+        <% } %>
+        <table class="table table-striped table-sm nowrap" id="mytable">
             <thead>
                 <tr>
                     <% if(roles.includes('user')) {%>
@@ -43,6 +45,7 @@
                     <th>Create Time</th>
                     <th>Current Status</th>
                     <th>Created By</th>
+                    <th>Designation</th>
                     <th>Actions</th>
                     <%}%>
                 </tr>
@@ -65,9 +68,8 @@
                         <%if(entry.currStatus === 'File Record Saved' || entry.currStatus === 'Returned with Observations'){ %>
                         <!--Delete only applicable for user and admin-->
                         <button class="btn btn-success btn-sm rounded-0 edit" type="button" data-toggle="tooltip"
-                            data-id="<%=entry.uid%>" data-file_amount="<%=entry.amount%>"
-                            data-dealer="<%=entry.dealer%>" data-contact="<%=entry.contact%>" data-placement="top"
-                            title="Edit"><i class="fa fa-edit"></i></button>
+                            data-id="<%=entry.uid%>" data-placement="top" title="Edit"><i
+                                class="fa fa-edit"></i></button>
                         <button class="btn btn-danger btn-sm rounded-0 delete" type="button" data-toggle="tooltip"
                             data-placement="top" title="Delete" data-id="<%=entry.uid%>"><i
                                 class="fa fa-trash"></i></button>
@@ -88,6 +90,7 @@
                     <td><%=entry.createTimestamp%></td>
                     <td><%=entry.currStatus%></td>
                     <td><%=(entry.createdBy)?entry.createdBy.name:''%></td>
+                    <td><%=(entry.createdBy)?entry.createdBy.designation.designation:''%></td>
                     <td>
                         <%for ( var i = 0; i < entry.nextActions.length; i++ ){%>
                         <a href="javascript:void(0);" class="btn btn-sm btn-primary action" data-id="<%=entry.uid%>"
@@ -105,24 +108,18 @@
                     <td><%=entry.createTimestamp%></td>
                     <td><%=entry.currStatus%></td>
                     <td><%=(entry.createdBy)?entry.createdBy.name:''%></td>
+                    <td><%=(entry.createdBy)?entry.createdBy.designation.designation:''%></td>
                     <td>
                         <!--Delete can be done by admin anytime-->
 
                         <button class="btn btn-danger btn-sm rounded-0 delete" type="button" data-toggle="tooltip"
                             data-placement="top" title="Delete" data-id="<%=entry.uid%>"><i
                                 class="fa fa-trash"></i></button>
-                        <!--To approve a different action is called-->
-                        <%for ( var i = 0; i < entry.nextActions.length; i++ ){%>
-                        <a href="javascript:void(0);" <%if(entry.nextActions[i] === 'Approve'){%>
-                            class="btn btn-sm btn-primary approve" <%}else{%> class="btn btn-sm btn-primary action" <%}%>
-                            data-id="<%=entry.uid%>"
-                            data-action="<%=entry.nextActions[i]%>"><%=entry.nextActions[i]%></a>
-                        <%}%>
                     </td>
                     <%}%>
                 </tr>
                 <%});%>
-                </tbody>
+                    </tbody>
         </table>
     </div>
 
@@ -141,12 +138,7 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="name">File Name</label>
-                            <input type="text" name="name" class="form-control" placeholder="File Name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="amount">Amount</label>
-                            <input type="text" name="amount" class="form-control" placeholder="Amount" required>
+                            <input type="text" name="name" class="form-control name" placeholder="File Name" required>
                         </div>
 
                         <div class="form-group">
@@ -158,6 +150,38 @@
                                 for ( var i = 0; i < years.length; i++ )
                                 {%>
                                 <option value="<%=years[i] %>"><%=years[i] %></option>
+                                <%}%>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="amount" id="amount_label">Amount</label>
+                            <input type="number" name="amount" id="amount" class="form-control" placeholder="Amount"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fundType">Type of fund</label>
+                            <select class="form-control" id="fundType" name="fundType"
+                                aria-placeholder="Type of fund">
+                                <option value="none" selected disabled>Select Fund Type</option>
+                                <%
+                                for ( var i = 0; i < fundTypes.length; i++ )
+                                {%>
+                                <option value="<%=fundTypes[i] %>"><%=fundTypes[i] %></option>
+                                <%}%>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="allocation">Allocation</label>
+                            <select class="form-control" id="allocation" name="allocation"
+                                aria-placeholder="Allocation">
+                                <option value="none" selected disabled>Select allocation</option>
+                                <%
+                                for ( var i = 0; i < allocations.length; i++ )
+                                {%>
+                                <option value="<%=allocations[i] %>"><%=allocations[i] %></option>
                                 <%}%>
                             </select>
                         </div>
@@ -185,12 +209,13 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save</button>
+                        <input type="hidden" name="user" class="user" value='<%=JSON.stringify(user)%>'></input>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </form>
 
     <!-- File Record Info-->
@@ -229,10 +254,51 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+
                     <div class="modal-body">
+                        <div class="form-group">
+                            <label for="name">File Name</label>
+                            <input type="text" name="name" class="form-control name" placeholder="File Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="financialYear">Financial Year</label>
+                            <select class="form-control financialYear" id="financialYear" name="financialYear"
+                                aria-placeholder="Financial Year">
+                                <option value="none" selected disabled>Select Year</option>
+                                <%
+                                for ( var i = 0; i < years.length; i++ )
+                                {%>
+                                <option value="<%=years[i] %>"><%=years[i] %></option>
+                                <%}%>
+                            </select>
+                        </div>
                         <div class="form-group">
                             <label for="amount">Amount</label>
                             <input type="text" name="amount" class="form-control amount" placeholder="Amount" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fundType">Type of fund</label>
+                            <select class="form-control fundType" name="fundType" aria-placeholder="Type of fund">
+                                <option value="none" selected disabled>Select Fund Type</option>
+                                <%
+                                for ( var i = 0; i < fundTypes.length; i++ )
+                                {%>
+                                <option value="<%=fundTypes[i] %>"><%=fundTypes[i] %></option>
+                                <%}%>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="allocation">Allocation</label>
+                            <select class="form-control allocation" name="allocation"
+                                aria-placeholder="Allocation">
+                                <option value="none" selected disabled>Select allocation</option>
+                                <%
+                                for ( var i = 0; i < allocations.length; i++ )
+                                {%>
+                                <option value="<%=allocations[i] %>"><%=allocations[i] %></option>
+                                <%}%>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="dealer">Dealer</label>
@@ -240,7 +306,8 @@
                         </div>
                         <div class="form-group">
                             <label for="contact">Contact</label>
-                            <input type="text" name="contact" class="form-control contact" placeholder="Contact No" required>
+                            <input type="text" name="contact" class="form-control contact" placeholder="Contact No"
+                                required>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -266,7 +333,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                            <strong>Are You Sure To Perform this action?</strong>
+                        <strong>Are You Sure To Perform this action?</strong>
                     </div>
                     <div class="modal-footer">
                         <input type="hidden" name="uid" class="uid3">
@@ -291,7 +358,7 @@
                                 aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <strong>Are You Sure To Delete This Data?</strong>
+                        <strong>Are You Sure To Delete This Record?</strong>
                     </div>
                     <div class="modal-footer">
                         <input type="hidden" name="uid" class="form-control uid2" required>
@@ -303,8 +370,8 @@
         </div>
     </form>
 
-     <!-- Approve File Record-->
-     <form action="/tracker/files/approve?_method=put" method="post">
+    <!-- Approve File Record-->
+    <form action="/tracker/files/approve?_method=put" method="post">
         <div class="modal fade" id="ApproveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -318,7 +385,15 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="amount">Vetted Amount</label>
-                            <input type="text" name="vettedAmount" class="form-control amount" placeholder="Vetted Amount" required>
+                            <input type="text" name="vettedAmount" class="form-control amount"
+                                placeholder="Vetted Amount" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message
+                                <span class="small">(upto 150 characters)</span>
+                            </label>
+                            <input type="text" name="message" class="form-control message" placeholder="Message"
+                                optional>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -332,27 +407,67 @@
         </div>
     </form>
 
-      <script>
+    <!-- Return File Record-->
+    <form action="/tracker/files/return?_method=put" method="post">
+        <div class="modal fade" id="ReturnModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Return File Record</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="message">Message
+                                <span class="small">(upto 150 characters)</span>
+                            </label>
+                            <input type="text" name="message" class="form-control message" placeholder="Message"
+                                optional>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="uid" class="uid5">
+                        <input type="hidden" name="action" class="action">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
         $(document).ready(function () {
             $('#mytable').DataTable({
+                //"scrollX": true,
                 "order": [[4, 'desc']],
                 "columnDefs": [{
                     "orderable": false,
                     "targets": 6
                 }]
             });
-            $('.dataTables_length').addClass('bs-select');
             //showing data to modal for edit record
             $('#mytable').on('click', '.edit', function () {
                 var fileId = $(this).data('id');
-                var amount = $(this).data('file_amount');
-                var dealer = $(this).data('dealer');
-                var contact = $(this).data('contact');
-                $('#EditModal').modal('show');
-                $('.amount').val(amount);
-                $('.dealer').val(dealer);
-                $('.contact').val(contact);
-                $('.uid').val(fileId);
+                $.ajax({
+                    type: 'GET',
+                    url: '/tracker/api/files/' + fileId,
+                    complete: function (res) {
+                        let fileRecord = res.responseJSON;
+                        $('#EditModal').modal('show');
+                        $('.name').val(fileRecord.name);
+                        $('.amount').val(fileRecord.amount);
+                        $('.dealer').val(fileRecord.dealer);
+                        $('.contact').val(fileRecord.contact);
+                        $('.fundType').val(fileRecord.fundType);
+                        $('.allocation').val(fileRecord.allocation);
+                        $('.financialYear').val(fileRecord.financialYear);
+                        $('.uid').val(fileRecord.fileId);
+                    }
+                });
             });
             //showing modal for delete record
             $('#mytable').on('click', '.delete', function () {
@@ -364,19 +479,44 @@
             $('#mytable').on('click', '.action', function () {
                 var fileId = $(this).data('id');
                 var action = $(this).data('action');
-                $('#StatusModal').modal('show');
-                $('.uid3').val(fileId);
-                $('.action').val(action);
+                if (action === 'Approve') {
+                    $('#ApproveModal').modal('show');
+                    $('.uid4').val(fileId);
+                    $('.action').val(action);
+                } else if (action === 'Return') {
+                    $('#ReturnModal').modal('show');
+                    $('.uid5').val(fileId);
+                    $('.action').val(action);
+                } else {
+                    $('#StatusModal').modal('show');
+                    $('.uid3').val(fileId);
+                    $('.action').val(action);
+                }
             });
 
             //showing modal for approve file record
-            $('#mytable').on('click', '.approve', function () {
-                var fileId = $(this).data('id');
-                var action = $(this).data('action');
-                $('#ApproveModal').modal('show');
-                $('.uid4').val(fileId);
-                $('.action').val(action);
+            // $('#mytable').on('click', '.approve', function () {
+            //     var fileId = $(this).data('id');
+            //     var action = $(this).data('action');
+            //     $('#ApproveModal').modal('show');
+            //     $('.uid4').val(fileId);
+            //     $('.action').val(action);
+            // });
+
+
+            $("#financialYear").change(function () {
+                let userData = JSON.parse(($('.user').val()));
+                if (userData.reports && userData.reports.length > 0) {
+                    let report = userData.reports.find((report) => report.financial_year === $('#financialYear').val());
+                    if (report) {
+                        $('#myModalAdd #amount_label').html('Amount  <span class="small">(Available amount=Rs. ' + report.available_amount + ', Limit per quotation=Rs. ' + report.limit_per_file + ' )');
+                        $('#myModalAdd #amount').attr("max", report.limit_per_file);
+                    } else {
+                        $('#myModalAdd #amount_label').html('Amount  <span class="small">(Available amount = undefined, Limit per quotation = undefined)');
+                    }
+                }
             });
+
             //showing modal for file info view
             $('#mytable').on('click', '.info', function () {
                 var fileId = $(this).data('id');
@@ -384,8 +524,21 @@
                     type: 'GET',
                     url: '/tracker/api/files/' + fileId,
                     complete: function (res) {
-                        let status_arr = res.responseJSON;
-                        let html = '<table class="table table-sm w-auto small" id="mytable"><thead><tr><th>From (Status)</th><th>Changed To (Status)</th><th>Date</th></tr></thead><tbody>';
+                        let fileRecord = res.responseJSON;
+                        let status_arr = fileRecord.status;
+                        let html = '<div>'
+                        if (fileRecord.vettedAmount) {
+                            html += '<div class="form-group"><label class="small">Vetted Amount - ' + fileRecord.vettedAmount + '</label></div>';
+                        }
+                        if (fileRecord.message) {
+                            html += '<div class="form-group"><label class="small">Message - ' + ((fileRecord.message) ? fileRecord.message : 'NA') + '</label></div>';
+                        }
+                        html += '<div class="form-group"><label class="small">Amount Applied - Rs. ' + fileRecord.amount + '</label></div>';
+                        html += '<div class="form-group"><label class="small">Financial Year - ' + fileRecord.financialYear + '</label></div>';
+                        html += '<div class="form-group"><label class="small">Created By - ' + fileRecord.createdBy.name + '</label></div>';
+                        html += '<div class="form-group"><label class="small">Created At - ' + fileRecord.createTimestamp + '</label></div>';
+                        html += '</div>'
+                        html += '<table class="table table-sm w-auto small" id="mytable"><thead><tr><th>From (Status)</th><th>Changed To (Status)</th><th>Date</th></tr></thead><tbody>';
                         status_arr.forEach((item, i) => {
                             if (i !== 0) {
                                 html += '<tr><td>' + status_arr[i - 1].status + ' </td><td>' + item.status + '</td><td>' + item.createdOn + '</td></tr>'

@@ -1,1 +1,1 @@
--  Update SR : Incorrect employee id returns no error
+- Error/Success msg handling while user designation assignment
