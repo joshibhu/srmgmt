@@ -6,7 +6,7 @@ const config = require('../config/config');
 
 class db {
     default_args = {
-        MONGODB_URI: config.mongo_db_uri
+        MONGODB_URI: process.env.MONGODB_URI || config.mongo_db_uri
     }
 
     constructor() {
