@@ -5,6 +5,8 @@ module.exports = function (app) {
 
     app.get('/tracker', auth.verifyToken, fileController.getAllFiles);
 
+    app.get('/tracker/subheads/:head_code', auth.verifyToken, fileController.getSubheads);
+
     app.put('/tracker/files/update', auth.verifyToken, fileController.updateFileRecord);
 
     app.post('/tracker/files/save', auth.verifyToken, auth.isUser, fileController.createFileRecord);

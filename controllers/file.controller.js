@@ -5,6 +5,7 @@ var logger = require('../config/winston');
 const FileRecord = require('../models/file_record');
 const FileStatus = require('../models/file_status');
 const Designation = require('../models/designation_mapping');
+const RevAlloc = require('../models/revenue_allocation');
 const User = require('../models/user');
 
 // fetch employee detail based on employee id
@@ -69,6 +70,8 @@ exports.getAllFiles = async function (req, res) {
 		} else {
 			query = { createdBy: db_user._id };
 		}
+		let rev_allocations = await RevAlloc.find().lean();
+		let fund_types = Array.from(new Set(rev_allocations.map(obj => obj.head_code)));
 		FileRecord.find(query).populate('status')
 			.populate({
 				path: 'createdBy',
@@ -87,13 +90,27 @@ exports.getAllFiles = async function (req, res) {
 				// If we were able to successfully find an Product with the given id, send it back to the client
 				//res.status(200).send(db_records);
 				let currentYear = new Date().getFullYear();
-				res.status(200).render('file_view', { table: db_records, categories: config.file_categories, years: utility.getLastThreeFinancialYears(), status: Object.keys(config.file_status), page: 'file_mgmt', fundTypes: config.fundTypes, allocations: config.allocations, user: req.user, roles: req.roles })
+				res.status(200).render('file_view', {
+					table: db_records, categories: config.file_categories
+					, years: utility.getLastThreeFinancialYears(), status: Object.keys(config.file_status)
+					, page: 'file_mgmt', fundTypes: fund_types, allocations: config.allocations
+					, rev_allocations: rev_allocations
+					, user: req.user, roles: req.roles
+				})
 			})
 			.catch(function (err) {
 				// If an error occurred, send it to the client
 				res.status(500).render('file_view', { message: "Error while fetching file record" });
 			});
 	});
+};
+
+// het sub heads
+exports.getSubheads = async function (req, res) {
+	let head_code = req.params.head_code;
+	let subheads = await RevAlloc.find({ 'head_code': head_code }, 'sub_head_code -_id').lean();
+	subheads = subheads.map(obj => obj.sub_head_code);
+	res.status(200).send(subheads);
 };
 
 function findNextActions(currStatus, db_user) {
@@ -180,7 +197,6 @@ exports.createFileRecord = async function (req, res) {
 // update by admin
 exports.updateFileRecord = async function (req, res) {
 	let { uid, ...body } = req.body;
-	console.log(req.user, 'first!!!!!!!!@@@@@@@');
 	FileRecord.findOneAndUpdate({ uid: uid }, body, (err, db_record) => {
 		if (err) {
 			req.flash('error', 'Error while updating record !');
@@ -192,7 +208,6 @@ exports.updateFileRecord = async function (req, res) {
 		let prev_allocated_amount = db_record.amount;
 		let curr_allocated_amount = parseInt(req.body.amount);
 		let financialYear = db_record.financialYear;
-		console.log(req.user, '!!!!!!!!@@@@@@@');
 		let report = db_user.reports.find((report) => report.financial_year === financialYear);
 		//remove the previously allocated amount
 		report.available_amount += prev_allocated_amount;
