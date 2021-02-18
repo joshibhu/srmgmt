@@ -41,7 +41,8 @@
         <button class="btn btn-success addNew" data-toggle="modal">Add New</button>
         <% } %>
         <table class="table w-auto small" id="mytable" data-toggle="table" data-height="600" data-show-columns="true"
-            data-show-export="true" data-pagination="true" data-search="true" data-filter-control="true">
+            data-show-export="true" data-pagination="true" data-search="true"
+            data-export-types="['excel', 'csv', 'txt']" data-filter-control="true">
             <thead>
                 <tr>
                     <% if(roles.includes('user')) {%>
