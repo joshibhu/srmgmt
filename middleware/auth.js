@@ -38,7 +38,8 @@ async function setUserNameandRole(req) {
         req.user = user;
         req.roles = user.roles.map((obj) => obj.name);
     } else {
-        res.status(500).send({ message: err });
+        console.error('no user found against the given token !!')
+        res.status(500).send({ message: "Unauthorized Access!" });
         return;
     }
 }
