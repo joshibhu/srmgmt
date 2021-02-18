@@ -61,9 +61,7 @@ exports.signin = async (req, res) => {
                     // add report for current financial year
                     let report = {
                         consumed_amount: 0,
-                        available_amount: user.designation.capping_per_finyear,
                         financial_year: current_finyear,
-                        limit_per_file: user.designation.capping_per_file
                     }
                     user.reports.push(report);
                     await user.save();
@@ -80,7 +78,7 @@ exports.signup = async (req, res) => {
         return
     }
     const user = new User({
-        name: req.body.first_name + ' ' + req.body.last_name,
+        name: req.body.uname,
         email: req.body.email,
         password: req.body.password
     });

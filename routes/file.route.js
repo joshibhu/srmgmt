@@ -21,4 +21,6 @@ module.exports = function (app) {
 
     app.get('/tracker/api/files/:fileId', fileController.getFileRecord);
 
+    app.get('/tracker/files/onbehalfUser/:on_behalf_user_id', auth.verifyToken, fileController.getAmountLimits);
+
 }

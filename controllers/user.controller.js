@@ -40,16 +40,13 @@ exports.updateUser = async function (req, res) {
 				financialYears.forEach((finyear) => {
 					let report = {
 						consumed_amount: 0,
-						available_amount: db_desgn.capping_per_finyear,
 						financial_year: finyear,
-						limit_per_file: db_desgn.capping_per_file
 					}
 					reports.push(report);
 				})
 				update_stmt = { ...update_stmt, reports: reports }
 			}
 			User.findOneAndUpdate({ email: email }, update_stmt, { new: true }, (err, db_record) => {
-				console.log(err);
 				if (err) {
 					req.flash('error', 'Error while updating record !');
 				} else {
@@ -62,23 +59,19 @@ exports.updateUser = async function (req, res) {
 };
 // fetch employee detail based on employee id
 exports.getAllUsers = async function (req, res) {
-	User.find().populate('roles').populate('designation')
-		.then(function (db_records) {
-			//filter out super admin
-			db_records = db_records.filter((obj) => {
-				return !obj.roles.includes(obj.roles.find(role => role.name === 'admin'));
-			});
-			Designation.find().then(function (db_desn_records) {
-				if (db_desn_records && db_desn_records.length > 0) {
-					db_desn_records = db_desn_records.filter((obj) => !(obj.mappedTo === '' && obj.capping_per_file === 1000000))
-				}
-				res.status(200).render('user', { table: db_records, designation_map: db_desn_records, page: 'user_mgmt', user: req.user, roles: req.roles })
-			})
-		})
-		.catch(function (err) {
-			// If an error occurred, send it to the client
-			res.status(500).render('user', { message: "Error while fetching users" });
-		});
+	try {
+		//let db_records = await User.find().populate('roles').populate('designation').lean();
+		let db_records = await User.findSystemUsers();
+		let user_assigned_desgns = db_records.map((obj) => obj.designation);
+		//remove undefined items
+		user_assigned_desgns = user_assigned_desgns.filter((x) => x !== undefined);
+		let db_desn_records = await Designation.find({ mappedTo: { $ne: 'none' } });
+		db_desn_records = db_desn_records.filter(obj => !user_assigned_desgns.some(desg_obj => desg_obj.designation === obj.designation));
+		res.status(200).render('user', { table: db_records, designation_map: db_desn_records, page: 'user_mgmt', user: req.user, roles: req.roles })
+	} catch (err) {
+		// If an error occurred, send it to the client
+		res.status(500).render('user', { message: "Error while fetching users" });
+	}
 };
 
 // delete user

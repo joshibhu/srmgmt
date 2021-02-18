@@ -9,7 +9,7 @@ const file_status = {
 }
 
 module.exports = {
-    mongo_db_uri: 'mongodb://127.0.0.1:27017/srmgmt_new',
+    mongo_db_uri: 'mongodb://127.0.0.1:27017/srmgmt',
     authKey: 'JWTKeyForSecurity',
     file_status,
     action_status_map_arr: [
@@ -62,12 +62,12 @@ module.exports = {
         { designation: 'FX-2', mappedTo: '' },
         { designation: 'FX-3', mappedTo: '' },
         { designation: 'FX-4', mappedTo: '' },
-        { designation: 'ADRM_Admin', mappedTo: '', capping_per_file: 1000000, capping_per_finyear: 12000000 },
-        { designation: 'ADRM_Infra', mappedTo: '', capping_per_file: 1000000, capping_per_finyear: 12000000 },
-        { designation: 'ADRM_BSB', mappedTo: '', capping_per_file: 1000000, capping_per_finyear: 12000000 },
-        { designation: 'ADRM_BUO', mappedTo: '', capping_per_file: 1000000, capping_per_finyear: 12000000 },
-        { designation: 'ADRM_Operation', mappedTo: '', capping_per_file: 1000000, capping_per_finyear: 12000000 },
-        { designation: 'DRM', mappedTo: '', capping_per_file: 1000000, capping_per_finyear: 12000000 }
+        { designation: 'ADRM_Admin', mappedTo: 'none', capping_per_file: 1000000, capping_per_finyear: 12000000 },
+        { designation: 'ADRM_Infra', mappedTo: 'none', capping_per_file: 1000000, capping_per_finyear: 12000000 },
+        { designation: 'ADRM_BSB', mappedTo: 'none', capping_per_file: 1000000, capping_per_finyear: 12000000 },
+        { designation: 'ADRM_BUO', mappedTo: 'none', capping_per_file: 1000000, capping_per_finyear: 12000000 },
+        { designation: 'ADRM_Operation', mappedTo: 'none', capping_per_file: 1000000, capping_per_finyear: 12000000 },
+        { designation: 'DRM', mappedTo: 'none', capping_per_file: 1000000, capping_per_finyear: 12000000 }
     ],
     fundTypes: ['Revenue', 'Capital'],
     allocations: ['01', '02', '03']

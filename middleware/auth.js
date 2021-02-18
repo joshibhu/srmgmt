@@ -33,7 +33,7 @@ verifyToken = ((req, res, next) => {
 });
 
 async function setUserNameandRole(req) {
-    let user = await User.findById(req.userId).populate('roles');
+    let user = await User.findById(req.userId).select('-password').populate('roles').populate('designation');
     if (user !== 'null') {
         req.user = user;
         req.roles = user.roles.map((obj) => obj.name);

@@ -22,6 +22,10 @@ const fileSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    onBehalfOf: {
+        type: String,
+        default: 'self'
+    },
     dealer: {
         type: String,
     },

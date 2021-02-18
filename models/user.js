@@ -14,7 +14,6 @@ const userSchema = new mongoose.Schema({
         type: String,
         trim: true,
         unique: true,
-        required: true,
         validate(value) {
             if (!validator.isEmail(value)) {
                 throw new Error('Email is invalid')
@@ -36,8 +35,6 @@ const userSchema = new mongoose.Schema({
     reports: [{
         _id: false,
         consumed_amount: { type: Number },
-        available_amount: { type: Number },
-        limit_per_file: { type: Number },
         financial_year: { type: String }
     }]
 }, { timestamps: true, collection: 'user' });
@@ -62,6 +59,25 @@ userSchema.statics.findByDesingations = async (designation_ids) => {
     const users = await User.find({ designation: { $in: designation_ids } });
     return users.map(obj => obj._id);
 
+}
+//all users except special users, and super admin as well
+userSchema.statics.findSystemUsers = async () => {
+    let users = await User.find().populate('roles').populate('designation').lean();
+    //remove super admin from list
+    users = users.filter((obj) => {
+        return !obj.roles.includes(obj.roles.find(role => role.name === 'admin'));
+    });
+    let special_users = users.filter((obj) => (obj.designation && obj.designation.mappedTo === 'none' && obj.designation.capping_per_file === 1000000));
+    //remove special users from the list
+    users = users.filter((obj) => !special_users.includes(obj))
+    return users;
+}
+
+//all special users
+userSchema.statics.findSpecialUsers = async () => {
+    const users = await User.find().populate('designation').lean();
+    let special_users = users.filter((obj) => (obj.designation && obj.designation.mappedTo === 'none' && obj.designation.capping_per_file === 1000000))
+    return special_users;
 }
 
 // Hash the plain text password before saving

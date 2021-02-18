@@ -5,47 +5,68 @@
     <title>File Management</title>
     <link href="/assets/css/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet"> -->
+    <!-- <script src="/assets/js/jquery-3.3.1.js"></script> -->
+    <!-- <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script> -->
+    <!-- <script src="/assets/js/bootstrap.js"></script> -->
+    <!-- <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script> -->
 
+    <!--TRIAL START-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-    <script src="/assets/js/jquery-3.3.1.js"></script>
-    <!-- Page level plugin JavaScript-->
-    <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
-    <script src="/assets/js/bootstrap.js"></script>
-    <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/extensions/filter-control/bootstrap-table-filter-control.js"></script>
+    <script type="text/javascript" src="/assets/export/tableExport.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/extensions/export/bootstrap-table-export.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/extensions/toolbar/bootstrap-table-toolbar.js"></script>
 
-    <!-- Bootstrap core JavaScript-->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css" />
+    <!--TRIAL END-->
 </head>
 
 <body>
     <div class="container">
         <%- include navigation.ejs %>
         <% if(roles.includes('user')) {%>
-        <button class="btn btn-sm btn-success addNew" data-toggle="modal">Add New</button>
+        <button class="btn btn-success addNew" data-toggle="modal">Add New</button>
         <% } %>
-        <table class="table table-striped table-sm nowrap" id="mytable">
+        <table class="table w-auto small" id="mytable" data-toggle="table" data-height="600" data-show-columns="true"
+            data-show-export="true" data-pagination="true" data-search="true" data-filter-control="true">
             <thead>
                 <tr>
                     <% if(roles.includes('user')) {%>
-                    <th>File ID</th>
-                    <th>File Name</th>
-                    <th>Amount</th>
-                    <th>Category</th>
-                    <th>Create Time</th>
-                    <th>Current Status</th>
+                    <th data-sortable="true">File ID</th>
+                    <th data-sortable="true" data-filter-control="input">File Name</th>
+                    <th data-sortable="true" data-filter-control="select">Fin Year</th>
+                    <th data-sortable="true" data-filter-control="select">In Power of</th>
+                    <th data-sortable="true" data-filter-control="input">Amount</th>
+                    <th data-sortable="true" data-filter-control="select">Current Status</th>
+                    <th data-sortable="true" data-filter-control="input">Vetted Amt</th>
+                    <th data-sortable="true" data-filter-control="select">Category</th>
+                    <th data-sortable="true" data-filter-control="input">Create Date</th>
+
                     <th>Actions</th>
                     <%} if(roles.includes('admin') || roles.includes('fx')) {%>
-                    <th>File ID</th>
-                    <th>File Name</th>
-                    <th>Amount</th>
-                    <th>Category</th>
-                    <th>Create Time</th>
-                    <th>Current Status</th>
-                    <th>Created By</th>
-                    <th>Designation</th>
+                    <th data-sortable="true">File ID</th>
+                    <th data-sortable="true" data-filter-control="input">File Name</th>
+                    <th data-sortable="true" data-filter-control="select">Fin Year</th>
+                    <th data-sortable="true" data-filter-control="select">Created By</th>
+                    <th data-sortable="true" data-filter-control="select">In Power of</th>
+                    <th data-sortable="true" data-filter-control="input">Amount</th>
+                    <th data-sortable="true" data-filter-control="select">Current Status</th>
+                    <th data-sortable="true" data-filter-control="input">Vetted Amt</th>
+                    <th data-sortable="true" data-filter-control="select">Category</th>
+                    <th data-sortable="true" data-filter-control="input">Create Date</th>
                     <th>Actions</th>
                     <%}%>
                 </tr>
@@ -58,11 +79,14 @@
                     <td><a href="javascript:void(0);" class="badge badge-info info"
                             data-id="<%=entry.uid%>"><%=entry.uid%></a></td>
                     <td><%=entry.name%></td>
+                    <td><%=entry.financialYear%></td>
+                    <td><%=entry.onBehalfOf%></td>
                     <td><%=entry.amount%></td>
+                    <td><%=entry.currStatus%></td>
+                    <td><%=entry.vettedAmount%></td>
                     <td><%=categories.find(obj => obj.priority === parseInt(entry.category)).text%></td>
                     <!-- <td><%=entry.category%></td> -->
                     <td><%=entry.createTimestamp%></td>
-                    <td><%=entry.currStatus%></td>
                     <td>
                         <!--Edit and Delete can only be done by user if the status is saved or rejected-->
                         <%if(entry.currStatus === 'File Record Saved' || entry.currStatus === 'Returned with Observations'){ %>
@@ -83,14 +107,17 @@
                         <!--FX ROLE-->
                     <td><a href="javascript:void(0);" class="badge badge-info info"
                             data-id="<%=entry.uid%>"><%=entry.uid%></a></td>
+
                     <td><%=entry.name%></td>
+                    <td><%=entry.financialYear%></td>
+                    <td><%=(entry.createdBy)?entry.createdBy.designation.designation:''%></td>
+                    <td><%=entry.onBehalfOf%></td>
                     <td><%=entry.amount%></td>
+                    <td><%=entry.currStatus%></td>
+                    <td><%=entry.vettedAmount%></td>
                     <td><%=categories.find(obj => obj.priority === parseInt(entry.category)).text%></td>
                     <!-- <td><%=entry.category%></td> -->
                     <td><%=entry.createTimestamp%></td>
-                    <td><%=entry.currStatus%></td>
-                    <td><%=(entry.createdBy)?entry.createdBy.name:''%></td>
-                    <td><%=(entry.createdBy)?entry.createdBy.designation.designation:''%></td>
                     <td>
                         <%for ( var i = 0; i < entry.nextActions.length; i++ ){%>
                         <a href="javascript:void(0);" class="btn btn-sm btn-primary action" data-id="<%=entry.uid%>"
@@ -102,20 +129,22 @@
                     <td><a href="javascript:void(0);" class="badge badge-info info"
                             data-id="<%=entry.uid%>"><%=entry.uid%></a></td>
                     <td><%=entry.name%></td>
+                    <td><%=entry.financialYear%></td>
+                    <td><%=(entry.createdBy)?entry.createdBy.designation.designation:''%></td>
+                    <td><%=entry.onBehalfOf%></td>
                     <td><%=entry.amount%></td>
+                    <td><%=entry.currStatus%></td>
+                    <td><%=entry.vettedAmount%></td>
                     <td><%=categories.find(obj => obj.priority === parseInt(entry.category)).text%></td>
                     <!-- <td><%=entry.category%></td> -->
                     <td><%=entry.createTimestamp%></td>
-                    <td><%=entry.currStatus%></td>
-                    <td><%=(entry.createdBy)?entry.createdBy.name:''%></td>
-                    <td><%=(entry.createdBy)?entry.createdBy.designation.designation:''%></td>
                     <td>
                         <!--Delete can be done by admin anytime-->
-
                         <button class="btn btn-danger btn-sm rounded-0 delete" type="button" data-toggle="tooltip"
                             data-placement="top" title="Delete" data-id="<%=entry.uid%>"><i
                                 class="fa fa-trash"></i></button>
                     </td>
+
                     <%}%>
                 </tr>
                 <%});%>
@@ -123,7 +152,7 @@
         </table>
     </div>
 
-    <!-- Add New File Record-->
+    <!-- Add/Edit New File Record-->
     <form method="post">
         <div class="modal fade" id="myModalAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -139,6 +168,39 @@
                         <div class="form-group">
                             <label for="name">File Name</label>
                             <input type="text" name="name" class="form-control name" placeholder="File Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fundType">Type of fund</label>
+                            <select class="form-control fundType" name="fundType" aria-placeholder="Type of fund">
+                                <option value="none" selected disabled>Select Fund Type</option>
+                                <%
+                                for ( var i = 0; i < fundTypes.length; i++ )
+                                {%>
+                                <option value="<%=fundTypes[i] %>"><%=fundTypes[i] %></option>
+                                <%}%>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="allocation">Allocation</label>
+                            <select class="form-control allocation" name="allocation"
+                                aria-placeholder="Allocation">
+                                <option value="none" selected disabled>Select allocation</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="onbehalf" id="on_behalf">On Behalf of</label>
+                            <select class="form-control onBehalfOf" name="onBehalfOf"
+                                aria-placeholder="On Behalf Of">
+                                <option value="self" selected>Self</option>
+                                <%
+                                for ( var i = 0; i < special_users.length; i++ )
+                                {%>
+                                <option value="<%=special_users[i]._id %>"><%=special_users[i].name %></option>
+                                <%}%>
+                            </select>
                         </div>
 
                         <div class="form-group">
@@ -158,27 +220,6 @@
                             <label for="amount" id="amount_label">Amount</label>
                             <input type="number" name="amount" id="amount" class="form-control amount" placeholder="Amount"
                                 required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="fundType">Type of fund</label>
-                            <select class="form-control fundType" name="fundType"
-                                aria-placeholder="Type of fund">
-                                <option value="none" selected disabled>Select Fund Type</option>
-                                <%
-                                for ( var i = 0; i < fundTypes.length; i++ )
-                                {%>
-                                <option value="<%=fundTypes[i] %>"><%=fundTypes[i] %></option>
-                                <%}%>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="allocation">Allocation</label>
-                            <select class="form-control allocation" name="allocation"
-                                aria-placeholder="Allocation">
-                                <option value="none" selected disabled>Select allocation</option>
-                            </select>
                         </div>
 
                         <div class="form-group">
@@ -238,78 +279,6 @@
         </div>
     </form>
 
-    <!-- Edit File Record-->
-    <!-- <form action="/tracker/files/update?_method=put" method="post">
-        <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Edit File Record</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="name">File Name</label>
-                            <input type="text" name="name" class="form-control name" placeholder="File Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="financialYear">Financial Year</label>
-                            <select class="form-control financialYear" name="financialYear"
-                                aria-placeholder="Financial Year">
-                                <option value="none" selected disabled>Select Year</option>
-                                <%
-                                for ( var i = 0; i < years.length; i++ )
-                                {%>
-                                <option value="<%=years[i] %>"><%=years[i] %></option>
-                                <%}%>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="amount">Amount</label>
-                            <input type="text" name="amount" class="form-control amount" placeholder="Amount" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="fundType">Type of fund</label>
-                            <select class="form-control fundType" name="fundType" aria-placeholder="Type of fund">
-                                <option value="none" selected disabled>Select Fund Type</option>
-                                <%
-                                for ( var i = 0; i < fundTypes.length; i++ )
-                                {%>
-                                <option value="<%=fundTypes[i] %>"><%=fundTypes[i] %></option>
-                                <%}%>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="allocation">Allocation</label>
-                            <select class="form-control allocation" name="allocation"
-                                aria-placeholder="Allocation">
-                                <option value="none" selected disabled>Select allocation</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="dealer">Dealer</label>
-                            <input type="text" name="dealer" class="form-control dealer" placeholder="Dealer" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact">Contact</label>
-                            <input type="text" name="contact" class="form-control contact" placeholder="Contact No"
-                                required>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <input type="hidden" name="uid" class="uid">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Update</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form> -->
 
     <!-- Change status-->
     <form action="/tracker/files/changeStatus?_method=put" method="post">
@@ -432,13 +401,36 @@
 
     <script>
         $(document).ready(function () {
-            $('#mytable').DataTable({
-                //"scrollX": true,
-                "order": [[4, 'desc']],
-                "columnDefs": [{
-                    "orderable": false,
-                    "targets": 6
-                }]
+            // $('#mytable').DataTable({
+            //     //"scrollX": true,
+            //     "order": [[4, 'desc']],
+            //     "columnDefs": [{
+            //         "orderable": false,
+            //         "targets": 6
+            //     }]
+            // });
+
+            // function DoOnCellHtmlData(cell, row, col, data) {
+            //     var result = "";
+            //     if (typeof data != 'undefined' && data != "") {
+            //         var html = $.parseHTML(data);
+
+            //         $.each(html, function () {
+            //             if (typeof $(this).html() === 'undefined')
+            //                 result += $(this).text();
+            //             else if (typeof $(this).attr('class') === 'undefined' || $(this).hasClass('th-inner') === true)
+            //                 result += $(this).html();
+            //         });
+            //     }
+            //     return result;
+            // }
+            $('#mytable').bootstrapTable('refreshOptions', {
+                exportOptions: {
+                    ignoreColumn: [0],
+                    fileName: 'file-report_' + new Date().getTime(),
+                    formats: ["xlsx", "csv", "txt"]
+                    //onCellHtmlData: DoOnCellHtmlData
+                }
             });
 
             //showing modal for delete record
@@ -467,6 +459,7 @@
                         $('.allocation').append('<option selected value="' + fileRecord.allocation + ' ">' + fileRecord.allocation + '</option>');
                         //$('.allocation').val(fileRecord.allocation);
                         $('.financialYear').val(fileRecord.financialYear);
+                        $('.onBehalfOf').val(fileRecord.onBehalfOf);
                         $('.category').val(fileRecord.category);
                         $('.uid').val(fileRecord.uid);
                     }
@@ -510,19 +503,71 @@
             //     $('.uid4').val(fileId);
             //     $('.action').val(action);
             // });
-
+            $(".onBehalfOf").change(function () {
+                let financial_year = $('.financialYear').val();
+                if (financial_year !== null) {
+                    let on_behalf_user_id = $('.onBehalfOf').val();
+                    $.ajax({
+                        type: 'GET',
+                        url: '/tracker/files/onbehalfUser/' + on_behalf_user_id,
+                        complete: function (res) {
+                            let userData = res.responseJSON;
+                            let limit_per_file = userData.designation.capping_per_file;
+                            let limit_per_finyear = userData.designation.capping_per_finyear;
+                            if (userData.reports && userData.reports.length > 0) {
+                                let report = userData.reports.find((report) => report.financial_year === financial_year);
+                                if (report) {
+                                    let available_amount = limit_per_finyear - report.consumed_amount;
+                                    $('#myModalAdd #amount_label').html('Amount  <span class="small">(Available amount=Rs. ' + available_amount + ', Limit per quotation=Rs. ' + limit_per_file + ' )');
+                                    $('#myModalAdd #amount').attr("max", report.limit_per_file);
+                                } else {
+                                    $('#myModalAdd #amount_label').html('Amount  <span class="small">(Available amount = undefined, Limit per quotation = undefined)');
+                                }
+                            }
+                        }
+                    });
+                }
+            });
 
             $(".financialYear").change(function () {
-                let userData = JSON.parse(($('.user').val()));
-                if (userData.reports && userData.reports.length > 0) {
-                    let report = userData.reports.find((report) => report.financial_year === $('.financialYear').val());
-                    if (report) {
-                        $('#myModalAdd #amount_label').html('Amount  <span class="small">(Available amount=Rs. ' + report.available_amount + ', Limit per quotation=Rs. ' + report.limit_per_file + ' )');
-                        $('#myModalAdd #amount').attr("max", report.limit_per_file);
-                    } else {
-                        $('#myModalAdd #amount_label').html('Amount  <span class="small">(Available amount = undefined, Limit per quotation = undefined)');
+                let financial_year = $('.financialYear').val();
+                let on_behalf_user_id = $('.onBehalfOf').val();
+                $.ajax({
+                    type: 'GET',
+                    url: '/tracker/files/onbehalfUser/' + on_behalf_user_id,
+                    complete: function (res) {
+                        let userData = res.responseJSON;
+                        let limit_per_file = userData.designation.capping_per_file;
+                        let limit_per_finyear = userData.designation.capping_per_finyear;
+                        if (userData.reports && userData.reports.length > 0) {
+                            let report = userData.reports.find((report) => report.financial_year === financial_year);
+                            if (report) {
+                                let available_amount = limit_per_finyear - report.consumed_amount;
+                                $('#myModalAdd #amount_label').html('Amount  <span class="small">(Available amount=Rs. ' + available_amount + ', Limit per quotation=Rs. ' + limit_per_file + ' )');
+                                $('#myModalAdd #amount').attr("max", report.limit_per_file);
+                            } else {
+                                $('#myModalAdd #amount_label').html('Amount  <span class="small">(Available amount = undefined, Limit per quotation = undefined)');
+                            }
+                        }
                     }
-                }
+                });
+
+
+
+                // older one
+                // let userData = JSON.parse(($('.user').val()));
+                // let limit_per_file = userData.designation.capping_per_file;
+                // let limit_per_finyear = userData.designation.capping_per_finyear;
+                // if (userData.reports && userData.reports.length > 0) {
+                //     let report = userData.reports.find((report) => report.financial_year === $('.financialYear').val());
+                //     if (report) {
+                //         let available_amount = limit_per_finyear - report.consumed_amount;
+                //         $('#myModalAdd #amount_label').html('Amount  <span class="small">(Available amount=Rs. ' + available_amount + ', Limit per quotation=Rs. ' + limit_per_file + ' )');
+                //         $('#myModalAdd #amount').attr("max", report.limit_per_file);
+                //     } else {
+                //         $('#myModalAdd #amount_label').html('Amount  <span class="small">(Available amount = undefined, Limit per quotation = undefined)');
+                //     }
+                // }
             });
 
             $(".fundType").change(function () {
