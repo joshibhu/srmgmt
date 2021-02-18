@@ -77,12 +77,13 @@ exports.getAllFiles = async function (req, res) {
 				}
 			});
 		//iterate over db records and find and add current status and next status value
-		db_records.forEach((item) => {
+		db_records.forEach(async (item) => {
 			let currStatus = item.status[item.status.length - 1].status;
 			let nextActions = findNextActions(currStatus, db_user);
 			item.currStatus = currStatus;
 			item.nextActions = nextActions;
 			item.createTimestamp = item.createTimestamp.split(' ')[0]
+			item.onBehalfOf = (item.onBehalfOf === 'self') ? item.onBehalfOf : (await User.findById(item.onBehalfOf).lean()).name;
 		})
 		//list special users
 		let special_users = await User.findSpecialUsers();
