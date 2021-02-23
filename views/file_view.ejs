@@ -46,28 +46,28 @@
             <thead>
                 <tr>
                     <% if(roles.includes('user')) {%>
-                    <th data-sortable="true">File ID</th>
-                    <th data-sortable="true" data-filter-control="input">File Name</th>
-                    <th data-sortable="true" data-filter-control="select">Fin Year</th>
-                    <th data-sortable="true" data-filter-control="select">In Power of</th>
-                    <th data-sortable="true" data-filter-control="input">Amount</th>
-                    <th data-sortable="true" data-filter-control="select">Current Status</th>
-                    <th data-sortable="true" data-filter-control="input">Vetted Amt</th>
-                    <th data-sortable="true" data-filter-control="select">Category</th>
-                    <th data-sortable="true" data-filter-control="input">Create Date</th>
+                    <th data-field="uid" data-sortable="true">File ID</th>
+                    <th data-field="name" data-sortable="true" data-filter-control="input">File Name</th>
+                    <th data-field="financialYear" data-sortable="true" data-filter-control="select">Fin Year</th>
+                    <th data-field="inPowerOf" data-sortable="true" data-filter-control="select">In Power of</th>
+                    <th data-field="amount" data-sortable="true" data-filter-control="input">Amount</th>
+                    <th data-field="currStatus" data-sortable="true" data-filter-control="select">Current Status</th>
+                    <th data-field="vettedAmount" data-sortable="true" data-filter-control="input">Vetted Amt</th>
+                    <th data-field="catgory" data-sortable="true" data-filter-control="select">Category</th>
+                    <th data-field="createTimestamp" data-sortable="true" data-filter-control="input">Create Date</th>
 
                     <th>Actions</th>
                     <%} if(roles.includes('admin') || roles.includes('fx')) {%>
-                    <th data-sortable="true">File ID</th>
-                    <th data-sortable="true" data-filter-control="input">File Name</th>
-                    <th data-sortable="true" data-filter-control="select">Fin Year</th>
-                    <th data-sortable="true" data-filter-control="select">Created By</th>
-                    <th data-sortable="true" data-filter-control="select">In Power of</th>
-                    <th data-sortable="true" data-filter-control="input">Amount</th>
-                    <th data-sortable="true" data-filter-control="select">Current Status</th>
-                    <th data-sortable="true" data-filter-control="input">Vetted Amt</th>
-                    <th data-sortable="true" data-filter-control="select">Category</th>
-                    <th data-sortable="true" data-filter-control="input">Create Date</th>
+                    <th data-field="uid" data-sortable="true">File ID</th>
+                    <th data-field="name" data-sortable="true" data-filter-control="input">File Name</th>
+                    <th data-field="financialYear" data-sortable="true" data-filter-control="select">Fin Year</th>
+                    <th data-field="createdBy" data-sortable="true" data-filter-control="select">Created By</th>
+                    <th data-field="inPowerOf" data-sortable="true" data-filter-control="select">In Power of</th>
+                    <th data-field="amount" data-sortable="true" data-filter-control="input">Amount</th>
+                    <th data-field="currStatus" data-sortable="true" data-filter-control="select">Current Status</th>
+                    <th data-field="vettedAmount" data-sortable="true" data-filter-control="input">Vetted Amt</th>
+                    <th data-field="catgory" data-sortable="true" data-filter-control="select">Category</th>
+                    <th data-field="createTimestamp" data-sortable="true" data-filter-control="input">Create Date</th>
                     <th>Actions</th>
                     <%}%>
                 </tr>
@@ -427,9 +427,8 @@
             // }
             $('#mytable').bootstrapTable('refreshOptions', {
                 exportOptions: {
-                    ignoreColumn: [0],
-                    fileName: 'file-report_' + new Date().getTime(),
-                    formats: ["xlsx", "csv", "txt"]
+                    ignoreColumn: [10],
+                    fileName: 'file-report_' + new Date().getTime()
                     //onCellHtmlData: DoOnCellHtmlData
                 }
             });
