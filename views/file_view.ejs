@@ -37,120 +37,204 @@
 <body>
     <div class="container">
         <%- include navigation.ejs %>
-        <% if(roles.includes('user')) {%>
-        <button class="btn btn-success addNew" data-toggle="modal">Add New</button>
-        <% } %>
-        <table class="table w-auto small" id="mytable" data-toggle="table" data-height="600" data-show-columns="true"
-            data-show-export="true" data-pagination="true" data-search="true"
-            data-export-types="['excel', 'csv', 'txt']" data-filter-control="true">
-            <thead>
-                <tr>
-                    <% if(roles.includes('user')) {%>
-                    <th data-field="uid" data-sortable="true">File ID</th>
-                    <th data-field="name" data-sortable="true" data-filter-control="input">File Name</th>
-                    <th data-field="financialYear" data-sortable="true" data-filter-control="select">Fin Year</th>
-                    <th data-field="inPowerOf" data-sortable="true" data-filter-control="select">In Power of</th>
-                    <th data-field="amount" data-sortable="true" data-filter-control="input">Amount</th>
-                    <th data-field="currStatus" data-sortable="true" data-filter-control="select">Current Status</th>
-                    <th data-field="vettedAmount" data-sortable="true" data-filter-control="input">Vetted Amt</th>
-                    <th data-field="catgory" data-sortable="true" data-filter-control="select">Category</th>
-                    <th data-field="createTimestamp" data-sortable="true" data-filter-control="input">Create Date</th>
+            <% if(roles.includes('user')) {%>
+                <button class="btn btn-success addNew" data-toggle="modal">Add New</button>
+                <% } %>
+                    <table class="table w-auto small" id="mytable" data-toggle="table" data-height="600"
+                        data-show-columns="true" data-show-export="true" data-pagination="true" data-search="true"
+                        data-export-types="['excel', 'csv', 'txt']" data-filter-control="true">
+                        <thead>
+                            <tr>
+                                <% if(roles.includes('user')) {%>
+                                    <th data-field="uid" data-sortable="true">File ID</th>
+                                    <th data-field="name" data-sortable="true" data-filter-control="input">File Name
+                                    </th>
+                                    <th data-field="financialYear" data-sortable="true" data-filter-control="select">Fin
+                                        Year</th>
+                                    <th data-field="inPowerOf" data-sortable="true" data-filter-control="select">In
+                                        Power of</th>
+                                    <th data-field="amount" data-sortable="true" data-filter-control="input">Amount</th>
+                                    <th data-field="currStatus" data-sortable="true" data-filter-control="select">
+                                        Current Status</th>
+                                    <th data-field="vettedAmount" data-sortable="true" data-filter-control="input">
+                                        Vetted Amt</th>
+                                    <th data-field="catgory" data-sortable="true" data-filter-control="select">Category
+                                    </th>
+                                    <th data-field="createTimestamp" data-sortable="true" data-filter-control="input">
+                                        Create Date</th>
 
-                    <th>Actions</th>
-                    <%} if(roles.includes('admin') || roles.includes('fx')) {%>
-                    <th data-field="uid" data-sortable="true">File ID</th>
-                    <th data-field="name" data-sortable="true" data-filter-control="input">File Name</th>
-                    <th data-field="financialYear" data-sortable="true" data-filter-control="select">Fin Year</th>
-                    <th data-field="createdBy" data-sortable="true" data-filter-control="select">Created By</th>
-                    <th data-field="inPowerOf" data-sortable="true" data-filter-control="select">In Power of</th>
-                    <th data-field="amount" data-sortable="true" data-filter-control="input">Amount</th>
-                    <th data-field="currStatus" data-sortable="true" data-filter-control="select">Current Status</th>
-                    <th data-field="vettedAmount" data-sortable="true" data-filter-control="input">Vetted Amt</th>
-                    <th data-field="catgory" data-sortable="true" data-filter-control="select">Category</th>
-                    <th data-field="createTimestamp" data-sortable="true" data-filter-control="input">Create Date</th>
-                    <th>Actions</th>
-                    <%}%>
-                </tr>
-            </thead>
-            <tbody>
-                <%table.forEach(function(entry) {%>
-                <tr>
-                    <% if(roles.includes('user')) {%>
-                    <!--USER ROLE-->
-                    <td><a href="javascript:void(0);" class="badge badge-info info"
-                            data-id="<%=entry.uid%>"><%=entry.uid%></a></td>
-                    <td><%=entry.name%></td>
-                    <td><%=entry.financialYear%></td>
-                    <td><%=entry.onBehalfOf%></td>
-                    <td><%=entry.amount%></td>
-                    <td><%=entry.currStatus%></td>
-                    <td><%=entry.vettedAmount%></td>
-                    <td><%=categories.find(obj => obj.priority === parseInt(entry.category)).text%></td>
-                    <!-- <td><%=entry.category%></td> -->
-                    <td><%=entry.createTimestamp%></td>
-                    <td>
-                        <!--Edit and Delete can only be done by user if the status is saved or rejected-->
-                        <%if(entry.currStatus === 'File Record Saved' || entry.currStatus === 'Returned with Observations'){ %>
-                        <!--Delete only applicable for user and admin-->
-                        <button class="btn btn-success btn-sm rounded-0 edit" type="button" data-toggle="tooltip"
-                            data-id="<%=entry.uid%>" data-placement="top" title="Edit"><i
-                                class="fa fa-edit"></i></button>
-                        <button class="btn btn-danger btn-sm rounded-0 delete" type="button" data-toggle="tooltip"
-                            data-placement="top" title="Delete" data-id="<%=entry.uid%>"><i
-                                class="fa fa-trash"></i></button>
-                        <%}%>
-                        <%for ( var i = 0; i < entry.nextActions.length; i++ ){%>
-                        <a href="javascript:void(0);" class="btn btn-sm btn-primary action" data-id="<%=entry.uid%>"
-                            data-action="<%=entry.nextActions[i]%>"><%=entry.nextActions[i]%></a>
-                        <%}%>
-                    </td>
-                    <%} if(roles.includes('fx')) {%>
-                        <!--FX ROLE-->
-                    <td><a href="javascript:void(0);" class="badge badge-info info"
-                            data-id="<%=entry.uid%>"><%=entry.uid%></a></td>
+                                    <th>Actions</th>
+                                    <%} if(roles.includes('admin') || roles.includes('fx')) {%>
+                                        <th data-field="uid" data-sortable="true">File ID</th>
+                                        <th data-field="name" data-sortable="true" data-filter-control="input">File Name
+                                        </th>
+                                        <th data-field="financialYear" data-sortable="true"
+                                            data-filter-control="select">Fin Year</th>
+                                        <th data-field="createdBy" data-sortable="true" data-filter-control="select">
+                                            Created By</th>
+                                        <th data-field="inPowerOf" data-sortable="true" data-filter-control="select">In
+                                            Power of</th>
+                                        <th data-field="amount" data-sortable="true" data-filter-control="input">Amount
+                                        </th>
+                                        <th data-field="currStatus" data-sortable="true" data-filter-control="select">
+                                            Current Status</th>
+                                        <th data-field="vettedAmount" data-sortable="true" data-filter-control="input">
+                                            Vetted Amt</th>
+                                        <th data-field="catgory" data-sortable="true" data-filter-control="select">
+                                            Category</th>
+                                        <th data-field="createTimestamp" data-sortable="true"
+                                            data-filter-control="input">Create Date</th>
+                                        <th>Actions</th>
+                                        <%}%>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%table.forEach(function(entry) {%>
+                                <tr>
+                                    <% if(roles.includes('user')) {%>
+                                        <!--USER ROLE-->
+                                        <td><a href="javascript:void(0);" class="badge badge-info info"
+                                                data-id="<%=entry.uid%>">
+                                                <%=entry.uid%>
+                                            </a></td>
+                                        <td>
+                                            <%=entry.name%>
+                                        </td>
+                                        <td>
+                                            <%=entry.financialYear%>
+                                        </td>
+                                        <td>
+                                            <%=entry.onBehalfOf%>
+                                        </td>
+                                        <td>
+                                            <%=entry.amount%>
+                                        </td>
+                                        <td>
+                                            <%=entry.currStatus%>
+                                        </td>
+                                        <td>
+                                            <%=entry.vettedAmount%>
+                                        </td>
+                                        <td>
+                                            <%=categories.find(obj=> obj.priority === parseInt(entry.category)).text%>
+                                        </td>
+                                        <!-- <td><%=entry.category%></td> -->
+                                        <td>
+                                            <%=entry.createTimestamp%>
+                                        </td>
+                                        <td>
+                                            <!--Edit and Delete can only be done by user if the status is saved or rejected-->
+                                            <%if(entry.currStatus==='File Record Saved' ||
+                                                entry.currStatus==='Returned with Observations' ){ %>
+                                                <!--Delete only applicable for user and admin-->
+                                                <button class="btn btn-success btn-sm rounded-0 edit" type="button"
+                                                    data-toggle="tooltip" data-id="<%=entry.uid%>" data-placement="top"
+                                                    title="Edit"><i class="fa fa-edit"></i></button>
+                                                <button class="btn btn-danger btn-sm rounded-0 delete" type="button"
+                                                    data-toggle="tooltip" data-placement="top" title="Delete"
+                                                    data-id="<%=entry.uid%>"><i class="fa fa-trash"></i></button>
+                                                <%}%>
+                                                    <%for ( var i=0; i < entry.nextActions.length; i++ ){%>
+                                                        <a href="javascript:void(0);"
+                                                            class="btn btn-sm btn-primary action"
+                                                            data-id="<%=entry.uid%>"
+                                                            data-action="<%=entry.nextActions[i]%>">
+                                                            <%=entry.nextActions[i]%>
+                                                        </a>
+                                                        <%}%>
+                                        </td>
+                                        <%} if(roles.includes('fx')) {%>
+                                            <!--FX ROLE-->
+                                            <td><a href="javascript:void(0);" class="badge badge-info info"
+                                                    data-id="<%=entry.uid%>">
+                                                    <%=entry.uid%>
+                                                </a></td>
 
-                    <td><%=entry.name%></td>
-                    <td><%=entry.financialYear%></td>
-                    <td><%=(entry.createdBy)?entry.createdBy.designation.designation:''%></td>
-                    <td><%=entry.onBehalfOf%></td>
-                    <td><%=entry.amount%></td>
-                    <td><%=entry.currStatus%></td>
-                    <td><%=entry.vettedAmount%></td>
-                    <td><%=categories.find(obj => obj.priority === parseInt(entry.category)).text%></td>
-                    <!-- <td><%=entry.category%></td> -->
-                    <td><%=entry.createTimestamp%></td>
-                    <td>
-                        <%for ( var i = 0; i < entry.nextActions.length; i++ ){%>
-                        <a href="javascript:void(0);" class="btn btn-sm btn-primary action" data-id="<%=entry.uid%>"
-                            data-action="<%=entry.nextActions[i]%>"><%=entry.nextActions[i]%></a>
-                        <%}%>
-                    </td>
-                    <%} if(roles.includes('admin')){%>
-                        <!--ADMIN ROLE-->
-                    <td><a href="javascript:void(0);" class="badge badge-info info"
-                            data-id="<%=entry.uid%>"><%=entry.uid%></a></td>
-                    <td><%=entry.name%></td>
-                    <td><%=entry.financialYear%></td>
-                    <td><%=(entry.createdBy)?entry.createdBy.designation.designation:''%></td>
-                    <td><%=entry.onBehalfOf%></td>
-                    <td><%=entry.amount%></td>
-                    <td><%=entry.currStatus%></td>
-                    <td><%=entry.vettedAmount%></td>
-                    <td><%=categories.find(obj => obj.priority === parseInt(entry.category)).text%></td>
-                    <!-- <td><%=entry.category%></td> -->
-                    <td><%=entry.createTimestamp%></td>
-                    <td>
-                        <!--Delete can be done by admin anytime-->
-                        <button class="btn btn-danger btn-sm rounded-0 delete" type="button" data-toggle="tooltip"
-                            data-placement="top" title="Delete" data-id="<%=entry.uid%>"><i
-                                class="fa fa-trash"></i></button>
-                    </td>
+                                            <td>
+                                                <%=entry.name%>
+                                            </td>
+                                            <td>
+                                                <%=entry.financialYear%>
+                                            </td>
+                                            <td>
+                                                <%=(entry.createdBy)?entry.createdBy.designation.designation:''%>
+                                            </td>
+                                            <td>
+                                                <%=entry.onBehalfOf%>
+                                            </td>
+                                            <td>
+                                                <%=entry.amount%>
+                                            </td>
+                                            <td>
+                                                <%=entry.currStatus%>
+                                            </td>
+                                            <td>
+                                                <%=entry.vettedAmount%>
+                                            </td>
+                                            <td>
+                                                <%=categories.find(obj=> obj.priority ===
+                                                    parseInt(entry.category)).text%>
+                                            </td>
+                                            <!-- <td><%=entry.category%></td> -->
+                                            <td>
+                                                <%=entry.createTimestamp%>
+                                            </td>
+                                            <td>
+                                                <%for ( var i=0; i < entry.nextActions.length; i++ ){%>
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary action"
+                                                        data-id="<%=entry.uid%>"
+                                                        data-action="<%=entry.nextActions[i]%>">
+                                                        <%=entry.nextActions[i]%>
+                                                    </a>
+                                                    <%}%>
+                                            </td>
+                                            <%} if(roles.includes('admin')){%>
+                                                <!--ADMIN ROLE-->
+                                                <td><a href="javascript:void(0);" class="badge badge-info info"
+                                                        data-id="<%=entry.uid%>">
+                                                        <%=entry.uid%>
+                                                    </a></td>
+                                                <td>
+                                                    <%=entry.name%>
+                                                </td>
+                                                <td>
+                                                    <%=entry.financialYear%>
+                                                </td>
+                                                <td>
+                                                    <%=(entry.createdBy)?entry.createdBy.designation.designation:''%>
+                                                </td>
+                                                <td>
+                                                    <%=entry.onBehalfOf%>
+                                                </td>
+                                                <td>
+                                                    <%=entry.amount%>
+                                                </td>
+                                                <td>
+                                                    <%=entry.currStatus%>
+                                                </td>
+                                                <td>
+                                                    <%=entry.vettedAmount%>
+                                                </td>
+                                                <td>
+                                                    <%=categories.find(obj=> obj.priority ===
+                                                        parseInt(entry.category)).text%>
+                                                </td>
+                                                <!-- <td><%=entry.category%></td> -->
+                                                <td>
+                                                    <%=entry.createTimestamp%>
+                                                </td>
+                                                <td>
+                                                    <!--Delete can be done by admin anytime-->
+                                                    <button class="btn btn-danger btn-sm rounded-0 delete" type="button"
+                                                        data-toggle="tooltip" data-placement="top" title="Delete"
+                                                        data-id="<%=entry.uid%>"><i class="fa fa-trash"></i></button>
+                                                </td>
 
-                    <%}%>
-                </tr>
-                <%});%>
-                    </tbody>
-        </table>
+                                                <%}%>
+                                </tr>
+                                <%});%>
+                        </tbody>
+                    </table>
     </div>
 
     <!-- Add/Edit New File Record-->
@@ -175,52 +259,50 @@
                             <label for="fundType">Type of fund</label>
                             <select class="form-control fundType" name="fundType" aria-placeholder="Type of fund">
                                 <option value="none" selected disabled>Select Fund Type</option>
-                                <%
-                                for ( var i = 0; i < fundTypes.length; i++ )
-                                {%>
-                                <option value="<%=fundTypes[i] %>"><%=fundTypes[i] %></option>
-                                <%}%>
+                                <% for ( var i=0; i < fundTypes.length; i++ ) {%>
+                                    <option value="<%=fundTypes[i] %>">
+                                        <%=fundTypes[i] %>
+                                    </option>
+                                    <%}%>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label for="allocation">Allocation</label>
-                            <select class="form-control allocation" name="allocation"
-                                aria-placeholder="Allocation">
+                            <select class="form-control allocation" name="allocation" aria-placeholder="Allocation">
                                 <option value="none" selected disabled>Select allocation</option>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label for="onbehalf" id="on_behalf">On Behalf of</label>
-                            <select class="form-control onBehalfOf" name="onBehalfOf"
-                                aria-placeholder="On Behalf Of">
+                            <select class="form-control onBehalfOf" name="onBehalfOf" aria-placeholder="On Behalf Of">
                                 <option value="self" selected>Self</option>
-                                <%
-                                for ( var i = 0; i < special_users.length; i++ )
-                                {%>
-                                <option value="<%=special_users[i]._id %>"><%=special_users[i].name %></option>
-                                <%}%>
+                                <% for ( var i=0; i < special_users.length; i++ ) {%>
+                                    <option value="<%=special_users[i]._id %>">
+                                        <%=special_users[i].name %>
+                                    </option>
+                                    <%}%>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label for="financialYear">Financial Year</label>
-                            <select class="form-control financialYear" name="financialYear"
+                            <select class="form-control financialYear" name="financialYear" id="financialYear"
                                 aria-placeholder="Financial Year">
                                 <option value="none" selected disabled>Select Year</option>
-                                <%
-                                for ( var i = 0; i < years.length; i++ )
-                                {%>
-                                <option value="<%=years[i] %>"><%=years[i] %></option>
-                                <%}%>
+                                <% for ( var i=0; i < years.length; i++ ) {%>
+                                    <option value="<%=years[i] %>">
+                                        <%=years[i] %>
+                                    </option>
+                                    <%}%>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label for="amount" id="amount_label">Amount</label>
-                            <input type="number" name="amount" id="amount" class="form-control amount" placeholder="Amount"
-                                required>
+                            <input type="number" name="amount" id="amount" class="form-control amount"
+                                placeholder="Amount" required>
                         </div>
 
                         <div class="form-group">
@@ -230,30 +312,32 @@
 
                         <div class="form-group">
                             <label for="contact">Contact</label>
-                            <input type="text" name="contact" class="form-control contact" placeholder="Contact No" required>
+                            <input type="text" name="contact" class="form-control contact" placeholder="Contact No"
+                                required>
                         </div>
 
                         <div class="form-group">
                             <label for="category">Category</label>
-                            <select class="form-control category" id="category" name="category" aria-placeholder="Category">
+                            <select class="form-control category" id="category" name="category"
+                                aria-placeholder="Category">
                                 <option value="none" selected disabled>Select Category</option>
-                                <%
-                                for ( var i = 0; i < categories.length; i++ )
-                                {%>
-                                <option value="<%=categories[i].priority %>"><%=categories[i].text %></option>
-                                <%}%>
+                                <% for ( var i=0; i < categories.length; i++ ) {%>
+                                    <option value="<%=categories[i].priority %>">
+                                        <%=categories[i].text %>
+                                    </option>
+                                    <%}%>
                             </select>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <input type="hidden" name="user" class="user" value='<%=JSON.stringify(user)%>'></input>
-                                <input type="hidden" name="uid" class="uid">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Save</button>
-                        </div>
+                        <input type="hidden" name="uid" class="uid">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
                     </div>
                 </div>
             </div>
+        </div>
     </form>
 
     <!-- File Record Info-->
@@ -504,7 +588,7 @@
             //     $('.action').val(action);
             // });
             $(".onBehalfOf").change(function () {
-                let financial_year = $('.financialYear').val();
+                let financial_year = $('#financialYear').val();
                 if (financial_year !== null) {
                     let on_behalf_user_id = $('.onBehalfOf').val();
                     $.ajax({
@@ -514,6 +598,7 @@
                             let userData = res.responseJSON;
                             let limit_per_file = userData.designation.capping_per_file;
                             let limit_per_finyear = userData.designation.capping_per_finyear;
+
                             if (userData.reports && userData.reports.length > 0) {
                                 let report = userData.reports.find((report) => report.financial_year === financial_year);
                                 if (report) {
@@ -530,7 +615,7 @@
             });
 
             $(".financialYear").change(function () {
-                let financial_year = $('.financialYear').val();
+                let financial_year = $('#financialYear').val();
                 let on_behalf_user_id = $('.onBehalfOf').val();
                 $.ajax({
                     type: 'GET',
