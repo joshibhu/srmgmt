@@ -1,30 +1,28 @@
 const mongoose = require('mongoose')
- 
+
 const employeeSchema = new mongoose.Schema({
     employeeId: {
         alias: 'empId',
         type: String,
         required: true,
-        trim: true,
-        maxlength: 15,
+        trim: true
     },
     employeeName: {
         alias: 'empName',
         type: String,
         unique: true,
         required: true,
-        trim: true,
-        maxlength: 50
+        trim: true
     }
 }, { collection: 'employee' });
 
 
 employeeSchema.statics.findByEmployeeId = async (empId) => {
-    const employee = await Employee.findOne({'employeeId':empId})
+    const employee = await Employee.findOne({ 'employeeId': empId })
 
     if (!employee) {
         throw new Error('Invalid employee Id')
-    }    
+    }
 
     return employee;
 }

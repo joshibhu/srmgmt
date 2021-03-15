@@ -4,8 +4,7 @@ const fileSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
-        trim: true,
-        maxlength: 15,
+        trim: true
     },
     uid: {
         type: String,
@@ -51,8 +50,7 @@ const fileSchema = new mongoose.Schema({
     category: {
         type: String,
         required: true,
-        trim: true,
-        maxlength: 50
+        trim: true
     },
     createTimestamp: {
         type: String,

@@ -149,42 +149,49 @@ exports.deleteFileRecord = async function (req, res) {
 
 // create a file record
 exports.createFileRecord = async function (req, res) {
-	// save status first and then file record
-	const fileStatus = new FileStatus({ status: config.file_status.FILE_RECORD_SAVED, createdOn: format('dd-MM-yyyy hh.mm.ss', new Date()) });
-	fileStatus.save(async (err, db_status) => {
-		if (err) {
-			res.status(500).render('addRecord', { message: err });
-			return;
-		}
-		//let db_user = await User.findById(req.userId).populate('designation');
-		let db_user = req.user;
-		//find desingation object of FX user to find count
-		let db_desgn = await Designation.findOneAndUpdate({ designation: db_user.designation.mappedTo }, { $inc: { fileCount: 1 } });
-		// desing unique file id based on the user designation mapped to which FX
-		let num = ++db_desgn.fileCount
-		const uniqueFileId = db_user.designation.mappedTo.replace('-', '') + num.toString().padStart(4, "0");
-		let additionalObj = { uid: uniqueFileId, createdBy: db_user._id, createTimestamp: format('dd-MM-yyyy hh.mm.ss', new Date()), status: db_status._id };
-		const file_record = new FileRecord({ ...req.body, ...additionalObj });
-		file_record.save(async (err, db_record) => {
+	try {
+		// save status first and then file record
+		const fileStatus = new FileStatus({ status: config.file_status.FILE_RECORD_SAVED, createdOn: format('dd-MM-yyyy hh.mm.ss', new Date()) });
+		fileStatus.save(async (err, db_status) => {
 			if (err) {
 				res.status(500).render('addRecord', { message: err });
 				return;
 			}
-			// update user data reports value
-			let financialYear = req.body.financialYear;
-			let amount = parseInt(req.body.amount);
-			let db_accounted_user;
-			if (req.body.onBehalfOf === 'self') {
-				db_accounted_user = req.user;
-			} else {
-				db_accounted_user = await User.findById(req.body.onBehalfOf);
-			}
-			let report = db_accounted_user.reports.find((report) => report.financial_year === financialYear);
-			report.consumed_amount += amount;
-			await db_accounted_user.save();
-			res.redirect('/tracker');
+			//let db_user = await User.findById(req.userId).populate('designation');
+			let db_user = req.user;
+			//find desingation object of FX user to find count
+			let db_desgn = await Designation.findOneAndUpdate({ designation: db_user.designation.mappedTo }, { $inc: { fileCount: 1 } });
+			// desing unique file id based on the user designation mapped to which FX
+			let num = ++db_desgn.fileCount
+			const uniqueFileId = db_user.designation.mappedTo.replace('-', '') + num.toString().padStart(4, "0");
+			let additionalObj = { uid: uniqueFileId, createdBy: db_user._id, createTimestamp: format('dd-MM-yyyy hh.mm.ss', new Date()), status: db_status._id };
+			const file_record = new FileRecord({ ...req.body, ...additionalObj });
+			file_record.save(async (err, db_record) => {
+				if (err) {
+					console.error(err);
+					req.flash('error', 'Error while creating record !');
+					res.redirect('/tracker');
+					return;
+				}
+				// update user data reports value
+				let financialYear = req.body.financialYear;
+				let amount = parseInt(req.body.amount);
+				let db_accounted_user;
+				if (req.body.onBehalfOf === 'self') {
+					db_accounted_user = req.user;
+				} else {
+					db_accounted_user = await User.findById(req.body.onBehalfOf);
+				}
+				let report = db_accounted_user.reports.find((report) => report.financial_year === financialYear);
+				report.consumed_amount += amount;
+				await db_accounted_user.save();
+				res.redirect('/tracker');
+			});
 		});
-	});
+	} catch (err) {
+		console.error(err);
+		res.status(500).send({ message: 'error while creating file record !!' });
+	}
 };
 
 // update by admin
@@ -192,6 +199,7 @@ exports.updateFileRecord = async function (req, res) {
 	let { uid, ...body } = req.body;
 	FileRecord.findOneAndUpdate({ uid: uid }, body, async (err, db_record) => {
 		if (err) {
+			console.error(err);
 			req.flash('error', 'Error while updating record !');
 			res.redirect('/tracker');
 			return;
